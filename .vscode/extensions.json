@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+    "grapecity.gc-excelviewer",
+    "yzhang.markdown-all-in-one",
+    "tamasfe.even-better-toml"
+  ]
+}

@@ -1,0 +1,16 @@
+# 统一换行符，避免跨平台协作时整文件 diff
+* text=auto eol=lf
+
+# 数据文件：明确为文本，保证 Git 能做行级 diff
+*.csv text eol=lf
+
+# 数据字典与文档
+*.md text eol=lf
+*.qmd text eol=lf
+
+# 锁文件体积大且机器生成，在 diff 中折叠显示
+uv.lock -diff linguist-generated
+
+# 语言统计：不把数据和站点产物计入项目语言构成
+data/** linguist-vendored
+_site/** linguist-generated

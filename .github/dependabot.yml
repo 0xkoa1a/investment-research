@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      vuepress:
+        patterns:
+          - "@vuepress/*"
+          - vuepress
+      frontend-tooling:
+        patterns:
+          - vite
+          - typescript
+          - vue-tsc
+          - tsx
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

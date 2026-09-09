@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.node.json",
+  "include": [
+    "vuepress.config.ts",
+    "site/content-types.ts",
+    "site/content.ts",
+    "scripts/**/*.ts",
+    "tests/node/**/*.ts"
+  ]
+}

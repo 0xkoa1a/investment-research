@@ -1,0 +1,36 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["${workspaceFolder}/src"],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.egg-info": true
+  },
+  "files.watcherExclude": {
+    "**/.venv/**": true,
+    "**/_site/**": true,
+    "**/data/**": true
+  },
+  "search.exclude": {
+    "**/.venv": true,
+    "**/_site": true,
+    "**/data/raw": true,
+    "**/uv.lock": true
+  },
+
+  "[python]": {
+    "editor.rulers": [100],
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": { "other": false }
+  },
+
+  "csv-preview.separator": ",",
+  "editor.renderWhitespace": "boundary",
+  "terminal.integrated.cwd": "${workspaceFolder}"
+}

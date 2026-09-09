@@ -1,0 +1,33 @@
+{
+  "name": "investment-research-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:content": "node --import tsx scripts/check-content.ts",
+    "check:site": "node --import tsx scripts/check-site.ts",
+    "docs:build": "vuepress build .",
+    "test": "node --import tsx --test tests/node/**/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json && vue-tsc --noEmit -p tsconfig.app.json"
+  },
+  "engines": {
+    "node": "22.18.0"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "devDependencies": {
+    "@mdit/plugin-katex": "1.0.3",
+    "@types/node": "22.20.1",
+    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "gray-matter": "4.0.3",
+    "katex": "0.18.4",
+    "markdown-it": "15.0.1",
+    "plotly.js-dist-min": "3.7.0",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "vue": "3.5.42",
+    "vue-router": "4.6.4",
+    "vue-tsc": "3.3.11",
+    "vuepress": "2.0.0-rc.31"
+  }
+}

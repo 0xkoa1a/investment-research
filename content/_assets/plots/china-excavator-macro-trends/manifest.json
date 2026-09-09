@@ -1,0 +1,16 @@
+{
+  "report": "china-excavator-macro-trends",
+  "data_as_of": "2026-07-31",
+  "charts": [
+    {
+      "file": "excavator-demand-drivers.json",
+      "sha256": "f8fe63212b08100cae038e3d31bf4ccbaacb69a50f556e848fc7f484253f8877",
+      "traces": 4
+    },
+    {
+      "file": "output-pmi-li-keqiang.json",
+      "sha256": "f49423964b38aa155892830e0d3905723f9bd271e17d3eb68fa80b85e598c4db",
+      "traces": 3
+    }
+  ]
+}

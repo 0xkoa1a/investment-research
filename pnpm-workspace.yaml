@@ -1,0 +1,12 @@
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  vue-demi: true
+
+# VuePress v2 RC packages declare adjacent peer ranges. These exact versions
+# are pinned and validated together by the lockfile and CI.
+peerDependencyRules:
+  allowedVersions:
+    "@vuepress/bundler-vite": 2.0.0-rc.31
+    markdown-it: 15.0.1
+    vuepress: 2.0.0-rc.31

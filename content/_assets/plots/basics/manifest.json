@@ -1,0 +1,21 @@
+{
+  "report": "basics",
+  "data_as_of": "2026-08-30",
+  "charts": [
+    {
+      "file": "cpi-level-and-inflation.json",
+      "sha256": "66990898552c652268e439f3db6acc3eee67e59308ff4dc3decef10c01863ead",
+      "traces": 3
+    },
+    {
+      "file": "loan-balance-bridge.json",
+      "sha256": "0b9ecee2c4555be7aed7458f83d518797a2e0f5fba5bfd3907c8b4148f6984a1",
+      "traces": 1
+    },
+    {
+      "file": "sales-growth-comparison.json",
+      "sha256": "a7c3234fe29a4a96d54d94ba9290b40aea5c0469012cce5c780a014278fd9fe1",
+      "traces": 3
+    }
+  ]
+}
