@@ -27,8 +27,8 @@ importers:
         specifier: 15.0.1
         version: 15.0.1
       plotly.js-dist-min:
-        specifier: 3.7.0
-        version: 3.7.0
+        specifier: 4.0.0
+        version: 4.0.0
       tsx:
         specifier: 4.23.12
         version: 4.23.12
@@ -1112,8 +1112,8 @@ packages:
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
 
-  plotly.js-dist-min@3.7.0:
-    resolution: {integrity: sha512-IRWNnBJZmKss3URDnicBK2nvt/VTSi/MD1GnUscAYFjwSuN6g/CTde5R1UC0RYtblehj8rkT4BL8r05e/c8j5Q==}
+  plotly.js-dist-min@4.0.0:
+    resolution: {integrity: sha512-Dm6Sr5aHaxDZ7HN6eLRBotMZ9zRYEd+eoimm27B8d2XOFiNpv0oO7QIE0WFwFAfPN16JHM/6do6kDbasB+ftbQ==}
 
   postcss-load-config@6.0.1:
     resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
@@ -2425,7 +2425,7 @@ snapshots:
       exsolve: 1.1.1
       pathe: 2.0.3
 
-  plotly.js-dist-min@3.7.0: {}
+  plotly.js-dist-min@4.0.0: {}
 
   postcss-load-config@6.0.1(postcss@8.5.26)(tsx@4.23.12)(yaml@2.9.0):
     dependencies:
