@@ -3,6 +3,9 @@ allowBuilds:
   esbuild: true
   vue-demi: true
 
+overrides:
+  "js-yaml@>=3.0.0 <3.15.2": 3.15.2
+
 # VuePress v2 RC packages declare adjacent peer ranges. These exact versions
 # are pinned and validated together by the lockfile and CI.
 peerDependencyRules:
