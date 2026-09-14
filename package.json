@@ -16,7 +16,7 @@
   "packageManager": "pnpm@11.19.0",
   "devDependencies": {
     "@mdit/plugin-katex": "1.0.3",
-    "@types/node": "22.20.1",
+    "@types/node": "26.4.1",
     "@vuepress/bundler-vite": "2.0.0-rc.31",
     "gray-matter": "4.0.3",
     "katex": "0.18.4",
