@@ -1,0 +1,80 @@
+{
+  "phase": 3,
+  "authorized_on": "2026-09-11",
+  "authorized_by": "用户明确回复：继续下一个phase",
+  "prior_phase_accepted_for_progression": 2,
+  "status": "accepted_for_progression",
+  "next_phase_authorized": true,
+  "report": "content/research/gold-outlook.md",
+  "chart_delivery": "local_only_pending_redistribution_review",
+  "chart_contracts": [
+    {
+      "id": "event-intraday",
+      "question": "8/19上涨和8/28下跌分别发生在已核实消息之前还是之后？",
+      "form": "Two vertically stacked five-minute line plots, each 08:00–17:00 New York; percent change from own prior-day 17:00 close.",
+      "units": "percent; hover also shows original GCZ26 USD/troy oz Close and full NY bar-end date/time",
+      "encoding": "gold solid price; blue dashed exact minutes/speech release; shared percent range and zero line",
+      "limits": "No Treasury marker with unknown release time. No artificial date alignment between two events. Full 8/31 window stays in table because risk clock and first Sunday bars are missing."
+    }
+  ],
+  "table_contract": "Three cases; prior-session close, day 0 and +1/+3/+5 cumulative returns with actual dates. All exact endpoint prices and source-date driver changes in statistics.json.",
+  "review_decisions": [
+    "One new chart, no duplicate event-return bar chart.",
+    "Retain existing gold/rate overlay and inverse rate axis.",
+    "Use case evidence to revise the existing explanation table and concise opening, rather than add a second summary."
+  ],
+  "validation": {
+    "status": "passed_local_review",
+    "checked_on": "2026-09-11",
+    "commands_passed": [
+      "make analyze REPORT=gold-outlook",
+      "make render (includes make check and scripts/check-site.ts)",
+      "git diff --check"
+    ],
+    "python_tests_passed": 60,
+    "node_tests_passed": 7,
+    "input_and_output_checks": [
+      "Pinned selection/evidence hashes and underlying macro/supplement/intraday snapshots verified.",
+      "Prior Phase 1 and 2 statistics and five chart hashes byte-for-byte unchanged.",
+      "12 event-window returns and three baseline prices reconciled with Markdown.",
+      "6 Markdown chart references, manifest and all payload hashes agree.",
+      "Both 08:00–17:00 event charts have complete five-minute bars.",
+      "September 8 missing yield endpoint remains null; September 7 excluded by verified COMEX trade calendar."
+    ],
+    "browser": {
+      "route": "/research/gold-outlook.html",
+      "desktop_viewport": [
+        1280,
+        900
+      ],
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "charts_loaded": 6,
+      "new_chart_visually_checked": "event-intraday",
+      "equal_y_ranges": true,
+      "desktop_tables_fit": true,
+      "page_horizontal_overflow": false,
+      "mobile_event_table_scroll_left_px": 333,
+      "hover_checked": "08/28 10:35 New York; gold 4621.90 USD/troy oz; -0.71% from prior-day 17:00",
+      "hover_precision_fixed": true,
+      "mobile_hover_within_viewport": true,
+      "console_errors_and_warnings": 0,
+      "viewport_override_reset": true
+    },
+    "public_clean_checkout_ready": false,
+    "publication_limit": "Commercial full inputs and Plotly payloads remain in ignored local storage, as in earlier phases."
+  },
+  "findings": [
+    "August 19 pre-minutes rally: Treasury announcement fits morning chronology better; exact release time and ex-ante consensus remain unknown.",
+    "August 28 post-speech decline plus same-date yield/FedWatch increases strengthen monetary repricing explanation.",
+    "August 31 oil-up/gold-down cannot isolate weekend conflict from continuing policy repricing; flat 2y and weaker DXY retained as counterevidence."
+  ],
+  "output_sha256": {
+    "content/research/gold-outlook.md": "3cafdaf6364f16433f07c05bea92af2b0aeda6f2ade4110aebb8957a0fdcebf1",
+    "data/raw/gold-outlook/phase3/statistics.json": "3971bfce6d1ba7880c5cbf1eab6ca11d2d259570cb67ab13b0ec546aae9b9b21",
+    "content/_assets/plots/gold-outlook/manifest.json": "9bef28e969c94e5dab13d14bf0ba30d60b41fce829825c350107391dc0ef7151"
+  },
+  "accepted_by": "用户明确回复：下一步（授权Phase 4）"
+}

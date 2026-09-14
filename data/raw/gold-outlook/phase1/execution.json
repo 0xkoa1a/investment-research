@@ -1,0 +1,64 @@
+{
+  "phase": 1,
+  "authorized_by": "user explicit continue",
+  "authorized_on": "2026-09-10",
+  "price_selection": "user confirmed latest downloaded snapshot",
+  "status": "implemented_pending_review",
+  "next_phase_authorized": false,
+  "input_snapshot": "20260909T125258Z",
+  "chart_delivery": "local_only_pending_redistribution_review",
+  "chart_contracts": [
+    {
+      "id": "history",
+      "question": "长历史中的价格位置",
+      "form": "daily line",
+      "points": 781
+    },
+    {
+      "id": "since-august",
+      "question": "八月以来的阶段与事件位置",
+      "form": "daily line with event markers",
+      "points": 27
+    },
+    {
+      "id": "drawdown",
+      "question": "窗口内回撤深度",
+      "form": "drawdown line",
+      "points": 27
+    },
+    {
+      "id": "contract-check",
+      "question": "连续与具体合约是否共同呈现这一形态",
+      "form": "indexed line comparison",
+      "points_per_series": 27
+    }
+  ],
+  "palette": "gold + blue + neutral; solid/dash/dot",
+  "publication_blocker": "完整价格数值的再分发许可未确认；图表被精确Git忽略，需本地生成；不应推送或部署当前组合",
+  "validation": {
+    "checked_on": "2026-09-10",
+    "commands_passed": [
+      "make analyze REPORT=gold-outlook",
+      "make check (make render prerequisite)",
+      "make render",
+      "git diff --check"
+    ],
+    "python_tests_passed": 34,
+    "node_tests_passed": 7,
+    "browser": {
+      "route": "/research/gold-outlook.html",
+      "desktop_content_width_px": 1265,
+      "mobile_viewport_width_px": 390,
+      "mobile_content_width_px": 375,
+      "charts_loaded": 4,
+      "page_horizontal_overflow": false,
+      "legend_hide_restore": "passed: 3 -> 2 -> 3 traces",
+      "price_and_event_hover": "passed: E3 date, Close and 14:00 New York release time",
+      "mobile_table_scroll": "passed: scrollLeft 274 px",
+      "console_errors_and_warnings": 0,
+      "layout_fix": "Increased contract chart top margin to separate wrapped legend from toolbar"
+    },
+    "public_clean_checkout_ready": false,
+    "public_clean_checkout_note": "Full-value gold Plotly snapshots remain ignored pending redistribution verification; local review build passed."
+  }
+}

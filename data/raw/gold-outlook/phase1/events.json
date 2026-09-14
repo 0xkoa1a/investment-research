@@ -1,0 +1,12 @@
+{
+  "information_cutoff_at": "2026-09-09T11:59:46+00:00",
+  "verified_on": "2026-09-10",
+  "coverage_note": "已核验的五项政策与宏观发布，不是全部市场消息。图中仅按发布日定位，不断言事件发生在 Yahoo Close 之前。",
+  "events": [
+    {"id":"E1","date":"2026-08-07","released_at":"2026-08-07T08:30:00-04:00","label":"七月就业","source":"BLS","url":"https://www.bls.gov/news.release/archives/empsit_08072026.htm","actual":"非农减少2.3万人，失业率4.1%","prior_and_revisions":"五月由+12.9万修订为+6.3万；六月由+5.7万修订为+2.0万","consensus":null,"consensus_source":null},
+    {"id":"E2","date":"2026-08-12","released_at":"2026-08-12T08:30:00-04:00","label":"七月CPI","source":"BLS","url":"https://www.bls.gov/news.release/archives/cpi_08122026.htm","actual":"总体环比+0.1%、同比+3.4%；核心环比+0.2%","prior_and_revisions":"六月总体环比-0.4%，核心环比0.0%；季调值以当次发布为准","consensus":null,"consensus_source":null},
+    {"id":"E3","date":"2026-08-19","released_at":"2026-08-19T14:00:00-04:00","label":"七月FOMC纪要","source":"Federal Reserve","url":"https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm","release_time_source":"https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260729.htm","actual":"纪要记录：若通胀不下降，许多与会者认为可能需要收紧政策","prior_and_revisions":"内容反映7月28—29日会议，8月19日才公开","consensus":null,"consensus_source":null},
+    {"id":"E4","date":"2026-08-26","released_at":"2026-08-26T08:30:00-04:00","label":"七月PCE","source":"BEA","url":"https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026","actual":"总体与核心PCE价格指数环比均为+0.2%","prior_and_revisions":"当次表列六月总体环比-0.1%、核心+0.1%；收入历史修订不能当作价格指数修订","consensus":null,"consensus_source":null},
+    {"id":"E5","date":"2026-09-04","released_at":"2026-09-04T08:30:00-04:00","label":"八月就业","source":"BLS","url":"https://www.bls.gov/news.release/archives/empsit_09042026.htm","actual":"非农增加16.2万人，失业率4.1%","prior_and_revisions":"六月由+2.0万修订为+3.1万；七月由-2.3万修订为+2.1万","consensus":null,"consensus_source":null}
+  ]
+}

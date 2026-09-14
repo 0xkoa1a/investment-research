@@ -1,0 +1,983 @@
+{
+  "phase": 2,
+  "data_as_of": "2026-09-08",
+  "inputs": {
+    "selection_sha256": "0684fd6dbdc259cfb172f753ccdadecc8f19dc4b2ef45d637b04f5ea06dd106b",
+    "evidence_sha256": "468cf1d6e014a4e49a3c2a5db85ad420e79a4da8dd3bb2744eed94db37d8dd5f",
+    "phase": 2,
+    "macro_snapshot": "20260909T115946Z",
+    "supplement_snapshot": "20260911T034839Z",
+    "information_cutoff_at": "2026-09-09T11:59:46Z",
+    "sample_end": "2026-09-08",
+    "supplement_files": {
+      "dxy.csv": "c00f19e8be4419e0a848197f52743594ac8e1f355d2bbd73800af99bcc38239b",
+      "fedwatch_20260916.csv": "ece6fab3b7be2ed3081b9d110f94120753f4bbcb1a9476f1264bcc8a433a156e",
+      "fedwatch_20261028.csv": "b0e1ae9bf08a36bd49ea16af9cd9b9e9bc315c0ffad390f62f8741f07fbe1834",
+      "fedwatch_20261209.csv": "35ecba98d452ce1f5e39bf214a4e89dcd1ad966a51e37b3c358101f1b889e876",
+      "gld_holdings.csv": "41f7030c588eca9607e26279a7a221fcc2c26578d29c17c23a30588c7f1b86d4",
+      "sources.json": "58549d55719dfae140cdf754ad6f81a2b81d89413ca2520bc85e3636a88b1cfc",
+      "wti_futures.csv": "2cffddb453f1a761564d5e0ad964ebbb355f327a7dc790546e4238f93d1dc6a4"
+    },
+    "sources": {
+      "dxy": {
+        "source_id": "DX-Y.NYB",
+        "retrieved_at": "2026-09-11T03:37:07+00:00",
+        "request_start": "2026-07-01",
+        "interval": "1d",
+        "auto_adjust": false,
+        "url": "https://finance.yahoo.com/quote/DX-Y.NYB/history/",
+        "raw_sha256": "8b09193cb55b660fedb4113c11d0b3b0b485064797be930dbcb6c7e3d78efb73",
+        "unit": "index",
+        "clock": "Yahoo daily label; exact Close clock unverified",
+        "frequency": "D",
+        "first": "2026-07-31",
+        "last": "2026-09-08",
+        "rows": 27,
+        "missing_numeric_cells": 0,
+        "revision_status": "historical download, not archived first release",
+        "baseline_status": "retrospective supplement acquired after information cutoff",
+        "timezone": "date labels only",
+        "available_at": null
+      },
+      "wti_futures": {
+        "source_id": "CL=F",
+        "retrieved_at": "2026-09-11T03:37:07+00:00",
+        "request_start": "2026-07-01",
+        "interval": "1d",
+        "auto_adjust": false,
+        "url": "https://finance.yahoo.com/quote/CL%3DF/history/",
+        "raw_sha256": "2cb3fb8333328cd1c95741074fc3138b860aeee126842460ed5148ca561ee112",
+        "unit": "USD/barrel",
+        "clock": "Yahoo daily label; exact Close clock unverified",
+        "frequency": "D",
+        "first": "2026-07-31",
+        "last": "2026-09-08",
+        "rows": 27,
+        "missing_numeric_cells": 0,
+        "revision_status": "historical download, not archived first release",
+        "baseline_status": "retrospective supplement acquired after information cutoff",
+        "timezone": "date labels only",
+        "available_at": null
+      },
+      "fedwatch_20260916": {
+        "source_id": "CME FedWatch",
+        "meeting": "2026-09-16",
+        "unit": "fraction; derived columns in %",
+        "retrieved_at": "2026-09-09T12:46:00.602471Z",
+        "raw_sha256": "5fa2fbadf4f894ae9d0b53631bc849903c20507317d75eaf6e4bcca1fcff94a9",
+        "url": "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html",
+        "current_target_bp": [
+          350,
+          375
+        ],
+        "frequency": "D",
+        "clock": "Export date only; exact observation/release clock unverified",
+        "missing_buckets": "Leading/trailing unpopulated targets retained as missing; populated mass must sum to 1 within 5e-6",
+        "first": "2026-07-31",
+        "last": "2026-09-08",
+        "rows": 27,
+        "missing_numeric_cells": 1404,
+        "revision_status": "historical download, not archived first release",
+        "baseline_status": "retrospective supplement acquired after information cutoff",
+        "timezone": "date labels only",
+        "available_at": null
+      },
+      "fedwatch_20261028": {
+        "source_id": "CME FedWatch",
+        "meeting": "2026-10-28",
+        "unit": "fraction; derived columns in %",
+        "retrieved_at": "2026-09-09T12:46:00.602471Z",
+        "raw_sha256": "9007ce99c30b4f9d3a4f49068194eed6f3e0c5ed1e6ef189cc3fb469045c0f78",
+        "url": "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html",
+        "current_target_bp": [
+          350,
+          375
+        ],
+        "frequency": "D",
+        "clock": "Export date only; exact observation/release clock unverified",
+        "missing_buckets": "Leading/trailing unpopulated targets retained as missing; populated mass must sum to 1 within 5e-6",
+        "first": "2026-07-31",
+        "last": "2026-09-08",
+        "rows": 27,
+        "missing_numeric_cells": 1107,
+        "revision_status": "historical download, not archived first release",
+        "baseline_status": "retrospective supplement acquired after information cutoff",
+        "timezone": "date labels only",
+        "available_at": null
+      },
+      "fedwatch_20261209": {
+        "source_id": "CME FedWatch",
+        "meeting": "2026-12-09",
+        "unit": "fraction; derived columns in %",
+        "retrieved_at": "2026-09-09T12:46:00.602471Z",
+        "raw_sha256": "dfca50c88231dc864399d13385afbd124e05738f7d76353337b1c38694a67a3b",
+        "url": "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html",
+        "current_target_bp": [
+          350,
+          375
+        ],
+        "frequency": "D",
+        "clock": "Export date only; exact observation/release clock unverified",
+        "missing_buckets": "Leading/trailing unpopulated targets retained as missing; populated mass must sum to 1 within 5e-6",
+        "first": "2026-07-31",
+        "last": "2026-09-08",
+        "rows": 27,
+        "missing_numeric_cells": 837,
+        "revision_status": "historical download, not archived first release",
+        "baseline_status": "retrospective supplement acquired after information cutoff",
+        "timezone": "date labels only",
+        "available_at": null
+      },
+      "gld_holdings": {
+        "source_id": "SPDR GLD issuer archive",
+        "raw_sha256": "5b1338fed839043a40e79e407402229812958813904022576d06f69f36a0d644",
+        "url": "https://api.spdrgoldshares.com/api/v1/historical-archive?product=gld&exchange=NYSE&lang=en",
+        "retrieved_at": "2026-09-09T12:13:17Z",
+        "unit": "tonnes",
+        "frequency": "D",
+        "clock": "Issuer observation date; publication clock unknown",
+        "rights": "Issuer prohibits redistribution without prior written consent; local cache only",
+        "first": "2026-07-31",
+        "last": "2026-09-08",
+        "rows": 28,
+        "missing_numeric_cells": 1,
+        "revision_status": "historical download, not archived first release",
+        "baseline_status": "retrospective supplement acquired after information cutoff",
+        "timezone": "date labels only",
+        "available_at": null
+      }
+    },
+    "macro_manifest_sha256": "ec1c880f69d4ab482ad95cfd9731271454fb035b6fe43ca12a9e4bfa6857c161",
+    "intraday_selection_sha256": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+    "publication": "full supplemental inputs and plots local-only; derived report findings for review"
+  },
+  "unit_conventions": {
+    "rates": "levels in percent; change in percentage points, multiply by 100 for basis points",
+    "policy": "levels in percent; change in percentage points",
+    "gold": "USD/troy oz",
+    "gld_holdings": "tonnes",
+    "cot": "contracts"
+  },
+  "comparisons": {
+    "rates": [
+      {
+        "start": "2026-07-31",
+        "requested_end": "2026-08-07",
+        "end": "2026-08-07",
+        "values": {
+          "gold": {
+            "start": 4107.0,
+            "end": 4399.7001953125,
+            "change": 292.7001953125,
+            "change_pct": 7.126861341916246
+          },
+          "ust2y": {
+            "start": 4.28,
+            "end": 4.19,
+            "change": -0.08999999999999986,
+            "change_pct": -2.102803738317749
+          },
+          "ust10y": {
+            "start": 4.75,
+            "end": 4.65,
+            "change": -0.09999999999999964,
+            "change_pct": -2.1052631578947323
+          },
+          "real10y": {
+            "start": 2.47,
+            "end": 2.4,
+            "change": -0.07000000000000028,
+            "change_pct": -2.8340080971660075
+          },
+          "real5y": {
+            "start": 2.19,
+            "end": 2.13,
+            "change": -0.06000000000000005,
+            "change_pct": -2.73972602739726
+          },
+          "breakeven10y": {
+            "start": 2.28,
+            "end": 2.25,
+            "change": -0.029999999999999805,
+            "change_pct": -1.3157894736842035
+          }
+        }
+      },
+      {
+        "start": "2026-08-07",
+        "requested_end": "2026-08-18",
+        "end": "2026-08-18",
+        "values": {
+          "gold": {
+            "start": 4399.7001953125,
+            "end": 4389.5,
+            "change": -10.2001953125,
+            "change_pct": -0.23183841761235113
+          },
+          "ust2y": {
+            "start": 4.19,
+            "end": 4.19,
+            "change": 0.0,
+            "change_pct": 0.0
+          },
+          "ust10y": {
+            "start": 4.65,
+            "end": 4.71,
+            "change": 0.05999999999999961,
+            "change_pct": 1.2903225806451424
+          },
+          "real10y": {
+            "start": 2.4,
+            "end": 2.41,
+            "change": 0.010000000000000231,
+            "change_pct": 0.4166666666666874
+          },
+          "real5y": {
+            "start": 2.13,
+            "end": 2.1,
+            "change": -0.029999999999999805,
+            "change_pct": -1.4084507042253391
+          },
+          "breakeven10y": {
+            "start": 2.25,
+            "end": 2.3,
+            "change": 0.04999999999999982,
+            "change_pct": 2.2222222222222143
+          }
+        }
+      },
+      {
+        "start": "2026-08-18",
+        "requested_end": "2026-08-25",
+        "end": "2026-08-25",
+        "values": {
+          "gold": {
+            "start": 4389.5,
+            "end": 4715.89990234375,
+            "change": 326.39990234375,
+            "change_pct": 7.435924418356299
+          },
+          "ust2y": {
+            "start": 4.19,
+            "end": 4.17,
+            "change": -0.020000000000000462,
+            "change_pct": -0.4773269689737569
+          },
+          "ust10y": {
+            "start": 4.71,
+            "end": 4.64,
+            "change": -0.07000000000000028,
+            "change_pct": -1.4861995753715607
+          },
+          "real10y": {
+            "start": 2.41,
+            "end": 2.32,
+            "change": -0.0900000000000003,
+            "change_pct": -3.734439834024905
+          },
+          "real5y": {
+            "start": 2.1,
+            "end": 2.04,
+            "change": -0.06000000000000005,
+            "change_pct": -2.857142857142858
+          },
+          "breakeven10y": {
+            "start": 2.3,
+            "end": 2.32,
+            "change": 0.020000000000000018,
+            "change_pct": 0.8695652173912993
+          }
+        }
+      },
+      {
+        "start": "2026-08-25",
+        "requested_end": "2026-09-08",
+        "end": "2026-09-04",
+        "values": {
+          "gold": {
+            "start": 4715.89990234375,
+            "end": 4476.60009765625,
+            "change": -239.2998046875,
+            "change_pct": -5.074318998343685
+          },
+          "ust2y": {
+            "start": 4.17,
+            "end": 4.37,
+            "change": 0.20000000000000018,
+            "change_pct": 4.796163069544379
+          },
+          "ust10y": {
+            "start": 4.64,
+            "end": 4.78,
+            "change": 0.14000000000000057,
+            "change_pct": 3.0172413793103647
+          },
+          "real10y": {
+            "start": 2.32,
+            "end": 2.43,
+            "change": 0.11000000000000032,
+            "change_pct": 4.74137931034484
+          },
+          "real5y": {
+            "start": 2.04,
+            "end": 2.17,
+            "change": 0.1299999999999999,
+            "change_pct": 6.372549019607843
+          },
+          "breakeven10y": {
+            "start": 2.32,
+            "end": 2.35,
+            "change": 0.03000000000000025,
+            "change_pct": 1.2931034482758674
+          }
+        }
+      }
+    ],
+    "dollar": [
+      {
+        "start": "2026-07-31",
+        "requested_end": "2026-08-07",
+        "end": "2026-08-07",
+        "values": {
+          "gold": {
+            "start": 4107.0,
+            "end": 4399.7001953125,
+            "change": 292.7001953125,
+            "change_pct": 7.126861341916246
+          },
+          "dxy": {
+            "start": 99.8000030517578,
+            "end": 99.5999984741211,
+            "change": -0.20000457763670454,
+            "change_pct": -0.20040538228538463
+          },
+          "usd_broad": {
+            "start": 119.7034,
+            "end": 119.0649,
+            "change": -0.6385000000000076,
+            "change_pct": -0.533401724595961
+          }
+        }
+      },
+      {
+        "start": "2026-08-07",
+        "requested_end": "2026-08-18",
+        "end": "2026-08-18",
+        "values": {
+          "gold": {
+            "start": 4399.7001953125,
+            "end": 4389.5,
+            "change": -10.2001953125,
+            "change_pct": -0.23183841761235113
+          },
+          "dxy": {
+            "start": 99.5999984741211,
+            "end": 99.6500015258789,
+            "change": 0.0500030517578125,
+            "change_pct": 0.05020386799585719
+          },
+          "usd_broad": {
+            "start": 119.0649,
+            "end": 118.9831,
+            "change": -0.0818000000000012,
+            "change_pct": -0.06870202721372953
+          }
+        }
+      },
+      {
+        "start": "2026-08-18",
+        "requested_end": "2026-08-25",
+        "end": "2026-08-25",
+        "values": {
+          "gold": {
+            "start": 4389.5,
+            "end": 4715.89990234375,
+            "change": 326.39990234375,
+            "change_pct": 7.435924418356299
+          },
+          "dxy": {
+            "start": 99.6500015258789,
+            "end": 98.91999816894533,
+            "change": -0.7300033569335795,
+            "change_pct": -0.7325673314154457
+          },
+          "usd_broad": {
+            "start": 118.9831,
+            "end": 118.2283,
+            "change": -0.7547999999999888,
+            "change_pct": -0.634375806311982
+          }
+        }
+      },
+      {
+        "start": "2026-08-25",
+        "requested_end": "2026-09-08",
+        "end": "2026-09-04",
+        "values": {
+          "gold": {
+            "start": 4715.89990234375,
+            "end": 4476.60009765625,
+            "change": -239.2998046875,
+            "change_pct": -5.074318998343685
+          },
+          "dxy": {
+            "start": 98.91999816894533,
+            "end": 99.16000366210938,
+            "change": 0.2400054931640483,
+            "change_pct": 0.24262585686076754
+          },
+          "usd_broad": {
+            "start": 118.2283,
+            "end": 118.0732,
+            "change": -0.15510000000000446,
+            "change_pct": -0.13118686473543306
+          }
+        }
+      }
+    ],
+    "oil": [
+      {
+        "start": "2026-07-31",
+        "requested_end": "2026-08-07",
+        "end": "2026-08-07",
+        "values": {
+          "gold": {
+            "start": 4107.0,
+            "end": 4399.7001953125,
+            "change": 292.7001953125,
+            "change_pct": 7.126861341916246
+          },
+          "wti": {
+            "start": 86.16,
+            "end": 79.77,
+            "change": -6.390000000000001,
+            "change_pct": -7.416434540389972
+          },
+          "wti_futures": {
+            "start": 84.66999816894531,
+            "end": 78.18000030517578,
+            "change": -6.489997863769531,
+            "change_pct": -7.665050199741108
+          }
+        }
+      },
+      {
+        "start": "2026-08-07",
+        "requested_end": "2026-08-18",
+        "end": "2026-08-18",
+        "values": {
+          "gold": {
+            "start": 4399.7001953125,
+            "end": 4389.5,
+            "change": -10.2001953125,
+            "change_pct": -0.23183841761235113
+          },
+          "wti": {
+            "start": 79.77,
+            "end": 86.48,
+            "change": 6.710000000000008,
+            "change_pct": 8.411683590322184
+          },
+          "wti_futures": {
+            "start": 78.18000030517578,
+            "end": 84.94000244140625,
+            "change": 6.760002136230469,
+            "change_pct": 8.646715412948058
+          }
+        }
+      },
+      {
+        "start": "2026-08-18",
+        "requested_end": "2026-08-25",
+        "end": "2026-08-25",
+        "values": {
+          "gold": {
+            "start": 4389.5,
+            "end": 4715.89990234375,
+            "change": 326.39990234375,
+            "change_pct": 7.435924418356299
+          },
+          "wti": {
+            "start": 86.48,
+            "end": 83.9,
+            "change": -2.5799999999999983,
+            "change_pct": -2.983348751156334
+          },
+          "wti_futures": {
+            "start": 84.94000244140625,
+            "end": 82.36000061035156,
+            "change": -2.5800018310546875,
+            "change_pct": -3.0374402600640837
+          }
+        }
+      },
+      {
+        "start": "2026-08-25",
+        "requested_end": "2026-09-08",
+        "end": "2026-09-01",
+        "values": {
+          "gold": {
+            "start": 4715.89990234375,
+            "end": 4375.7001953125,
+            "change": -340.19970703125,
+            "change_pct": -7.213887361395743
+          },
+          "wti": {
+            "start": 83.9,
+            "end": 91.48,
+            "change": 7.579999999999998,
+            "change_pct": 9.034564958283674
+          },
+          "wti_futures": {
+            "start": 82.36000061035156,
+            "end": 90.22000122070312,
+            "change": 7.8600006103515625,
+            "change_pct": 9.543468373121478
+          }
+        }
+      }
+    ],
+    "gld": [
+      {
+        "start": "2026-07-31",
+        "requested_end": "2026-08-07",
+        "end": "2026-08-07",
+        "values": {
+          "gold": {
+            "start": 4107.0,
+            "end": 4399.7001953125,
+            "change": 292.7001953125,
+            "change_pct": 7.126861341916246
+          },
+          "gld_holdings": {
+            "start": 1007.01,
+            "end": 1017.54,
+            "change": 10.529999999999973,
+            "change_pct": 1.0456698543211962
+          }
+        }
+      },
+      {
+        "start": "2026-08-07",
+        "requested_end": "2026-08-18",
+        "end": "2026-08-18",
+        "values": {
+          "gold": {
+            "start": 4399.7001953125,
+            "end": 4389.5,
+            "change": -10.2001953125,
+            "change_pct": -0.23183841761235113
+          },
+          "gld_holdings": {
+            "start": 1017.54,
+            "end": 1025.24,
+            "change": 7.7000000000000455,
+            "change_pct": 0.7567270082748712
+          }
+        }
+      },
+      {
+        "start": "2026-08-18",
+        "requested_end": "2026-08-25",
+        "end": "2026-08-25",
+        "values": {
+          "gold": {
+            "start": 4389.5,
+            "end": 4715.89990234375,
+            "change": 326.39990234375,
+            "change_pct": 7.435924418356299
+          },
+          "gld_holdings": {
+            "start": 1025.24,
+            "end": 1048.35,
+            "change": 23.1099999999999,
+            "change_pct": 2.2541063555850283
+          }
+        }
+      },
+      {
+        "start": "2026-08-25",
+        "requested_end": "2026-09-08",
+        "end": "2026-09-08",
+        "values": {
+          "gold": {
+            "start": 4715.89990234375,
+            "end": 4400.0,
+            "change": -315.89990234375,
+            "change_pct": -6.698613390558849
+          },
+          "gld_holdings": {
+            "start": 1048.35,
+            "end": 1050.63,
+            "change": 2.2800000000002,
+            "change_pct": 0.21748461868653646
+          }
+        }
+      }
+    ],
+    "policy": [
+      {
+        "start": "2026-07-31",
+        "requested_end": "2026-08-07",
+        "end": "2026-08-07",
+        "values": {
+          "gold": {
+            "start": 4107.0,
+            "end": 4399.7001953125,
+            "change": 292.7001953125,
+            "change_pct": 7.126861341916246
+          },
+          "fedwatch_20260916": {
+            "start": 67.0,
+            "end": 44.4286,
+            "change": -22.571399999999997,
+            "change_pct": -33.68865671641791
+          },
+          "fedwatch_20261028": {
+            "start": 77.23,
+            "end": 59.1947,
+            "change": -18.035300000000007,
+            "change_pct": -23.352712676421085
+          },
+          "fedwatch_20261209": {
+            "start": 87.8729,
+            "end": 77.11880000000001,
+            "change": -10.754099999999994,
+            "change_pct": -12.238244100285744
+          }
+        }
+      },
+      {
+        "start": "2026-08-07",
+        "requested_end": "2026-08-18",
+        "end": "2026-08-18",
+        "values": {
+          "gold": {
+            "start": 4399.7001953125,
+            "end": 4389.5,
+            "change": -10.2001953125,
+            "change_pct": -0.23183841761235113
+          },
+          "fedwatch_20260916": {
+            "start": 44.4286,
+            "end": 36.0714,
+            "change": -8.357200000000006,
+            "change_pct": -18.810405909706816
+          },
+          "fedwatch_20261028": {
+            "start": 59.1947,
+            "end": 48.811499999999995,
+            "change": -10.383200000000002,
+            "change_pct": -17.540759561244514
+          },
+          "fedwatch_20261209": {
+            "start": 77.11880000000001,
+            "end": 67.9218,
+            "change": -9.197000000000003,
+            "change_pct": -11.925756106163476
+          }
+        }
+      },
+      {
+        "start": "2026-08-18",
+        "requested_end": "2026-08-25",
+        "end": "2026-08-25",
+        "values": {
+          "gold": {
+            "start": 4389.5,
+            "end": 4715.89990234375,
+            "change": 326.39990234375,
+            "change_pct": 7.435924418356299
+          },
+          "fedwatch_20260916": {
+            "start": 36.0714,
+            "end": 39.6429,
+            "change": 3.5715000000000003,
+            "change_pct": 9.901195961343333
+          },
+          "fedwatch_20261028": {
+            "start": 48.811499999999995,
+            "end": 54.3442,
+            "change": 5.5327000000000055,
+            "change_pct": 11.33482888253794
+          },
+          "fedwatch_20261209": {
+            "start": 67.9218,
+            "end": 72.4374,
+            "change": 4.515599999999992,
+            "change_pct": 6.648233704053763
+          }
+        }
+      },
+      {
+        "start": "2026-08-25",
+        "requested_end": "2026-09-08",
+        "end": "2026-09-08",
+        "values": {
+          "gold": {
+            "start": 4715.89990234375,
+            "end": 4400.0,
+            "change": -315.89990234375,
+            "change_pct": -6.698613390558849
+          },
+          "fedwatch_20260916": {
+            "start": 39.6429,
+            "end": 59.4286,
+            "change": 19.785700000000006,
+            "change_pct": 49.90981991731183
+          },
+          "fedwatch_20261028": {
+            "start": 54.3442,
+            "end": 70.209,
+            "change": 15.864800000000002,
+            "change_pct": 29.19317976895419
+          },
+          "fedwatch_20261209": {
+            "start": 72.4374,
+            "end": 86.51679999999999,
+            "change": 14.079399999999993,
+            "change_pct": 19.436644606239305
+          }
+        }
+      }
+    ]
+  },
+  "rate_decomposition_max_residual_bp": 4.440892098500626e-14,
+  "levels": {
+    "2026-07-31T00:00:00.000": {
+      "gold": 4107.0,
+      "ust2y": 4.28,
+      "ust10y": 4.75,
+      "real10y": 2.47,
+      "real5y": 2.19,
+      "breakeven10y": 2.28,
+      "usd_broad": 119.7034,
+      "wti": 86.16,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 99.8000030518,
+      "wti_futures": 84.6699981689,
+      "fedwatch_20260916": 67.0,
+      "fedwatch_20261028": 77.23,
+      "fedwatch_20261209": 87.8729,
+      "gld_holdings": 1007.01
+    },
+    "2026-08-07T00:00:00.000": {
+      "gold": 4399.7001953125,
+      "ust2y": 4.19,
+      "ust10y": 4.65,
+      "real10y": 2.4,
+      "real5y": 2.13,
+      "breakeven10y": 2.25,
+      "usd_broad": 119.0649,
+      "wti": 79.77,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 99.5999984741,
+      "wti_futures": 78.1800003052,
+      "fedwatch_20260916": 44.4286,
+      "fedwatch_20261028": 59.1947,
+      "fedwatch_20261209": 77.1188,
+      "gld_holdings": 1017.54
+    },
+    "2026-08-18T00:00:00.000": {
+      "gold": 4389.5,
+      "ust2y": 4.19,
+      "ust10y": 4.71,
+      "real10y": 2.41,
+      "real5y": 2.1,
+      "breakeven10y": 2.3,
+      "usd_broad": 118.9831,
+      "wti": 86.48,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 99.6500015259,
+      "wti_futures": 84.9400024414,
+      "fedwatch_20260916": 36.0714,
+      "fedwatch_20261028": 48.8115,
+      "fedwatch_20261209": 67.9218,
+      "gld_holdings": 1025.24
+    },
+    "2026-08-25T00:00:00.000": {
+      "gold": 4715.8999023438,
+      "ust2y": 4.17,
+      "ust10y": 4.64,
+      "real10y": 2.32,
+      "real5y": 2.04,
+      "breakeven10y": 2.32,
+      "usd_broad": 118.2283,
+      "wti": 83.9,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 98.9199981689,
+      "wti_futures": 82.3600006104,
+      "fedwatch_20260916": 39.6429,
+      "fedwatch_20261028": 54.3442,
+      "fedwatch_20261209": 72.4374,
+      "gld_holdings": 1048.35
+    },
+    "2026-09-01T00:00:00.000": {
+      "gold": 4375.7001953125,
+      "ust2y": 4.39,
+      "ust10y": 4.79,
+      "real10y": 2.44,
+      "real5y": 2.18,
+      "breakeven10y": 2.35,
+      "usd_broad": 118.6568,
+      "wti": 91.48,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 99.6699981689,
+      "wti_futures": 90.2200012207,
+      "fedwatch_20260916": 67.2143,
+      "fedwatch_20261028": 76.6519,
+      "fedwatch_20261209": 91.3006,
+      "gld_holdings": 1046.64
+    },
+    "2026-09-04T00:00:00.000": {
+      "gold": 4476.6000976562,
+      "ust2y": 4.37,
+      "ust10y": 4.78,
+      "real10y": 2.43,
+      "real5y": 2.17,
+      "breakeven10y": 2.35,
+      "usd_broad": 118.0732,
+      "wti": null,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 99.1600036621,
+      "wti_futures": 91.4800033569,
+      "fedwatch_20260916": 59.4286,
+      "fedwatch_20261028": 70.209,
+      "fedwatch_20261209": 86.0093,
+      "gld_holdings": 1052.06
+    },
+    "2026-09-08T00:00:00.000": {
+      "gold": 4400.0,
+      "ust2y": null,
+      "ust10y": null,
+      "real10y": null,
+      "real5y": null,
+      "breakeven10y": 2.37,
+      "usd_broad": null,
+      "wti": null,
+      "ffr_target_lower": 3.5,
+      "ffr_target_upper": 3.75,
+      "dxy": 98.8399963379,
+      "wti_futures": 93.0299987793,
+      "fedwatch_20260916": 59.4286,
+      "fedwatch_20261028": 70.209,
+      "fedwatch_20261209": 86.5168,
+      "gld_holdings": 1050.63
+    }
+  },
+  "cot": [
+    {
+      "date": "2026-07-28",
+      "value": 119795,
+      "managed_money_long": 135093,
+      "managed_money_short": 15298,
+      "managed_money_spreading": 18384,
+      "open_interest": 384603,
+      "available_at": "2026-07-31T15:30:00-04:00",
+      "known_by_at": null,
+      "vintage_date": null,
+      "long_change": null,
+      "short_contribution": null,
+      "net_change": null
+    },
+    {
+      "date": "2026-08-04",
+      "value": 130766,
+      "managed_money_long": 139809,
+      "managed_money_short": 9043,
+      "managed_money_spreading": 17502,
+      "open_interest": 371551,
+      "available_at": "2026-08-07T15:30:00-04:00",
+      "known_by_at": null,
+      "vintage_date": null,
+      "long_change": 4716.0,
+      "short_contribution": 6255.0,
+      "net_change": 10971.0
+    },
+    {
+      "date": "2026-08-11",
+      "value": 137662,
+      "managed_money_long": 148634,
+      "managed_money_short": 10972,
+      "managed_money_spreading": 14003,
+      "open_interest": 400309,
+      "available_at": "2026-08-14T15:30:00-04:00",
+      "known_by_at": null,
+      "vintage_date": null,
+      "long_change": 8825.0,
+      "short_contribution": -1929.0,
+      "net_change": 6896.0
+    },
+    {
+      "date": "2026-08-18",
+      "value": 141648,
+      "managed_money_long": 154595,
+      "managed_money_short": 12947,
+      "managed_money_spreading": 15591,
+      "open_interest": 406260,
+      "available_at": "2026-08-21T15:30:00-04:00",
+      "known_by_at": null,
+      "vintage_date": null,
+      "long_change": 5961.0,
+      "short_contribution": -1975.0,
+      "net_change": 3986.0
+    },
+    {
+      "date": "2026-08-25",
+      "value": 144747,
+      "managed_money_long": 159819,
+      "managed_money_short": 15072,
+      "managed_money_spreading": 16251,
+      "open_interest": 427957,
+      "available_at": "2026-08-28T15:30:00-04:00",
+      "known_by_at": null,
+      "vintage_date": null,
+      "long_change": 5224.0,
+      "short_contribution": -2125.0,
+      "net_change": 3099.0
+    },
+    {
+      "date": "2026-09-01",
+      "value": 136771,
+      "managed_money_long": 149721,
+      "managed_money_short": 12950,
+      "managed_money_spreading": 27264,
+      "open_interest": 415196,
+      "available_at": "2026-09-04T15:30:00-04:00",
+      "known_by_at": null,
+      "vintage_date": null,
+      "long_change": -10098.0,
+      "short_contribution": 2122.0,
+      "net_change": -7976.0
+    }
+  ],
+  "limits": [
+    "Observation-date comparisons; different market close clocks.",
+    "COT filtered by release time; historical archive can contain later revisions.",
+    "Supplemental historical downloads are not first-release vintages.",
+    "No interpolation, contribution attribution or causal regression."
+  ],
+  "charts": [
+    {
+      "file": "dollar-energy.json",
+      "sha256": "1094a81dc2358639202f84d2cd5ae1eddaaeb23850bef930b7ea1b9c960920ee",
+      "traces": 4
+    },
+    {
+      "file": "holdings-positioning.json",
+      "sha256": "b65c33a4c2abde081f2fa708a011684e54cd8fa6def8717e10b1ca9e675314ae",
+      "traces": 4
+    },
+    {
+      "file": "rates-policy.json",
+      "sha256": "98fe4d16c2375ad77f3f6d0714b9c96c26e21563b8c4df7bba57009854df580b",
+      "traces": 6
+    }
+  ]
+}

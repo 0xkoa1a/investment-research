@@ -1,0 +1,64 @@
+{
+  "phase": 5,
+  "checked_at": "2026-09-11T11:18:10+00:00",
+  "reviews": [
+    {
+      "group": "July and August employment",
+      "sources": [
+        "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
+        "https://www.bls.gov/news.release/archives/empsit_09042026.htm"
+      ],
+      "review": "Current official archived releases agree with saved actual payrolls, unemployment, May/June/July revisions and release dates."
+    },
+    {
+      "group": "July CPI and PCE",
+      "sources": [
+        "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
+        "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026"
+      ],
+      "review": "Current official archives agree with headline/core monthly changes and June prior values; no missing consensus invented."
+    },
+    {
+      "group": "Policy and Treasury chronology",
+      "sources": [
+        "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm",
+        "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+        "https://home.treasury.gov/news/press-releases/sb0607"
+      ],
+      "review": "Rechecked policy target/dissent, conditional tightening, broad financial conditions, and Treasury announcement/effective dates. Precise Treasury release clock remains unknown."
+    },
+    {
+      "group": "August PPI, global ETFs and Sep 10 policy pricing",
+      "sources": [
+        "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
+        "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+        "https://www.marketscreener.com/news/gold-falls-over-1-as-u-s-inflation-data-boosts-fed-hike-bets-ce785bdede89f725"
+      ],
+      "review": "Rechecked PPI actual/prior revision, WGC monthly flow/tonnage and dated Reuters approximate 70% quotation. No precise difference between news quote and original CSV."
+    },
+    {
+      "group": "Forward calendar",
+      "sources": [
+        "https://www.bls.gov/schedule/news_release/cpi.htm",
+        "https://www.bls.gov/schedule/news_release/empsit.htm",
+        "https://www.bea.gov/news/schedule/full",
+        "https://www.federalreserve.gov/newsevents/2026-september.htm",
+        "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm"
+      ],
+      "review": "Cross-checked release dates and September Fed/CFTC times; Beijing conversions tested including November daylight saving transition. No new actual releases added."
+    },
+    {
+      "group": "Remaining historical news, instrument and rights sources",
+      "review": "Compared citation roles against pinned Phase 0-4 source records. Descriptions of investor views remain qualitative rather than consensus. Historical news prices are not substituted for GCZ26 endpoints. Commercial redistribution conditions remain unresolved."
+    }
+  ],
+  "causal_review": [
+    "Policy explanations distinguish contemporaneous levels from release-time reactions.",
+    "August 19 rally precedes minutes; Treasury interpretation retained with uncertain exact announcement time.",
+    "August 28 temporal and cross-market evidence supports policy repricing without a numerical contribution claim.",
+    "August 31 conflict and prior Friday speech overlap; flat 2y and falling DXY retained.",
+    "September 9 positive gold/yield co-movement is retained.",
+    "ETF holdings changes are not dollar flows; gold returns are contract quote changes, not leveraged investment returns.",
+    "Forward scenarios have observable conditions, no assigned scenario probabilities, price targets or trading instructions."
+  ]
+}

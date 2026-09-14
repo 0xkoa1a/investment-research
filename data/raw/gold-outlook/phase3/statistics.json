@@ -1,0 +1,882 @@
+{
+  "phase": 3,
+  "inputs": {
+    "selection_sha256": "18f789e6d4d099cc4396ba0b575a8c7b833c46cac3191b5e4c33daa8ae288ac9",
+    "phase": 3,
+    "information_cutoff_at": "2026-09-09T11:59:46Z",
+    "sample_end": "2026-09-08T17:00:00-04:00",
+    "files": {
+      "data/raw/gold-outlook/phase1/intraday-input.json": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+      "data/raw/gold-outlook/phase1/events.json": "38ef3362b60791c93d3bf6cb26115d5403c4fc5fb7237fc16106d844c314d865",
+      "data/raw/gold-outlook/phase2/inputs.json": "0684fd6dbdc259cfb172f753ccdadecc8f19dc4b2ef45d637b04f5ea06dd106b",
+      "data/raw/gold-outlook/phase2/evidence.json": "468cf1d6e014a4e49a3c2a5db85ad420e79a4da8dd3bb2744eed94db37d8dd5f",
+      "data/raw/gold-outlook/phase3/evidence.json": "e618e779fb3c64c9b4746c7e51bb2c138dc5b608ead03d50efcc00358d453ed3"
+    },
+    "note": "Underlying price and macro/supplement snapshots are independently verified by load_intraday and load_drivers; Phase 3 pins their selection records. No new market observations."
+  },
+  "cases": [
+    {
+      "id": "aug19",
+      "label": "8/19：纪要与财政部公告",
+      "date": "2026-08-19",
+      "baseline": {
+        "date": "2026-08-18",
+        "bar_end": "2026-08-18T17:00:00-04:00",
+        "close": 4389.5,
+        "status": "observed"
+      },
+      "windows": [
+        {
+          "horizon": 0,
+          "date": "2026-08-19",
+          "bar_end": "2026-08-19T17:00:00-04:00",
+          "close": 4580.7001953125,
+          "status": "observed",
+          "change_pct": 4.355853635095119
+        },
+        {
+          "horizon": 1,
+          "date": "2026-08-20",
+          "bar_end": "2026-08-20T17:00:00-04:00",
+          "close": 4575.10009765625,
+          "status": "observed",
+          "change_pct": 4.228274237527052
+        },
+        {
+          "horizon": 3,
+          "date": "2026-08-24",
+          "bar_end": "2026-08-24T17:00:00-04:00",
+          "close": 4710.0,
+          "status": "observed",
+          "change_pct": 7.301514978926993
+        },
+        {
+          "horizon": 5,
+          "date": "2026-08-26",
+          "bar_end": "2026-08-26T17:00:00-04:00",
+          "close": 4647.7998046875,
+          "status": "observed",
+          "change_pct": 5.884492645802486
+        }
+      ],
+      "drivers": {
+        "ust2y": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-19",
+            "start": 4.19,
+            "end": 4.19,
+            "change": 0.0,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-20",
+            "start": 4.19,
+            "end": 4.19,
+            "change": 0.0,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-24",
+            "start": 4.19,
+            "end": 4.24,
+            "change": 4.999999999999982,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-26",
+            "start": 4.19,
+            "end": 4.19,
+            "change": 0.0,
+            "unit": "bp",
+            "status": "observed"
+          }
+        ],
+        "real10y": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-19",
+            "start": 2.41,
+            "end": 2.35,
+            "change": -6.000000000000005,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-20",
+            "start": 2.41,
+            "end": 2.35,
+            "change": -6.000000000000005,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-24",
+            "start": 2.41,
+            "end": 2.38,
+            "change": -3.000000000000025,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-26",
+            "start": 2.41,
+            "end": 2.34,
+            "change": -7.000000000000028,
+            "unit": "bp",
+            "status": "observed"
+          }
+        ],
+        "dxy": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-19",
+            "start": 99.6500015258789,
+            "end": 98.83000183105467,
+            "change": -0.822879761433104,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-20",
+            "start": 99.6500015258789,
+            "end": 98.9000015258789,
+            "change": -0.7526342082445736,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-24",
+            "start": 99.6500015258789,
+            "end": 99.0,
+            "change": -0.6522845117168385,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-26",
+            "start": 99.6500015258789,
+            "end": 99.16999816894533,
+            "change": -0.48168926200058415,
+            "unit": "percent",
+            "status": "observed"
+          }
+        ],
+        "wti_futures": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-19",
+            "start": 84.94000244140625,
+            "end": 85.83000183105469,
+            "change": 1.0477976972774083,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-20",
+            "start": 84.94000244140625,
+            "end": 87.83000183105469,
+            "change": 3.4024008789522053,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-24",
+            "start": 84.94000244140625,
+            "end": 85.01000213623047,
+            "change": 0.08241075207469084,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-26",
+            "start": 84.94000244140625,
+            "end": 82.2300033569336,
+            "change": -3.1904862333175465,
+            "unit": "percent",
+            "status": "observed"
+          }
+        ],
+        "fedwatch_20260916": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-19",
+            "start": 36.0714,
+            "end": 33.071400000000004,
+            "change": -2.999999999999993,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-20",
+            "start": 36.0714,
+            "end": 36.0714,
+            "change": 0.0,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-24",
+            "start": 36.0714,
+            "end": 41.4286,
+            "change": 5.357200000000006,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-18",
+            "end_date": "2026-08-26",
+            "start": 36.0714,
+            "end": 36.6429,
+            "change": 0.5715000000000003,
+            "unit": "percentage_points",
+            "status": "observed"
+          }
+        ]
+      },
+      "intraday": {
+        "released_at": "2026-08-19T14:00:00-04:00",
+        "before": {
+          "bar_end": "2026-08-19T13:55:00-04:00",
+          "close": 4544.10009765625,
+          "status": "observed",
+          "change_from_previous_close_pct": 3.5220434595341077
+        },
+        "after": [
+          {
+            "minutes_after_release": 5,
+            "bar_end": "2026-08-19T14:05:00-04:00",
+            "close": 4553.7998046875,
+            "status": "observed",
+            "change_from_before_pct": 0.21345716033529527
+          },
+          {
+            "minutes_after_release": 30,
+            "bar_end": "2026-08-19T14:30:00-04:00",
+            "close": 4533.7998046875,
+            "status": "observed",
+            "change_from_before_pct": -0.2266739892913594
+          },
+          {
+            "minutes_after_release": 60,
+            "bar_end": "2026-08-19T15:00:00-04:00",
+            "close": 4553.2998046875,
+            "status": "observed",
+            "change_from_before_pct": 0.20245388159461086
+          }
+        ],
+        "day_close": {
+          "bar_end": "2026-08-19T17:00:00-04:00",
+          "close": 4580.7001953125,
+          "status": "observed",
+          "change_from_before_pct": 0.805442152894642
+        },
+        "chart_missing_bar_ends": []
+      }
+    },
+    {
+      "id": "aug28",
+      "label": "8/28：Warsh讲话",
+      "date": "2026-08-28",
+      "baseline": {
+        "date": "2026-08-27",
+        "bar_end": "2026-08-27T17:00:00-04:00",
+        "close": 4654.7998046875,
+        "status": "observed"
+      },
+      "windows": [
+        {
+          "horizon": 0,
+          "date": "2026-08-28",
+          "bar_end": "2026-08-28T17:00:00-04:00",
+          "close": 4529.89990234375,
+          "status": "observed",
+          "change_pct": -2.6832497117915244
+        },
+        {
+          "horizon": 1,
+          "date": "2026-08-31",
+          "bar_end": "2026-08-31T17:00:00-04:00",
+          "close": 4497.2998046875,
+          "status": "observed",
+          "change_pct": -3.3836041636289838
+        },
+        {
+          "horizon": 3,
+          "date": "2026-09-02",
+          "bar_end": "2026-09-02T17:00:00-04:00",
+          "close": 4434.2998046875,
+          "status": "observed",
+          "change_pct": -4.737045829080577
+        },
+        {
+          "horizon": 5,
+          "date": "2026-09-04",
+          "bar_end": "2026-09-04T17:00:00-04:00",
+          "close": 4476.60009765625,
+          "status": "observed",
+          "change_pct": -3.8283001312279463
+        }
+      ],
+      "drivers": {
+        "ust2y": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-28",
+            "start": 4.2,
+            "end": 4.34,
+            "change": 13.999999999999968,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-31",
+            "start": 4.2,
+            "end": 4.34,
+            "change": 13.999999999999968,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-02",
+            "start": 4.2,
+            "end": 4.39,
+            "change": 18.99999999999995,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-04",
+            "start": 4.2,
+            "end": 4.37,
+            "change": 16.999999999999993,
+            "unit": "bp",
+            "status": "observed"
+          }
+        ],
+        "real10y": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-28",
+            "start": 2.34,
+            "end": 2.42,
+            "change": 8.000000000000007,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-31",
+            "start": 2.34,
+            "end": 2.44,
+            "change": 10.000000000000009,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-02",
+            "start": 2.34,
+            "end": 2.45,
+            "change": 11.000000000000032,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-04",
+            "start": 2.34,
+            "end": 2.43,
+            "change": 9.00000000000003,
+            "unit": "bp",
+            "status": "observed"
+          }
+        ],
+        "dxy": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-28",
+            "start": 99.16000366210938,
+            "end": 99.6999969482422,
+            "change": 0.5445676343184491,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-31",
+            "start": 99.16000366210938,
+            "end": 99.43000030517578,
+            "change": 0.27228381715920236,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-02",
+            "start": 99.16000366210938,
+            "end": 99.55999755859376,
+            "change": 0.4033822929730535,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-04",
+            "start": 99.16000366210938,
+            "end": 99.16000366210938,
+            "change": 0.0,
+            "unit": "percent",
+            "status": "observed"
+          }
+        ],
+        "wti_futures": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-28",
+            "start": 83.52999877929688,
+            "end": 83.4000015258789,
+            "change": -0.15562942094785592,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-31",
+            "start": 83.52999877929688,
+            "end": 85.76000213623047,
+            "change": 2.669703567009152,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-02",
+            "start": 83.52999877929688,
+            "end": 91.01000213623048,
+            "change": 8.954870664726444,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-04",
+            "start": 83.52999877929688,
+            "end": 91.4800033569336,
+            "change": 9.517544228202656,
+            "unit": "percent",
+            "status": "observed"
+          }
+        ],
+        "fedwatch_20260916": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-28",
+            "start": 35.428599999999996,
+            "end": 56.99999999999999,
+            "change": 21.571399999999997,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-27",
+            "end_date": "2026-08-31",
+            "start": 35.428599999999996,
+            "end": 65.4286,
+            "change": 30.000000000000007,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-02",
+            "start": 35.428599999999996,
+            "end": 63.2143,
+            "change": 27.785700000000006,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-27",
+            "end_date": "2026-09-04",
+            "start": 35.428599999999996,
+            "end": 59.4286,
+            "change": 24.000000000000007,
+            "unit": "percentage_points",
+            "status": "observed"
+          }
+        ]
+      },
+      "intraday": {
+        "released_at": "2026-08-28T10:00:00-04:00",
+        "before": {
+          "bar_end": "2026-08-28T09:55:00-04:00",
+          "close": 4662.7001953125,
+          "status": "observed",
+          "change_from_previous_close_pct": 0.16972568008282174
+        },
+        "after": [
+          {
+            "minutes_after_release": 5,
+            "bar_end": "2026-08-28T10:05:00-04:00",
+            "close": 4630.10009765625,
+            "status": "observed",
+            "change_from_before_pct": -0.699167784560184
+          },
+          {
+            "minutes_after_release": 30,
+            "bar_end": "2026-08-28T10:30:00-04:00",
+            "close": 4603.2001953125,
+            "status": "observed",
+            "change_from_before_pct": -1.2760846185181807
+          },
+          {
+            "minutes_after_release": 60,
+            "bar_end": "2026-08-28T11:00:00-04:00",
+            "close": 4629.0,
+            "status": "observed",
+            "change_from_before_pct": -0.7227613593166371
+          }
+        ],
+        "day_close": {
+          "bar_end": "2026-08-28T17:00:00-04:00",
+          "close": 4529.89990234375,
+          "status": "observed",
+          "change_from_before_pct": -2.8481413645736087
+        },
+        "chart_missing_bar_ends": []
+      }
+    },
+    {
+      "id": "aug31",
+      "label": "8/31：周末风险后的首个日终",
+      "date": "2026-08-31",
+      "baseline": {
+        "date": "2026-08-28",
+        "bar_end": "2026-08-28T17:00:00-04:00",
+        "close": 4529.89990234375,
+        "status": "observed"
+      },
+      "windows": [
+        {
+          "horizon": 0,
+          "date": "2026-08-31",
+          "bar_end": "2026-08-31T17:00:00-04:00",
+          "close": 4497.2998046875,
+          "status": "observed",
+          "change_pct": -0.7196648570398367
+        },
+        {
+          "horizon": 1,
+          "date": "2026-09-01",
+          "bar_end": "2026-09-01T17:00:00-04:00",
+          "close": 4375.7001953125,
+          "status": "observed",
+          "change_pct": -3.404042260436435
+        },
+        {
+          "horizon": 3,
+          "date": "2026-09-03",
+          "bar_end": "2026-09-03T17:00:00-04:00",
+          "close": 4520.0,
+          "status": "observed",
+          "change_pct": -0.21854571971067216
+        },
+        {
+          "horizon": 5,
+          "date": "2026-09-08",
+          "bar_end": "2026-09-08T17:00:00-04:00",
+          "close": 4400.0,
+          "status": "observed",
+          "change_pct": -2.867610877594451
+        }
+      ],
+      "drivers": {
+        "ust2y": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-28",
+            "end_date": "2026-08-31",
+            "start": 4.34,
+            "end": 4.34,
+            "change": 0.0,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-01",
+            "start": 4.34,
+            "end": 4.39,
+            "change": 4.999999999999982,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-03",
+            "start": 4.34,
+            "end": 4.34,
+            "change": 0.0,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-08",
+            "start": 4.34,
+            "end": null,
+            "change": null,
+            "unit": "bp",
+            "status": "missing_endpoint"
+          }
+        ],
+        "real10y": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-28",
+            "end_date": "2026-08-31",
+            "start": 2.42,
+            "end": 2.44,
+            "change": 2.0000000000000018,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-01",
+            "start": 2.42,
+            "end": 2.44,
+            "change": 2.0000000000000018,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-03",
+            "start": 2.42,
+            "end": 2.42,
+            "change": 0.0,
+            "unit": "bp",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-08",
+            "start": 2.42,
+            "end": null,
+            "change": null,
+            "unit": "bp",
+            "status": "missing_endpoint"
+          }
+        ],
+        "dxy": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-28",
+            "end_date": "2026-08-31",
+            "start": 99.6999969482422,
+            "end": 99.43000030517578,
+            "change": -0.27080907856655845,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-01",
+            "start": 99.6999969482422,
+            "end": 99.66999816894533,
+            "change": -0.030089047357195753,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-03",
+            "start": 99.6999969482422,
+            "end": 99.0,
+            "change": -0.7021032795072157,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-08",
+            "start": 99.6999969482422,
+            "end": 98.83999633789062,
+            "change": -0.8625884018813257,
+            "unit": "percent",
+            "status": "observed"
+          }
+        ],
+        "wti_futures": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-28",
+            "end_date": "2026-08-31",
+            "start": 83.4000015258789,
+            "end": 85.76000213623047,
+            "change": 2.8297368910949583,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-01",
+            "start": 83.4000015258789,
+            "end": 90.22000122070312,
+            "change": 8.17745751804091,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-03",
+            "start": 83.4000015258789,
+            "end": 91.3000030517578,
+            "change": 9.472423718634504,
+            "unit": "percent",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-08",
+            "start": 83.4000015258789,
+            "end": 93.02999877929688,
+            "change": 11.546759085405768,
+            "unit": "percent",
+            "status": "observed"
+          }
+        ],
+        "fedwatch_20260916": [
+          {
+            "horizon": 0,
+            "start_date": "2026-08-28",
+            "end_date": "2026-08-31",
+            "start": 56.99999999999999,
+            "end": 65.4286,
+            "change": 8.42860000000001,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 1,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-01",
+            "start": 56.99999999999999,
+            "end": 67.21430000000001,
+            "change": 10.214300000000016,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 3,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-03",
+            "start": 56.99999999999999,
+            "end": 49.4286,
+            "change": -7.57139999999999,
+            "unit": "percentage_points",
+            "status": "observed"
+          },
+          {
+            "horizon": 5,
+            "start_date": "2026-08-28",
+            "end_date": "2026-09-08",
+            "start": 56.99999999999999,
+            "end": 59.4286,
+            "change": 2.42860000000001,
+            "unit": "percentage_points",
+            "status": "observed"
+          }
+        ]
+      }
+    }
+  ],
+  "weekend": {
+    "first_observed_bar_end": "2026-08-30T18:15:00-04:00",
+    "first_observed_close": 4509.2001953125,
+    "change_from_friday_close_pct": -0.4569572722907256,
+    "not_opening_quote": true
+  },
+  "method": "Cumulative return from prior session 17:00 Close; no filling or calendar shifts for missing prices. Drivers retain their source dates; multi-day windows include later news.",
+  "charts": [
+    {
+      "file": "event-intraday.json",
+      "sha256": "1d1f5cde6470e210f693a50c84ee3133e5ae6b18ca0a7dd98bc11b90fc1ea7bb",
+      "traces": 2
+    }
+  ]
+}

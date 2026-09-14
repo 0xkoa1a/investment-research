@@ -1,0 +1,13 @@
+{
+  "phase": 3,
+  "information_cutoff_at": "2026-09-09T11:59:46Z",
+  "sample_end": "2026-09-08T17:00:00-04:00",
+  "files": {
+    "data/raw/gold-outlook/phase1/intraday-input.json": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+    "data/raw/gold-outlook/phase1/events.json": "38ef3362b60791c93d3bf6cb26115d5403c4fc5fb7237fc16106d844c314d865",
+    "data/raw/gold-outlook/phase2/inputs.json": "0684fd6dbdc259cfb172f753ccdadecc8f19dc4b2ef45d637b04f5ea06dd106b",
+    "data/raw/gold-outlook/phase2/evidence.json": "468cf1d6e014a4e49a3c2a5db85ad420e79a4da8dd3bb2744eed94db37d8dd5f",
+    "data/raw/gold-outlook/phase3/evidence.json": "e618e779fb3c64c9b4746c7e51bb2c138dc5b608ead03d50efcc00358d453ed3"
+  },
+  "note": "Underlying price and macro/supplement snapshots are independently verified by load_intraday and load_drivers; Phase 3 pins their selection records. No new market observations."
+}

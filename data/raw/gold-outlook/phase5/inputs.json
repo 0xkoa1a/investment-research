@@ -1,0 +1,21 @@
+{
+  "phase": 5,
+  "information_cutoff_at": "2026-09-11T10:28:05Z",
+  "sample_end": "2026-09-10T17:00:00-04:00",
+  "historical_sample_end": "2026-09-08T17:00:00-04:00",
+  "files": {
+    "data/raw/gold-outlook/phase1/statistics.json": "617f0bcc03c407d3ff2d7c8d02c7e350c9e30c8adb4b843930c26f446eb2efa5",
+    "data/raw/gold-outlook/phase2/statistics.json": "6db507c695e0da8ce7dbec3d6f1886e8509c18acfab188fcdf8ba688e0735640",
+    "data/raw/gold-outlook/phase3/statistics.json": "3971bfce6d1ba7880c5cbf1eab6ca11d2d259570cb67ab13b0ec546aae9b9b21",
+    "data/raw/gold-outlook/phase4/statistics.json": "de0a084e2886b4542489041b53bcbe7db75a8ceab8901f6281fdba51ae19b13d",
+    "data/raw/gold-outlook/phase1/intraday-input.json": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+    "data/raw/gold-outlook/phase1/events.json": "38ef3362b60791c93d3bf6cb26115d5403c4fc5fb7237fc16106d844c314d865",
+    "data/raw/gold-outlook/phase2/inputs.json": "0684fd6dbdc259cfb172f753ccdadecc8f19dc4b2ef45d637b04f5ea06dd106b",
+    "data/raw/gold-outlook/phase2/evidence.json": "468cf1d6e014a4e49a3c2a5db85ad420e79a4da8dd3bb2744eed94db37d8dd5f",
+    "data/raw/gold-outlook/phase3/inputs.json": "18f789e6d4d099cc4396ba0b575a8c7b833c46cac3191b5e4c33daa8ae288ac9",
+    "data/raw/gold-outlook/phase3/evidence.json": "e618e779fb3c64c9b4746c7e51bb2c138dc5b608ead03d50efcc00358d453ed3",
+    "data/raw/gold-outlook/phase4/inputs.json": "011bbe711faed1be02c170dfad7a804f1c37b0cd001fb6b2d005e498d0a9178e",
+    "data/raw/gold-outlook/phase4/evidence.json": "dc8789652f18bd9d67e0c3ca8c548ace8aec12af162ff076755d15f20ec8751c"
+  },
+  "note": "Integration pins the existing four phases. No additional market observations or future event outcomes imported."
+}

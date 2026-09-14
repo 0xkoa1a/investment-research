@@ -1,0 +1,213 @@
+{
+  "phase": 2,
+  "authorized_on": "2026-09-11",
+  "authorized_by": "用户明确回复：进入下阶段",
+  "prior_phase_accepted_for_progression": 1,
+  "status": "accepted_for_progression",
+  "next_phase_authorized": true,
+  "report": "content/research/gold-outlook.md",
+  "input_selection": "phase2/inputs.json",
+  "sample_end": "2026-09-08",
+  "chart_delivery": "local_only_pending_redistribution_review",
+  "chart_contracts": [
+    {
+      "id": "rates-policy",
+      "question": "金价与实际收益率在同一日期是否反向变化？",
+      "form": "two panels; top overlays daily 17:00 New York GCZ26 gold prices on left axis and FRED yield changes on right axis; bottom meeting probabilities",
+      "limit": "Price axis upright; user-requested inverted rate axis, labelled in axis title and caption. Price USD/troy oz; original signed rate changes from July 31 in bp. Source dates differ; no intraday causal ordering.",
+      "default_visible": "gold and 10y real yield; 2y nominal and breakeven selectable in legend",
+      "palette": "gold solid price; blue dashed real yield; neutral optional rates"
+    },
+    {
+      "id": "dollar-energy",
+      "question": "美元与能源是否能解释上涨及回落，存在哪些反例？",
+      "form": "two panels; two dollar baskets indexed at July 31; WTI spot and futures levels kept separate",
+      "limit": "Different instruments and close clocks; source-specific endpoints, no splice or forward fill."
+    },
+    {
+      "id": "holdings-positioning",
+      "question": "ETF实物增持与期货净多头变化是否一致？",
+      "form": "daily GLD tonnes; five weekly stacked signed changes with net markers",
+      "limit": "Five weekly observations are the full available focus sample; no interpolation to daily frequency."
+    }
+  ],
+  "review_decisions": [
+    "Keep two Phase 1 charts; add three driver figures, each with one question. No extra monthly ETF figure from one month.",
+    "Use mechanism, directional tests and counterexamples; no regression or contribution estimates with this short sample.",
+    "Current policy is 3.50–3.75%; distinguish target-level probabilities from actions at a later meeting.",
+    "Explicitly retain Aug 18–25 gold rally despite a rising September hike probability.",
+    "Separate historical-source acquisition from publication; classify WGC September 9 date-only report as supplemental.",
+    "Phase 3 candidates: Aug 19 rally; Aug 28 decline; Aug 31 oil-up/gold-down. Event windows not yet executed.",
+    "User requested same-plot gold/rate comparison; retained original frozen inputs and statistics, daily gold sampled at exactly 17:00 New York, no fill. Mobile legend shortened to two columns.",
+    "User requested the right-hand interest-rate axis to be reversed; falling rates now plot upward. Original values and signs remain unchanged."
+  ],
+  "coverage": {
+    "ust2y": {
+      "rows": 26,
+      "latest_observation": "2026-09-04"
+    },
+    "ust10y": {
+      "rows": 26,
+      "latest_observation": "2026-09-04"
+    },
+    "real10y": {
+      "rows": 26,
+      "latest_observation": "2026-09-04"
+    },
+    "real5y": {
+      "rows": 26,
+      "latest_observation": "2026-09-04"
+    },
+    "breakeven10y": {
+      "rows": 28,
+      "latest_observation": "2026-09-08"
+    },
+    "usd_broad": {
+      "rows": 26,
+      "latest_observation": "2026-09-04"
+    },
+    "wti": {
+      "rows": 23,
+      "latest_observation": "2026-09-01"
+    },
+    "ffr_target_lower": {
+      "rows": 40,
+      "latest_observation": "2026-09-08"
+    },
+    "ffr_target_upper": {
+      "rows": 40,
+      "latest_observation": "2026-09-08"
+    },
+    "dxy": {
+      "rows": 27,
+      "latest_observation": "2026-09-08"
+    },
+    "wti_futures": {
+      "rows": 27,
+      "latest_observation": "2026-09-08"
+    },
+    "fedwatch_20260916": {
+      "rows": 27,
+      "latest_observation": "2026-09-08"
+    },
+    "fedwatch_20261028": {
+      "rows": 27,
+      "latest_observation": "2026-09-08"
+    },
+    "fedwatch_20261209": {
+      "rows": 27,
+      "latest_observation": "2026-09-08"
+    },
+    "gld_holdings": {
+      "rows": 28,
+      "latest_observation": "2026-09-08"
+    },
+    "cot": {
+      "rows": 6,
+      "latest_observation": "2026-09-01"
+    }
+  },
+  "validation": {
+    "status": "passed_local_review",
+    "checked_on": "2026-09-11",
+    "commands_passed": [
+      "make analyze REPORT=gold-outlook",
+      "make check (make render prerequisite)",
+      "make render",
+      "git diff --check"
+    ],
+    "python_tests_passed": 54,
+    "node_tests_passed": 7,
+    "input_and_output_checks": [
+      "macro and supplemental snapshot file hashes",
+      "selected chart hashes match stage statistics",
+      "Phase 1 statistics unchanged from archived pre-Phase-2 copy",
+      "yield decomposition residual <=2bp; actual residual saved in statistics"
+    ],
+    "browser": {
+      "route": "/research/gold-outlook.html",
+      "desktop_viewport": [
+        1280,
+        900
+      ],
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "charts_loaded": 5,
+      "new_charts_visually_checked": [
+        "rates-policy",
+        "dollar-energy",
+        "holdings-positioning"
+      ],
+      "page_horizontal_overflow": false,
+      "desktop_evidence_table_fits": true,
+      "mobile_evidence_table_scroll_left_px": 439.5,
+      "legend_hide_restore": "5 -> 4 -> 5 traces",
+      "rates_hover": "2026-08-03, 10y real yield change -4.00 bp",
+      "cot_hover": "2026-09-01 long change -10098 contracts; released 2026-09-04 15:30 New York",
+      "mobile_hover_within_viewport": true,
+      "console_errors_and_warnings": 0,
+      "layout_fixes": [
+        "explicit 8/25 dividers",
+        "weekly CFTC date ticks",
+        "higher contrast net markers",
+        "shortened evidence table cells"
+      ]
+    },
+    "public_clean_checkout_ready": false,
+    "publication_limit": "Commercial input and Plotly payloads remain ignored; local review only.",
+    "rate_overlay_revision": {
+      "checked_on": "2026-09-11",
+      "numerical_check": "Every plotted gold point equals the frozen 17:00 bar; July 31=4107, Sep 8=4400; Sep 7 remains missing; non-chart statistics identical.",
+      "desktop": [
+        1280,
+        900
+      ],
+      "mobile": [
+        390,
+        844
+      ],
+      "same_date_hover": "Aug 13 gold 4407.10 and real yield change -8 bp",
+      "status": "passed_local_review",
+      "legend_add_remove": "4 -> 5 -> 4 traces",
+      "mobile_two_column_legend": true,
+      "page_horizontal_overflow": false,
+      "console_errors_and_warnings": 0,
+      "checks_passed": [
+        "make analyze REPORT=gold-outlook",
+        "make check (make render prerequisite)",
+        "make render",
+        "git diff --check"
+      ]
+    },
+    "inverse_rate_axis_revision": {
+      "status": "passed_local_review",
+      "rate_axis": "reversed",
+      "gold_axis": "upright",
+      "labels": "axis title and caption explicitly state reversed orientation",
+      "desktop_viewport": [
+        1280,
+        900
+      ],
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "mobile_rate_ticks_top_to_bottom": [
+        -15,
+        -10,
+        -5,
+        0
+      ],
+      "page_horizontal_overflow": false,
+      "checks_passed": [
+        "make analyze REPORT=gold-outlook",
+        "make render (includes make check)",
+        "git diff --check"
+      ]
+    }
+  },
+  "accepted_on": "2026-09-11",
+  "accepted_by": "用户明确回复：继续下一个phase"
+}

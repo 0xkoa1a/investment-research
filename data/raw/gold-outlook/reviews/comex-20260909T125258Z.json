@@ -1,0 +1,71 @@
+{
+  "report": "gold-outlook",
+  "phase": 0,
+  "cutoff_at": "2026-09-09T12:52:58.558996+00:00",
+  "created_at": "2026-09-09T12:52:58+00:00",
+  "research_instrument": "COMEX gold futures",
+  "selected_primary": "GC=F",
+  "primary_price_status": "downloaded_pending_roll_and_close_validation",
+  "phase_1_authorized": false,
+  "sources": {
+    "gold": {
+      "ticker": "GC=F",
+      "input_sha256": "f2b0954e138dbea270f13be7aab516bd91fe68e6eb420fd08b7d87eaaa44b9a3",
+      "retrieved_at": "2026-09-09T12:47:49.714135+00:00",
+      "cache_written_at": "2026-09-09T08:47:49.714028-04:00",
+      "raw_rows": 782,
+      "excluded_rows": 1
+    },
+    "gcv26": {
+      "ticker": "GCV26.CMX",
+      "input_sha256": "1df15c84586512c0b58a8a39bb6af7ee60514b3ab07c03d5efbc0c8276be185b",
+      "retrieved_at": null,
+      "cache_written_at": "2026-09-09T08:49:05.198496-04:00",
+      "raw_rows": 49,
+      "excluded_rows": 1
+    },
+    "gcz26": {
+      "ticker": "GCZ26.CMX",
+      "input_sha256": "d34daaf2fb91391ddb106f5beea7d46b52622e16ee1b1cb038cc193ea8fce2b4",
+      "retrieved_at": null,
+      "cache_written_at": "2026-09-09T08:48:34.294611-04:00",
+      "raw_rows": 49,
+      "excluded_rows": 1
+    }
+  },
+  "coverage": {
+    "gold": {
+      "rows": 781,
+      "first": "2023-08-01",
+      "last": "2026-09-08",
+      "missing_close": 0
+    },
+    "gcv26": {
+      "rows": 48,
+      "first": "2026-07-01",
+      "last": "2026-09-08",
+      "missing_close": 0
+    },
+    "gcz26": {
+      "rows": 48,
+      "first": "2026-07-01",
+      "last": "2026-09-08",
+      "missing_close": 0
+    }
+  },
+  "focus_rows": 26,
+  "focus_zero_volume_dates": [
+    "2026-09-08"
+  ],
+  "changed_close_dates_vs_old": [
+    "2026-08-07"
+  ],
+  "completion_filter": "observation date before cutoff NY calendar date; not a verified close time",
+  "roll_policy": "Yahoo historical contract mapping and adjustment rules unconfirmed",
+  "public_numeric_redistribution": "pending; price files kept in ignored local cache",
+  "files": {
+    "gold.csv": "52cfafda0052ece0f787bd79426656bb0844269493ebe23d327fd86300c87af5",
+    "gcz26.csv": "3709d369eaa9384e1010a72e25fa018da955f0444a5c2f755562cbeb156f7234",
+    "gcv26.csv": "509d2c6b20fbc32ec916a086203bd66b2f689b452e9cd326d5a3417804c5acfb"
+  }
+}

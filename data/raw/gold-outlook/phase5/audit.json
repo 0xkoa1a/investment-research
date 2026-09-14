@@ -1,0 +1,690 @@
+{
+  "phase": 5,
+  "checked_at": "2026-09-11T11:26:04+00:00",
+  "information_cutoff_at": "2026-09-11T10:28:05+00:00",
+  "status": "numerical_and_contract_checks_passed",
+  "report_sha256": "53dd72e0d218b71da2490f67856e4f4dd8dcfc52bd0a003dd1404ad90a3e5939",
+  "numeric_checks": [
+    {
+      "claim": "阶段：快速回升",
+      "expected_fragments": [
+        "4,107.00",
+        "4,399.70",
+        "+7.13%",
+        "-1.80%",
+        "7天",
+        "7/31—8/7"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "阶段：高位反复",
+      "expected_fragments": [
+        "4,399.70",
+        "4,389.50",
+        "-0.23%",
+        "-3.04%",
+        "11天",
+        "8/7—8/18"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "阶段：再度上行",
+      "expected_fragments": [
+        "4,389.50",
+        "4,715.90",
+        "+7.44%",
+        "-1.91%",
+        "7天",
+        "8/18—8/25"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "阶段：回落与反复",
+      "expected_fragments": [
+        "4,715.90",
+        "4,400.00",
+        "-6.70%",
+        "-8.40%",
+        "14天",
+        "8/25—9/8"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "阶段：全窗口",
+      "expected_fragments": [
+        "4,107.00",
+        "4,400.00",
+        "+7.13%",
+        "-8.84%",
+        "39天",
+        "7/31—9/8"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "事件窗口：8/19上涨",
+      "expected_fragments": [
+        "4,389.50（8/18）",
+        "+4.36%",
+        "+4.23%（8/20）",
+        "+7.30%（8/24）",
+        "+5.88%（8/26）"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "事件窗口：8/28下跌",
+      "expected_fragments": [
+        "4,654.80（8/27）",
+        "-2.68%",
+        "-3.38%（8/31）",
+        "-4.74%（9/2）",
+        "-3.83%（9/4）"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "事件窗口：8/31油涨金跌",
+      "expected_fragments": [
+        "4,529.90（8/28）",
+        "-0.72%",
+        "-3.40%（9/1）",
+        "-0.22%（9/3）",
+        "-2.87%（9/8）"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "更新表：gold",
+      "expected_fragments": [
+        "4,400.00（9/8）",
+        "4,358.50（9/10）",
+        "-0.94%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "更新表：ust2y",
+      "expected_fragments": [
+        "4.37%（9/4）",
+        "4.43%（9/9）",
+        "+6基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "更新表：real10y",
+      "expected_fragments": [
+        "2.43%（9/4）",
+        "2.46%（9/9）",
+        "+3基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "更新表：dxy",
+      "expected_fragments": [
+        "98.84（9/8）",
+        "99.09（9/10）",
+        "+0.25%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "更新表：wti_futures",
+      "expected_fragments": [
+        "93.03（9/8）",
+        "102.48（9/10）",
+        "+10.16%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "更新表：gld_holdings",
+      "expected_fragments": [
+        "1,050.63（9/8）",
+        "1,050.28（9/10）",
+        "-0.35"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "背景日线高点及末价",
+      "expected_fragments": [
+        "5,318.40",
+        "4,393.90",
+        "17.38%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "五分钟极值与回撤",
+      "expected_fragments": [
+        "4,752.50",
+        "8.84%",
+        "8月24日20:40",
+        "9月1日23:35"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "七月末至更新末日",
+      "expected_fragments": [
+        "6.12%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "real10y 2026-07-31—2026-08-07",
+      "expected_fragments": [
+        "7基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "real10y 2026-08-18—2026-08-25",
+      "expected_fragments": [
+        "9基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "ust10y 2026-08-18—2026-08-25",
+      "expected_fragments": [
+        "7基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "breakeven10y 2026-08-18—2026-08-25",
+      "expected_fragments": [
+        "2基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "ust2y 2026-08-25—2026-09-04",
+      "expected_fragments": [
+        "20基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "real10y 2026-08-25—2026-09-04",
+      "expected_fragments": [
+        "11基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "real5y 2026-08-25—2026-09-04",
+      "expected_fragments": [
+        "13基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "gold 2026-08-25—2026-09-04",
+      "expected_fragments": [
+        "5.07%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "dxy 2026-08-18—2026-08-25",
+      "expected_fragments": [
+        "0.73%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "usd_broad 2026-08-18—2026-08-25",
+      "expected_fragments": [
+        "0.63%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "dxy 2026-08-25—2026-09-08",
+      "expected_fragments": [
+        "0.08%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "usd_broad 2026-08-25—2026-09-04",
+      "expected_fragments": [
+        "0.13%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "wti 2026-08-25—2026-09-01",
+      "expected_fragments": [
+        "9.03%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "wti_futures 2026-08-25—2026-09-01",
+      "expected_fragments": [
+        "9.54%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "gold 2026-08-25—2026-09-01",
+      "expected_fragments": [
+        "7.21%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "月初利率与加息概率",
+      "expected_fragments": [
+        "9、7基点",
+        "67.0%",
+        "44.4%",
+        "36.1%",
+        "39.6%",
+        "59.4%",
+        "86.5%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "ETF持金量变化",
+      "expected_fragments": [
+        "41.34吨",
+        "2.28吨"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "CFTC多空净额与总持仓",
+      "expected_fragments": [
+        "119,795手",
+        "144,747手",
+        "7,976手",
+        "10,098手",
+        "2,122手",
+        "427,957",
+        "415,196手"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "8/19盘中反应",
+      "expected_fragments": [
+        "4,544.10",
+        "3.52%",
+        "0.21%",
+        "0.23%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "8/28盘中反应",
+      "expected_fragments": [
+        "4,662.70",
+        "4,603.20",
+        "1.28%",
+        "2.85%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "周日首个可用价",
+      "expected_fragments": [
+        "4,509.20",
+        "0.46%",
+        "18:15"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "事件日跨市场：2026-08-19",
+      "expected_fragments": [
+        "0.82%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "事件日跨市场：2026-08-28",
+      "expected_fragments": [
+        "0.54%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "事件日跨市场：2026-08-31",
+      "expected_fragments": [
+        "0.27%",
+        "2.83%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "9/9利率同涨反例",
+      "expected_fragments": [
+        "4、3基点",
+        "1.07%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：cpi_aug",
+      "expected_fragments": [
+        "20:30",
+        "9/11"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：cot_sep08",
+      "expected_fragments": [
+        "03:30",
+        "9/12"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：fomc_sep",
+      "expected_fragments": [
+        "02:00",
+        "9/17"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：fomc_sep_press",
+      "expected_fragments": [
+        "02:30",
+        "9/17"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：jolts_aug",
+      "expected_fragments": [
+        "22:00",
+        "9/29"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：pce_aug",
+      "expected_fragments": [
+        "20:30",
+        "9/30"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "北京时间：jobs_sep",
+      "expected_fragments": [
+        "20:30",
+        "10/2"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "利率图真实截止",
+      "expected_fragments": [
+        "两年名义、十年实际收益率截至9/4，通胀补偿、金价及概率截至9/8"
+      ],
+      "passed": true
+    }
+  ],
+  "chart_audit": [
+    {
+      "chart": "dollar-energy",
+      "sha256": "1094a81dc2358639202f84d2cd5ae1eddaaeb23850bef930b7ea1b9c960920ee",
+      "traces": [
+        {
+          "name": "DXY",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        },
+        {
+          "name": "广义美元",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-04",
+          "valid_points": 26,
+          "connectgaps": false
+        },
+        {
+          "name": "WTI现货",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-01",
+          "valid_points": 23,
+          "connectgaps": false
+        },
+        {
+          "name": "CL=F期货",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        }
+      ]
+    },
+    {
+      "chart": "event-intraday",
+      "sha256": "1d1f5cde6470e210f693a50c84ee3133e5ae6b18ca0a7dd98bc11b90fc1ea7bb",
+      "traces": [
+        {
+          "name": null,
+          "type": "scatter",
+          "first": "2026-08-19T08:00:00",
+          "last": "2026-08-19T17:00:00",
+          "valid_points": 109,
+          "connectgaps": false
+        },
+        {
+          "name": null,
+          "type": "scatter",
+          "first": "2026-08-28T08:00:00",
+          "last": "2026-08-28T17:00:00",
+          "valid_points": 109,
+          "connectgaps": false
+        }
+      ]
+    },
+    {
+      "chart": "history",
+      "sha256": "96e9ace4fa5791dbda6d7523c8b03109bfb887ae6cb518fff026f57791606e27",
+      "traces": [
+        {
+          "name": "GC=F Close",
+          "type": "scatter",
+          "first": "2023-08-01",
+          "last": "2026-09-08",
+          "valid_points": 781,
+          "connectgaps": false
+        }
+      ]
+    },
+    {
+      "chart": "holdings-positioning",
+      "sha256": "b65c33a4c2abde081f2fa708a011684e54cd8fa6def8717e10b1ca9e675314ae",
+      "traces": [
+        {
+          "name": "GLD持金量",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        },
+        {
+          "name": "多头增减",
+          "type": "bar",
+          "first": "2026-08-04",
+          "last": "2026-09-01",
+          "valid_points": 5,
+          "connectgaps": false
+        },
+        {
+          "name": "空头减少/增加",
+          "type": "bar",
+          "first": "2026-08-04",
+          "last": "2026-09-01",
+          "valid_points": 5,
+          "connectgaps": false
+        },
+        {
+          "name": "净额变化",
+          "type": "scatter",
+          "first": "2026-08-04",
+          "last": "2026-09-01",
+          "valid_points": 5,
+          "connectgaps": false
+        }
+      ]
+    },
+    {
+      "chart": "rates-policy",
+      "sha256": "98fe4d16c2375ad77f3f6d0714b9c96c26e21563b8c4df7bba57009854df580b",
+      "traces": [
+        {
+          "name": "黄金",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        },
+        {
+          "name": "10年实际",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-04",
+          "valid_points": 26,
+          "connectgaps": false
+        },
+        {
+          "name": "2年名义",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-04",
+          "valid_points": 26,
+          "connectgaps": false
+        },
+        {
+          "name": "通胀补偿",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        },
+        {
+          "name": "9/16会议后",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        },
+        {
+          "name": "12/9会议后",
+          "type": "scatter",
+          "first": "2026-07-31",
+          "last": "2026-09-08",
+          "valid_points": 27,
+          "connectgaps": false
+        }
+      ]
+    },
+    {
+      "chart": "since-august",
+      "sha256": "a70c8a52e695f255a35bb1a1ff4081cf313d0da4a4f9fa9e24c780b11af79f38",
+      "traces": [
+        {
+          "name": "十二月合约 · 5分钟 Close",
+          "type": "scatter",
+          "first": "2026-07-31T17:00:00",
+          "last": "2026-09-08T17:00:00",
+          "valid_points": 7094,
+          "connectgaps": false
+        },
+        {
+          "name": null,
+          "type": "scatter",
+          "first": "2026-07-31T17:00:00",
+          "last": "2026-09-08T17:00:00",
+          "valid_points": 2,
+          "connectgaps": false
+        },
+        {
+          "name": "发布时间",
+          "type": "scatter",
+          "first": "2026-08-07T08:30:00",
+          "last": "2026-09-04T08:30:00",
+          "valid_points": 5,
+          "connectgaps": false
+        }
+      ]
+    }
+  ],
+  "statistics_values_unchanged_for_phases": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "external_source_links": [
+    "https://finance.yahoo.com/quote/CL%3DF/history/",
+    "https://finance.yahoo.com/quote/DX-Y.NYB/history/",
+    "https://finance.yahoo.com/quote/GC%3DF/history/",
+    "https://finance.yahoo.com/quote/GCZ26.CMX/history/",
+    "https://fred.stlouisfed.org/series/DFII10",
+    "https://fred.stlouisfed.org/series/DGS2",
+    "https://home.treasury.gov/news/press-releases/sb0607",
+    "https://www.axios.com/2026/08/30/us-iran-strike-hormuz-mines",
+    "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+    "https://www.bea.gov/news/schedule/full",
+    "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
+    "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
+    "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+    "https://www.bls.gov/news.release/archives/ppi_08132026.htm",
+    "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
+    "https://www.bls.gov/schedule/2026/09_sched.htm",
+    "https://www.bls.gov/schedule/news_release/cpi.htm",
+    "https://www.bls.gov/schedule/news_release/empsit.htm",
+    "https://www.brecorder.com/news/40435585/gold-surges-over-3-as-us-treasury-announcement-hurts-yields-dollar",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+    "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html",
+    "https://www.cmegroup.com/trading-hours.html",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm",
+    "https://www.federalreserve.gov/newsevents/2026-august.htm",
+    "https://www.federalreserve.gov/newsevents/2026-september.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+    "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+    "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+    "https://www.investing.com/news/economy-news/anxious-investors-hope-for-clarity-on-warshs-fed-plan-at-jackson-hole-4876622",
+    "https://www.marketscreener.com/news/gold-falls-over-1-as-u-s-inflation-data-boosts-fed-hike-bets-ce785bdede89f725",
+    "https://www.marketscreener.com/news/gold-slips-to-near-two-week-low-on-fed-rate-hike-bets-ce7858dcd080f726",
+    "https://www.spdrgoldshares.com/usa/gld/",
+    "https://www.theice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf"
+  ],
+  "old_characters_excluding_link_targets": 9045,
+  "new_characters_excluding_link_targets": 7902,
+  "review_limits": [
+    "Formatting assertions complement, but do not replace, manual claim/source review.",
+    "Future calendar remains as known at the fixed Phase 4 cutoff, not newly released actual results.",
+    "Commercial full series remain local-only."
+  ]
+}

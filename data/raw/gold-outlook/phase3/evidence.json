@@ -1,0 +1,212 @@
+{
+  "phase": 3,
+  "reviewed_at": "2026-09-11T09:40:27Z",
+  "information_cutoff_at": "2026-09-09T11:59:46Z",
+  "acquisition_note": "Retrospective source inspection; original information cutoff and selected market snapshots unchanged. Date-only publication is not assigned an invented intraday clock.",
+  "sources": {
+    "minutes": {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm",
+      "released_at": "2026-08-19T14:00:00-04:00",
+      "time_source": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260729.htm",
+      "type": "official meeting record",
+      "fact": "July 28–29 meeting: many participants saw tightening as likely necessary if inflation failed to fall; some doubted financial conditions were restrictive enough.",
+      "revision": "July meeting discussion published August 19; not an August 19 policy decision."
+    },
+    "july_statement": {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "released_at": "2026-07-29T14:00:00-04:00",
+      "type": "official prior information",
+      "fact": "3.50–3.75% target maintained; three dissenters preferred a 25 bp increase. Known before the August 19 minutes."
+    },
+    "buybacks": {
+      "url": "https://home.treasury.gov/news/press-releases/sb0607",
+      "published_date": "2026-08-19",
+      "released_at": null,
+      "type": "official announcement",
+      "fact": "Maximum per-operation liquidity-support buybacks of 10–20y and 20–30y nominal bonds increase from USD 2bn to at least USD 4bn, effective September 9 through November 4.",
+      "revision": "Announcement about future operations; not same-day purchases or a Federal Reserve QE announcement."
+    },
+    "morning_gold": {
+      "url": "https://www.brecorder.com/news/40435585/gold-surges-over-3-as-us-treasury-announcement-hurts-yields-dollar",
+      "publisher": "Reuters via Business Recorder",
+      "published_date": "2026-08-19",
+      "updated_display": "August 19, 2026 08:02pm; timezone unverified",
+      "released_at": null,
+      "type": "contemporary post-announcement account",
+      "market_observation_at": "2026-08-19T10:35:00-04:00",
+      "fact": "Body describes a morning gold rally after the Treasury announcement, while minutes were still due at 18:00 GMT. Exact Treasury announcement time remains unverified.",
+      "expectation_limit": "Analyst description of surprise was after the announcement; not an archived pre-announcement consensus. Article spot/futures prices are not used in this report's contract statistics."
+    },
+    "warsh_preview": {
+      "url": "https://www.investing.com/news/economy-news/anxious-investors-hope-for-clarity-on-warshs-fed-plan-at-jackson-hole-4876622",
+      "publisher": "Reuters via Investing.com",
+      "published_date": "2026-08-26",
+      "updated_date": "2026-08-27",
+      "updated_display": "Aug 27, 2026, 05:07 PM; timezone unverified",
+      "type": "pre-event qualitative expectations",
+      "fact": "Investors sought clarity on the inflation response and whether higher bond yields reduced the need for policy hikes; few expected explicit forward guidance. Some considered bond-market tightening sufficient.",
+      "expectation_limit": "Diverse investor views, not a survey consensus. The article's intraday 40% rate-hike quote is not substituted for the selected August 27 FedWatch date record."
+    },
+    "warsh_speech": {
+      "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+      "released_at": "2026-08-28T10:00:00-04:00",
+      "time_source": "https://www.federalreserve.gov/newsevents/2026-august.htm",
+      "type": "official speech",
+      "fact": "Warsh did not describe broad financial conditions as restrictive; confidence that underlying inflation was moving clearly and sufficiently fast toward target was needed. No specific meeting action was promised.",
+      "revision": "Speech, not a policy decision or revised statistical release."
+    },
+    "weekend_risk": {
+      "url": "https://www.axios.com/2026/08/30/us-iran-strike-hormuz-mines",
+      "published_date": "2026-08-30",
+      "released_at": null,
+      "type": "contemporary reporting",
+      "fact": "US strikes on Iranian targets reported August 30.",
+      "revision": "Exact occurrence, first-publication and update times unverified; no precise event-time marker."
+    },
+    "monday_gold": {
+      "url": "https://www.marketscreener.com/news/gold-slips-to-near-two-week-low-on-fed-rate-hike-bets-ce7858dcd080f726",
+      "publisher": "Reuters via MarketScreener",
+      "published_at": "2026-08-31T10:49:00-04:00",
+      "updated_at": "2026-08-31T14:06:00-04:00",
+      "type": "post-event competing explanations",
+      "fact": "Reporting linked gold weakness to continuing post-Warsh hike expectations and renewed oil/inflation concerns after weekend conflict. It also noted a modest dollar pullback.",
+      "revision": "Use the updated version only by its update time, not by the earlier publication time. Not ex-ante evidence."
+    },
+    "cme_calendar": {
+      "url": "https://www.cmegroup.com/trading-hours.html",
+      "type": "official trading calendar",
+      "fact": "Sunday September 6 pre-open orders are for Tuesday September 8 trade date; Tuesday has normal Globex close. September 7 is excluded as a separate regular trade date, not treated as a missing observed close."
+    },
+    "cme_settlement": {
+      "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2026/labor-day-holiday-settlement-times-2026.pdf",
+      "type": "official holiday settlement notice",
+      "fact": "Normal September 4 settlements; no September 7 COMEX settlements. This does not mean no holiday intraday trading."
+    }
+  },
+  "calendar": {
+    "start": "2026-07-31",
+    "end": "2026-09-16",
+    "dates": [
+      "2026-07-31",
+      "2026-08-03",
+      "2026-08-04",
+      "2026-08-05",
+      "2026-08-06",
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ],
+    "excluded_weekdays": [
+      "2026-09-07"
+    ],
+    "sources": [
+      "cme_calendar",
+      "cme_settlement"
+    ],
+    "close_convention": "Exact 17:00 America/New_York bar end; source bar starts 16:55; not an exchange settlement."
+  },
+  "cases": [
+    {
+      "id": "aug19",
+      "date": "2026-08-19",
+      "label": "8/19：纪要与财政部公告",
+      "released_at": "2026-08-19T14:00:00-04:00",
+      "source_ids": [
+        "minutes",
+        "july_statement",
+        "buybacks",
+        "morning_gold"
+      ],
+      "pre_expectation": {
+        "source_ids": [
+          "july_statement"
+        ],
+        "consensus": null,
+        "limit": "Prior hawkish dissent known; no verified pre-release minutes surprise measure or Treasury buyback forecast."
+      },
+      "actual_revision": "No new policy rate set; minutes describe July. Treasury enlarged future operations.",
+      "other_news_in_forward_window": [
+        "August 26 PCE release (E4) enters +5 close."
+      ],
+      "plot": true
+    },
+    {
+      "id": "aug28",
+      "date": "2026-08-28",
+      "label": "8/28：Warsh讲话",
+      "released_at": "2026-08-28T10:00:00-04:00",
+      "source_ids": [
+        "warsh_preview",
+        "warsh_speech"
+      ],
+      "pre_expectation": {
+        "source_ids": [
+          "warsh_preview"
+        ],
+        "consensus": null,
+        "limit": "Qualitative investor expectations plus prior-date FedWatch, not a quantified speech consensus."
+      },
+      "actual_revision": "No statistical prior-value revision or new rate decision.",
+      "other_news_in_forward_window": [
+        "August 30 conflict news enters +1.",
+        "September 4 employment and prior revisions (E5) enter +5."
+      ],
+      "plot": true
+    },
+    {
+      "id": "aug31",
+      "date": "2026-08-31",
+      "label": "8/31：周末风险后的首个日终",
+      "released_at": null,
+      "event_date": "2026-08-30",
+      "source_ids": [
+        "weekend_risk",
+        "monday_gold",
+        "warsh_speech"
+      ],
+      "pre_expectation": {
+        "source_ids": [],
+        "consensus": null,
+        "limit": "No ex-ante forecast of the weekend strike; Friday pricing already incorporates Warsh."
+      },
+      "actual_revision": "Rolling news without a fully timestamped first-release archive.",
+      "other_news_in_forward_window": [
+        "Continuing post-Warsh monetary repricing overlaps throughout.",
+        "September 4 employment and prior revisions (E5) enter +4.",
+        "September 7 is not a separate regular COMEX trade date; +5 is September 8."
+      ],
+      "plot": false
+    }
+  ],
+  "known_limits": [
+    "No complete intraday cross-market rate/dollar/oil/position data to establish the full transmission order.",
+    "Sunday August 30 first available gold bar ends 18:15 NY; first two five-minute bars absent. Never label it the opening price.",
+    "Same-day driver comparisons use each source's date; they are not synchronized-close or first-release measurements.",
+    "Cases and horizons are selected retrospectively; multi-day returns include other news and are not isolated causal effects."
+  ]
+}

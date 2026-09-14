@@ -1,0 +1,135 @@
+{
+  "snapshot": "20260911T014837Z",
+  "source_review_sha256": "e787fca5732a662796995c991af593acfcc76bd51abe2d261e74be89d5e7682f",
+  "coverage": {
+    "gold": {
+      "raw_rows": 9492,
+      "retained_rows": 7369,
+      "excluded_rows": 2123,
+      "excluded_by_reason": {
+        "missing_ohlcv": 2121,
+        "outside_regular_gc_hours": 2040,
+        "outside_completed_window": 0
+      },
+      "off_session_nonmissing": [
+        "2026-08-14T21:00:00+00:00",
+        "2026-09-03T21:00:00+00:00"
+      ],
+      "absent_regular_grid_by_ny_date": {
+        "2026-08-02": 2,
+        "2026-08-09": 2,
+        "2026-08-16": 2,
+        "2026-08-23": 2,
+        "2026-08-25": 1,
+        "2026-08-30": 2,
+        "2026-09-06": 72,
+        "2026-09-07": 276
+      },
+      "retrieved_at": "2026-09-11T01:48:38+00:00"
+    },
+    "gcv26": {
+      "raw_rows": 9492,
+      "retained_rows": 7299,
+      "excluded_rows": 2193,
+      "excluded_by_reason": {
+        "missing_ohlcv": 2193,
+        "outside_regular_gc_hours": 2040,
+        "outside_completed_window": 0
+      },
+      "off_session_nonmissing": [],
+      "absent_regular_grid_by_ny_date": {
+        "2026-07-30": 2,
+        "2026-07-31": 1,
+        "2026-08-02": 3,
+        "2026-08-03": 12,
+        "2026-08-04": 2,
+        "2026-08-05": 4,
+        "2026-08-06": 2,
+        "2026-08-09": 5,
+        "2026-08-10": 2,
+        "2026-08-11": 5,
+        "2026-08-12": 3,
+        "2026-08-13": 3,
+        "2026-08-14": 3,
+        "2026-08-16": 2,
+        "2026-08-17": 2,
+        "2026-08-18": 1,
+        "2026-08-19": 2,
+        "2026-08-20": 3,
+        "2026-08-23": 2,
+        "2026-08-24": 3,
+        "2026-08-25": 1,
+        "2026-08-26": 1,
+        "2026-08-27": 2,
+        "2026-08-28": 2,
+        "2026-08-30": 2,
+        "2026-09-01": 2,
+        "2026-09-02": 3,
+        "2026-09-03": 6,
+        "2026-09-06": 72,
+        "2026-09-07": 276
+      },
+      "retrieved_at": "2026-09-11T01:48:39+00:00"
+    },
+    "gcz26": {
+      "raw_rows": 9492,
+      "retained_rows": 7369,
+      "excluded_rows": 2123,
+      "excluded_by_reason": {
+        "missing_ohlcv": 2121,
+        "outside_regular_gc_hours": 2040,
+        "outside_completed_window": 0
+      },
+      "off_session_nonmissing": [
+        "2026-08-14T21:00:00+00:00",
+        "2026-09-03T21:00:00+00:00"
+      ],
+      "absent_regular_grid_by_ny_date": {
+        "2026-08-02": 2,
+        "2026-08-09": 2,
+        "2026-08-16": 2,
+        "2026-08-23": 2,
+        "2026-08-25": 1,
+        "2026-08-30": 2,
+        "2026-09-06": 72,
+        "2026-09-07": 276
+      },
+      "retrieved_at": "2026-09-11T01:48:39+00:00"
+    }
+  },
+  "comparison": {
+    "timestamps_identical": true,
+    "close_mismatches": 2,
+    "max_abs_close_difference": 4.60009765625,
+    "all_column_mismatches": {
+      "bar_end": 0,
+      "open": 2,
+      "high": 2,
+      "low": 2,
+      "close": 2,
+      "volume": 4
+    },
+    "december_daily_vs_last_5m": {
+      "observations": 27,
+      "differing_closes_over_0_05": 22,
+      "max_absolute_difference": 39.0
+    }
+  },
+  "statistics_check": {
+    "observed_focus_bars": 7094,
+    "trough_close": 4332.2001953125,
+    "independent_running_peak_loop_max_drawdown_pct": -8.843762329037352,
+    "stage_compounded_change_pct": 7.13416118821526
+  },
+  "rules": [
+    "missing prices are never filled",
+    "five-minute Close is not tick high/low or exchange settlement",
+    "regular-session grid is not a holiday trading schedule"
+  ],
+  "sources": {
+    "yfinance": "https://ranaroussi.github.io/yfinance/reference/api/yfinance.download.html",
+    "gc_contract": "https://www.cmegroup.com/markets/metals/precious/gold.contractSpecs.html",
+    "hours": "https://www.cmegroup.com/trading/metals/files/metals-prod-guide-2021.pdf",
+    "labor_day_settlement": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2026/labor-day-holiday-settlement-times-2026.pdf"
+  }
+}

@@ -178,6 +178,38 @@ CN_INDEXES: dict[str, tuple[str, str]] = {
     "sh000688": ("star50", "科创50"),
 }
 
+# 黄金研究采用独立的定时快照，不改变 gold=GC=F 或公共 SPX 日历。
+GOLD_RESEARCH_RAW = RAW / "gold-outlook"
+GOLD_RESEARCH_PRIMARY = "gold"
+GOLD_RESEARCH_FUTURES = {"gold": "GC=F", "gcv26": "GCV26.CMX", "gcz26": "GCZ26.CMX"}
+GOLD_RESEARCH_INTRADAY = {
+    "primary": "gcz26", "interval": "5m", "timezone": "America/New_York",
+    "start": "2026-07-30T18:00:00-04:00", "end": "2026-09-08T17:00:00-04:00",
+    "unit": "USD/troy oz", "source": "https://finance.yahoo.com/quote/GCZ26.CMX/history/",
+}
+GOLD_RESEARCH_FRED_IDS = (
+    "DFF", "DFEDTARU", "DFEDTARL", "DGS2", "DGS10", "DFII10", "DFII5", "T10YIE",
+    "DTWEXBGS", "CPIAUCSL", "CPILFESL", "PCEPILFE", "UNRATE", "PAYEMS", "ICSA", "DCOILWTICO",
+)
+# Phase 2 定向补充；复用已登记的 Yahoo 品种，不更新共享 raw。
+GOLD_RESEARCH_DRIVER_MARKETS = {"dxy": "DX-Y.NYB", "wti_futures": "CL=F"}
+GOLD_RESEARCH_FEDWATCH_MEETINGS = ("2026-09-16", "2026-10-28", "2026-12-09")
+# 字段 -> (品种说明, 单位, 频率, 来源入口)。这些候选尚未获得公开数值发布许可。
+GOLD_RESEARCH_CANDIDATES = {
+    "gold": ("COMEX 黄金期货（已选主对象；接续与 Close 口径待核验）", "USD/troy oz", "D",
+             "https://finance.yahoo.com/quote/GC%3DF/history/"),
+    "xauusd": ("美元计价现货黄金（补充参照）", "USD/troy oz", "D",
+               "https://www.dukascopy.com/swiss/english/marketwatch/historical/"),
+    "dxy": ("美元指数 DXY", "index", "D", "https://finance.yahoo.com/quote/DX-Y.NYB/history/"),
+    "policy_expectations": ("按会议区分的政策利率预期", "%", "D",
+                            "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"),
+    "etf_global": ("全球实物黄金 ETF 持金量与资金流", "tonnes; USD", "W/M",
+                   "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows"),
+    "etf_gld": ("SPDR Gold Shares 持金量", "tonnes", "D", "https://www.spdrgoldshares.com/usa/gld/"),
+    "comex_activity": ("COMEX 黄金合约成交量与未平仓量", "contracts", "D",
+                       "https://www.cmegroup.com/markets/metals/precious/gold.volume.html"),
+}
+
 
 
 def series_meta() -> dict[str, dict[str, str]]:

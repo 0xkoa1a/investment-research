@@ -1,0 +1,124 @@
+{
+  "report": "gold-outlook",
+  "phase": 1,
+  "data_as_of": "2026-09-08",
+  "inputs": {
+    "snapshot": "20260911T014837Z",
+    "files": {
+      "gcv26-raw.csv": "43f50f1dd046d3473bffabafaf1b397c3195209ac0d419b5faec597b38a96b06",
+      "gcv26.csv": "a0bf94fc3db217ae18b305996051534e3eff275a6b2612aeff768221b840b43f",
+      "gcz26-raw.csv": "3e7995a0bb4d834b00638a88b820bd3e268ec794c199cd82a404f9ac67e837a0",
+      "gcz26.csv": "af0c48bf09a569cd9917f4a87728803830f27f0724429a49496db03e5a216f35",
+      "gold-raw.csv": "d32b8502da613ac531fe4ea21cfa5baad4f400603ba8976aef549aa7ba8e95ea",
+      "gold.csv": "554a48ba975bb5ed66f40f55efa2b38abfd6b7d18d27ab20afc65fda5c7cf9e3"
+    },
+    "primary": "gcz26",
+    "selection_sha256": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+    "review_sha256": "e787fca5732a662796995c991af593acfcc76bd51abe2d261e74be89d5e7682f"
+  },
+  "basis": "GCZ26.CMX observed five-minute Close; 17:00 New York endpoints; not settlement or total investment return",
+  "overall": {
+    "start": "2026-07-31T17:00:00-04:00",
+    "end": "2026-09-08T17:00:00-04:00",
+    "start_close": 4107.0,
+    "end_close": 4400.0,
+    "change_pct": 7.134161188215238,
+    "intervals": 7093,
+    "calendar_days": 39,
+    "max_drawdown_pct": -8.843762329037352,
+    "drawdown_peak": "2026-08-24T20:40:00-04:00",
+    "drawdown_trough": "2026-09-01T23:35:00-04:00"
+  },
+  "stages": [
+    {
+      "label": "快速回升",
+      "start": "2026-07-31T17:00:00-04:00",
+      "end": "2026-08-07T17:00:00-04:00",
+      "start_close": 4107.0,
+      "end_close": 4399.7001953125,
+      "change_pct": 7.126861341916246,
+      "intervals": 1378,
+      "calendar_days": 7,
+      "max_drawdown_pct": -1.7978331006958115,
+      "drawdown_peak": "2026-08-05T22:10:00-04:00",
+      "drawdown_trough": "2026-08-06T12:25:00-04:00"
+    },
+    {
+      "label": "高位反复",
+      "start": "2026-08-07T17:00:00-04:00",
+      "end": "2026-08-18T17:00:00-04:00",
+      "start_close": 4399.7001953125,
+      "end_close": 4389.5,
+      "change_pct": -0.23183841761235113,
+      "intervals": 1928,
+      "calendar_days": 11,
+      "max_drawdown_pct": -3.035353769168825,
+      "drawdown_peak": "2026-08-12T20:35:00-04:00",
+      "drawdown_trough": "2026-08-13T22:15:00-04:00"
+    },
+    {
+      "label": "再度上行",
+      "start": "2026-08-18T17:00:00-04:00",
+      "end": "2026-08-25T17:00:00-04:00",
+      "start_close": 4389.5,
+      "end_close": 4715.89990234375,
+      "change_pct": 7.435924418356299,
+      "intervals": 1377,
+      "calendar_days": 7,
+      "max_drawdown_pct": -1.9105692727511836,
+      "drawdown_peak": "2026-08-24T20:40:00-04:00",
+      "drawdown_trough": "2026-08-25T09:50:00-04:00"
+    },
+    {
+      "label": "回落与反复",
+      "start": "2026-08-25T17:00:00-04:00",
+      "end": "2026-09-08T17:00:00-04:00",
+      "start_close": 4715.89990234375,
+      "end_close": 4400.0,
+      "change_pct": -6.698613390558849,
+      "intervals": 2410,
+      "calendar_days": 14,
+      "max_drawdown_pct": -8.404338194500216,
+      "drawdown_peak": "2026-08-25T18:55:00-04:00",
+      "drawdown_trough": "2026-09-01T23:35:00-04:00"
+    }
+  ],
+  "observed_bars": 7094,
+  "peak_bar_end": "2026-08-24T20:40:00-04:00",
+  "peak_close": 4752.5,
+  "peak_to_last_pct": -7.4171488690163105,
+  "background": {
+    "start": "2023-08-01",
+    "end": "2026-09-08",
+    "start_close": 1940.699951171875,
+    "end_close": 4393.89990234375,
+    "change_pct": 126.40799777887,
+    "intervals": 780,
+    "calendar_days": 1134,
+    "max_drawdown_pct": -25.060165259482503,
+    "drawdown_peak": "2026-01-29",
+    "drawdown_trough": "2026-07-16"
+  },
+  "background_inputs": {
+    "snapshot": "20260909T125258Z",
+    "files": {
+      "gold.csv": "52cfafda0052ece0f787bd79426656bb0844269493ebe23d327fd86300c87af5",
+      "gcz26.csv": "3709d369eaa9384e1010a72e25fa018da955f0444a5c2f755562cbeb156f7234",
+      "gcv26.csv": "509d2c6b20fbc32ec916a086203bd66b2f689b452e9cd326d5a3417804c5acfb"
+    },
+    "review_sha256": "d706ea778b76df3af4df217942c4894fe4c0f6053e3190120787a05c649febd1",
+    "events_sha256": "38ef3362b60791c93d3bf6cb26115d5403c4fc5fb7237fc16106d844c314d865"
+  },
+  "charts": [
+    {
+      "file": "history.json",
+      "sha256": "96e9ace4fa5791dbda6d7523c8b03109bfb887ae6cb518fff026f57791606e27",
+      "traces": 1
+    },
+    {
+      "file": "since-august.json",
+      "sha256": "a70c8a52e695f255a35bb1a1ff4081cf313d0da4a4f9fa9e24c780b11af79f38",
+      "traces": 3
+    }
+  ]
+}

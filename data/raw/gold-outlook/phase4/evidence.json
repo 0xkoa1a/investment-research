@@ -1,0 +1,220 @@
+{
+  "phase": 4,
+  "information_cutoff_at": "2026-09-11T10:28:05Z",
+  "checked_at": "2026-09-11T10:45:09+00:00",
+  "interpretation": "Cutoff fixed before acquisition. Historical price downloads use completed earlier dates; dated news and agency releases must precede cutoff. Future calendar has no released actual values.",
+  "releases": [
+    {
+      "id": "ppi_aug",
+      "observation_period": "2026-08",
+      "released_at": "2026-09-10T08:30:00-04:00",
+      "source_url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
+      "actual": {
+        "final_demand_mom_sa_pct": 0.4,
+        "final_demand_yoy_nsa_pct": 5.4,
+        "less_food_energy_trade_mom_sa_pct": 0.3,
+        "final_demand_energy_mom_sa_pct": 4.2
+      },
+      "prior": {
+        "period": "2026-07",
+        "first_release_mom_pct": 0.0,
+        "revised_mom_pct": 0.1,
+        "first_release_at": "2026-08-13T08:30:00-04:00",
+        "first_release_source": "https://www.bls.gov/news.release/archives/ppi_08132026.htm"
+      },
+      "ex_ante_consensus": null,
+      "ex_ante_consensus_source": null,
+      "limit": "No saved pre-release consensus; do not label beat/miss. Less food energy trade is not core CPI or core PCE."
+    },
+    {
+      "id": "wgc_aug",
+      "observation_period": "2026-08",
+      "published_date": "2026-09-09",
+      "released_at": null,
+      "known_by_at": "2026-09-10T12:00:00Z",
+      "source_url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+      "actual": {
+        "global_net_flow_usd_bn_approx": 18,
+        "holdings_change_tonnes_rounded": 121,
+        "holdings_tonnes_rounded": 4189
+      },
+      "change_from_baseline": "Previously supplementary: clock unknown on cutoff date. Now known available, still August rather than September flow.",
+      "known_by_basis": "End of stated publication date using conservative UTC-12 boundary; not exact publication time.",
+      "prior_revisions": null,
+      "ex_ante_consensus": null
+    }
+  ],
+  "news_snapshots": [
+    {
+      "id": "reuters_fedwatch_sep10",
+      "source_url": "https://www.marketscreener.com/news/gold-falls-over-1-as-u-s-inflation-data-boosts-fed-hike-bets-ce785bdede89f725",
+      "publisher": "Reuters via MarketScreener",
+      "published_at": "2026-09-10T09:48:00-04:00",
+      "updated_at": "2026-09-10T13:52:00-04:00",
+      "meeting": "2026-09-16",
+      "higher_target_probability_pct_approx": 70,
+      "underlying_source": "CME FedWatch cited by Reuters",
+      "observation_clock": null,
+      "precision": "rounded news quote; not a fresh official CSV observation",
+      "use": "qualitative confirmation of continuing hike pricing; no exact difference against Sep 8 official export",
+      "competing_news": "Article also reports oil and shipping attacks; no quantitative causal attribution"
+    }
+  ],
+  "calendar": [
+    {
+      "id": "cpi_aug",
+      "scheduled_at": "2026-09-11T08:30:00-04:00",
+      "label": "八月CPI",
+      "source_url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+      "watch": "核心月率、分项与前值修订；保存发布前预期",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "cot_sep08",
+      "scheduled_at": "2026-09-11T15:30:00-04:00",
+      "label": "9月8日CFTC持仓",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+      "watch": "Managed Money多头、空头与净额分开读",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "fomc_sep",
+      "scheduled_at": "2026-09-16T14:00:00-04:00",
+      "label": "FOMC决议及经济预测",
+      "source_url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+      "watch": "决定相对已计价的差异、预测与后续路径",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "fomc_sep_press",
+      "scheduled_at": "2026-09-16T14:30:00-04:00",
+      "label": "FOMC记者会",
+      "source_url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+      "watch": "通胀门槛、金融条件与下一步指引",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "jolts_aug",
+      "scheduled_at": "2026-09-29T10:00:00-04:00",
+      "label": "八月JOLTS",
+      "source_url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+      "watch": "职位空缺与劳动力降温",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "pce_aug",
+      "scheduled_at": "2026-09-30T08:30:00-04:00",
+      "label": "八月PCE及国民经济账户年度更新",
+      "source_url": "https://www.bea.gov/news/schedule/full",
+      "watch": "核心月率、历史修订及GDP第三次估计",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "jobs_sep",
+      "scheduled_at": "2026-10-02T08:30:00-04:00",
+      "label": "九月就业",
+      "source_url": "https://www.bls.gov/schedule/news_release/empsit.htm",
+      "watch": "非农、失业率、工资及前值修订",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "cpi_sep",
+      "scheduled_at": "2026-10-14T08:30:00-04:00",
+      "label": "九月CPI",
+      "source_url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+      "watch": "通胀持续性",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "pce_sep",
+      "scheduled_at": "2026-10-29T08:30:00-04:00",
+      "label": "九月PCE与三季度GDP初值",
+      "source_url": "https://www.bea.gov/news/schedule/full",
+      "watch": "通胀与增长组合",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "jobs_oct",
+      "scheduled_at": "2026-11-06T08:30:00-05:00",
+      "label": "十月就业",
+      "source_url": "https://www.bls.gov/schedule/news_release/empsit.htm",
+      "watch": "就业与修订",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "cpi_oct",
+      "scheduled_at": "2026-11-10T08:30:00-05:00",
+      "label": "十月CPI",
+      "source_url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+      "watch": "通胀持续性",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "pce_oct",
+      "scheduled_at": "2026-11-25T08:30:00-05:00",
+      "label": "十月PCE与三季度GDP第二次估计",
+      "source_url": "https://www.bea.gov/news/schedule/full",
+      "watch": "通胀与增长组合",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "jobs_nov",
+      "scheduled_at": "2026-12-04T08:30:00-05:00",
+      "label": "十一月就业",
+      "source_url": "https://www.bls.gov/schedule/news_release/empsit.htm",
+      "watch": "就业与修订",
+      "actual": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "cpi_nov",
+      "scheduled_at": "2026-12-10T08:30:00-05:00",
+      "label": "十一月CPI",
+      "source_url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+      "watch": "通胀持续性",
+      "actual": null,
+      "status": "scheduled"
+    }
+  ],
+  "longer_horizon_meetings": [
+    {
+      "meeting_dates_ny": [
+        "2026-10-27",
+        "2026-10-28"
+      ],
+      "projections": false,
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "release_clock": null
+    },
+    {
+      "meeting_dates_ny": [
+        "2026-12-08",
+        "2026-12-09"
+      ],
+      "projections": true,
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "release_clock": null
+    }
+  ],
+  "calendar_limit": "Verified current official schedules; later changes require a new dated snapshot. October/December meeting dates are New York dates with no unverified clock added.",
+  "annual_revision_source": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+  "unresolved": [
+    "Official FedWatch re-export returns HTML error; keep Sep 8 official history separate from Sep 10 news quote.",
+    "Global ETF workbook absent; published monthly summary only.",
+    "CFTC Sep 8 report is scheduled after cutoff; latest available remains Sep 1 published Sep 4.",
+    "Fresh Sep 10 FRED yields not available in completed Sep 10 vintage; no yield claim for gold Sep 10 endpoint.",
+    "No macro pre-release consensus archive; no numerical surprise claims."
+  ]
+}

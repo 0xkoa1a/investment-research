@@ -1,0 +1,117 @@
+{
+  "phase": 5,
+  "authorized_on": "2026-09-11",
+  "authorized_by": "用户明确回复：下一步",
+  "prior_phase_accepted_for_progression": 4,
+  "status": "implemented_pending_review",
+  "next_phase_authorized": false,
+  "report": "content/research/gold-outlook.md",
+  "delivery": "existing Markdown and Plotly local review surface",
+  "information_cutoff_at": "2026-09-11T10:28:05Z",
+  "reader_structure": [
+    "Current short/medium-term view and newly available evidence",
+    "Historical price path and long context",
+    "Rates, dollar/energy and demand evidence",
+    "Release table and three event studies",
+    "Revision conditions and upcoming calendar",
+    "Unresolved questions and concise methods"
+  ],
+  "skill_structure_mapping": {
+    "executive_summary": "Existing Chinese current-judgment section; retain user language and established report surface rather than introduce English headings or another artifact.",
+    "findings_with_visuals": "Three driver sections plus price and event evidence.",
+    "next_steps": "Three scenario conditions and forward calendar.",
+    "questions_and_methods": "One short final section."
+  },
+  "chart_map": [
+    {
+      "id": "since-august",
+      "question": "What was the full observed intraday path?",
+      "type": "five-minute line and event markers"
+    },
+    {
+      "id": "history",
+      "question": "Where does the episode sit in the longer GC=F history?",
+      "type": "daily line; separate instrument statistics"
+    },
+    {
+      "id": "rates-policy",
+      "question": "Do yields and meeting probability move consistently with gold?",
+      "type": "gold/rate overlay with inverse rate axis and probability panel"
+    },
+    {
+      "id": "dollar-energy",
+      "question": "Do currencies and energy support or contradict the episode explanation?",
+      "type": "two date-aligned line panels"
+    },
+    {
+      "id": "holdings-positioning",
+      "question": "How do physical ETF holdings and long/short positioning differ?",
+      "type": "holdings line plus diverging weekly changes and net marker"
+    },
+    {
+      "id": "event-intraday",
+      "question": "Did the move precede or follow the verified announcement time?",
+      "type": "two intraday event lines on common return scale"
+    }
+  ],
+  "editorial_changes": [
+    "Moved latest view before historical evidence; combined price sections and placed release table with event studies.",
+    "Removed duplicate explanation summary table and repetitive process notes; preserved competing evidence within the relevant sections.",
+    "Retained six charts for distinct temporal questions; no added chart for only two new daily endpoints.",
+    "Corrected the rate caption: nominal/real yields end Sep 4, breakevens end Sep 8.",
+    "Formatted CFTC hover labels explicitly so signs and thousands separators render consistently. Numeric chart coordinates unchanged."
+  ],
+  "validation": {
+    "status": "passed_for_local_review",
+    "completed_at": "2026-09-11T11:27:42+00:00",
+    "commands": {
+      "make analyze REPORT=gold-outlook": "passed",
+      "make check": "passed as make render prerequisite",
+      "make render": "passed including check-site.ts",
+      "git diff --check": "passed"
+    },
+    "python_tests_passed": 65,
+    "node_tests_passed": 7,
+    "numeric_and_date_checks_passed": 50,
+    "input_hashes_verified": 12,
+    "chart_hashes_verified": 6,
+    "unchanged_statistical_phases": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "unchanged_plot_payloads": 5,
+    "changed_plot_payload": {
+      "file": "holdings-positioning.json",
+      "change": "Preformatted CFTC hover labels; numeric coordinates unchanged."
+    },
+    "browser": {
+      "desktop_viewport": [
+        1280,
+        900
+      ],
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "charts_rendered": 6,
+      "table_count": 5,
+      "all_current_toc_targets_resolve": true,
+      "checks": [
+        "Desktop and mobile title, judgment, source captions and plot layout inspected.",
+        "No page horizontal overflow; mobile tables scroll internally.",
+        "Mobile latest-update, event-window and calendar final columns brought into view.",
+        "Interest-rate axis verified descending upward; nominal-rate legend enabled and restored.",
+        "CFTC hover verified: -10,098, +2,122 and net -0.7976; mobile positive tooltip fits.",
+        "Scenario text and calendar visually checked on mobile.",
+        "Original viewport restored; report left at the current-judgment anchor."
+      ],
+      "console_errors": 0,
+      "console_warning_note": "Four earlier warnings referenced the retired ETF heading during editorial reloads. Current TOC targets all exist; no new warnings after navigation and reload at the retained current-judgment anchor."
+    },
+    "report_sha256": "53dd72e0d218b71da2490f67856e4f4dd8dcfc52bd0a003dd1404ad90a3e5939"
+  },
+  "publication_status": "local_only_pending_commercial_redistribution_review",
+  "final_user_acceptance": false
+}

@@ -1,0 +1,235 @@
+{
+  "checked_at": "2026-09-09T12:13:17+00:00",
+  "research_cutoff_at": "2026-09-09T11:59:46+00:00",
+  "phase": 0,
+  "next_phase_authorized": false,
+  "cftc_release_source": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+  "cftc_release_times": {
+    "2026-07-28": "2026-07-31T15:30:00-04:00",
+    "2026-08-04": "2026-08-07T15:30:00-04:00",
+    "2026-08-11": "2026-08-14T15:30:00-04:00",
+    "2026-08-18": "2026-08-21T15:30:00-04:00",
+    "2026-08-25": "2026-08-28T15:30:00-04:00",
+    "2026-09-01": "2026-09-04T15:30:00-04:00",
+    "2026-09-08": "2026-09-11T15:30:00-04:00"
+  },
+  "sources": {
+    "xauusd": {
+      "status": "unconfirmed",
+      "retrieved_at": "2026-09-09T12:13:17+00:00",
+      "gap": "Dukascopy 官方导出入口已核验，但本机 TLS 连接失败，浏览器连接关闭；未取得报价序列、买卖边和日终定义。Stooq 下载返回 404。Investing.com 仅可核对近期日线表，未确认日终与买卖边。",
+      "alternative_url": "https://www.investing.com/currencies/xau-usd-historical-data",
+      "rights_url": "https://www.dukascopy.com/swiss/english/legal-pages/terms-of-use/",
+      "quote_side": "unconfirmed",
+      "session_close": "unconfirmed",
+      "source_first_observation": "",
+      "source_last_observation": "",
+      "decision": "用户已确认改用 COMEX 期货，XAU/USD 为补充参照，不再作为进入下一阶段的必要条件",
+      "last_rechecked_at": "2026-09-09T12:46:00.602471+00:00"
+    },
+    "dxy": {
+      "status": "failed_access",
+      "retrieved_at": "2026-09-09T12:13:17+00:00",
+      "gap": "Yahoo chart 请求返回 HTTP 429；本地原文件截至 2026-08-07，未作为新快照输入。",
+      "decision": "建议先以 FRED 广义美元作美元渠道辅助，不能称为 DXY；替代主指标待用户确认"
+    },
+    "policy_expectations": {
+      "status": "downloaded_pending_methodology_and_rights",
+      "retrieved_at": "2026-09-09T12:46:00.602471+00:00",
+      "gap": "已取得2026-09-16、2026-10-28、2026-12-09会议历史概率CSV；文件仅含观察日期，日终时刻与历史修订机制尚待核验，完整数值再分发条件尚待确认。",
+      "methodology_url": "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html",
+      "decision": "原文件保存在忽略缓存；公开记录覆盖与哈希。本次为基准截止之后的补充获取，不改写原固定快照。",
+      "source_first_observation": "2025-09-09",
+      "source_last_observation": "2026-09-08",
+      "meeting_files": [
+        {
+          "meeting_date": "2026-09-16",
+          "rows": 251,
+          "start": "2025-09-09",
+          "end": "2026-09-08",
+          "focus_rows": 26,
+          "duplicate_dates": 0,
+          "max_probability_sum_error": 2.0000000000575113e-06,
+          "sha256": "5fa2fbadf4f894ae9d0b53631bc849903c20507317d75eaf6e4bcca1fcff94a9"
+        },
+        {
+          "meeting_date": "2026-10-28",
+          "rows": 244,
+          "start": "2025-09-18",
+          "end": "2026-09-08",
+          "focus_rows": 26,
+          "duplicate_dates": 0,
+          "max_probability_sum_error": 2.0000000000575113e-06,
+          "sha256": "9007ce99c30b4f9d3a4f49068194eed6f3e0c5ed1e6ef189cc3fb469045c0f78"
+        },
+        {
+          "meeting_date": "2026-12-09",
+          "rows": 214,
+          "start": "2025-10-30",
+          "end": "2026-09-08",
+          "focus_rows": 26,
+          "duplicate_dates": 0,
+          "max_probability_sum_error": 2.0000000000575113e-06,
+          "sha256": "dfca50c88231dc864399d13385afbd124e05738f7d76353337b1c38694a67a3b"
+        }
+      ]
+    },
+    "etf_global": {
+      "status": "login_required",
+      "retrieved_at": "2026-09-09T12:13:17+00:00",
+      "source_last_observation": "2026-08-31",
+      "source_publication_date": "2026-09-09",
+      "publication_time_precision": "date_only",
+      "download_url": "https://www.gold.org/download/file/21136/ETF_Flows_2026-09-02_1315.xlsx",
+      "rights_url": "https://www.gold.org/terms-and-conditions",
+      "gap": "切换代理节点后，数据页面可访问；点击工作簿下载弹出登录框，匿名下载仍返回403。尚未取得全球ETF工作簿。",
+      "decision": "当日发布时间不详，不断言它在研究启动时已发布；暂不纳入基准定量证据",
+      "last_rechecked_at": "2026-09-09T12:46:00.602471+00:00"
+    },
+    "etf_gld": {
+      "status": "inspected_restricted",
+      "retrieved_at": "2026-09-09T12:13:17+00:00",
+      "source_rows": 5483,
+      "source_background_rows": 779,
+      "source_focus_rows": 26,
+      "source_first_observation": "2004-11-18",
+      "source_last_observation": "2026-09-08",
+      "timezone": "America/New_York; daily publication time requires verification",
+      "download_url": "https://api.spdrgoldshares.com/api/v1/historical-archive?product=gld&exchange=NYSE&lang=en",
+      "rights_url": "https://www.spdrgoldshares.com/usa/gld/",
+      "input_sha256": "5b1338fed839043a40e79e407402229812958813904022576d06f69f36a0d644",
+      "gap": "工作簿 Disclaimer 限制再分发；已移除 LBMA Gold Price；数值仅留在忽略缓存中。持金量不等于净资金流。",
+      "decision": "仅核验可用性；未批准作为全球 ETF 替代口径，也未将完整数值写入公开目录"
+    },
+    "comex_activity": {
+      "status": "documentation_only",
+      "retrieved_at": "2026-09-09T12:13:17+00:00",
+      "gap": "CME 成交量及未平仓量页面可访问，未取得可复核的历史合约序列。CFTC 周度总持仓已取得，但不能替代日度成交。",
+      "decision": "保留日度成交与持仓缺口；暂不分析换月或日内仓位传导"
+    },
+    "cot_gold": {
+      "gap": "年度档案可能包含历史修订；2026年7月28日以前的逐周发布时间未逐一核验，历史记录只作描述性背景。",
+      "decision": "重点样本按官方公布时间过滤，9月8日观测应到9月11日才发布，不能提前使用"
+    },
+    "gold": {
+      "status": "downloaded_pending_roll_and_close_validation",
+      "source_id": "GC=F",
+      "unit": "USD/troy oz",
+      "timezone": "America/New_York",
+      "source_first_observation": "2023-08-01",
+      "source_last_observation": "2026-09-08",
+      "review_file": "reviews/comex-20260909T125258Z.json",
+      "source_url": "https://finance.yahoo.com/quote/GC%3DF/history/",
+      "gap": "已下载；Yahoo Close 的准确形成时刻、历史对应合约及接续规则未确认；9月8日成交量为0，旧版8月7日价格与新下载不同。完整数据公开使用条件待核验。",
+      "decision": "保留独立缓存快照与版本差异，不将 GC=F 等同于具体交割月或 CME 官方结算序列"
+    }
+  },
+  "price_checks": [
+    {
+      "role": "july_baseline",
+      "observation_date": "2026-07-31",
+      "status": "unresolved",
+      "note": "候选主序列未取得；未用期货、ETF或新闻盘中值填补"
+    },
+    {
+      "role": "latest_completed_candidate",
+      "observation_date": "2026-09-08",
+      "status": "single_vendor_reference_only",
+      "source_url": "https://www.investing.com/currencies/xau-usd-historical-data",
+      "note": "页面历史表可读；其日终、买卖边未核验，且页面顶部 previous close 与历史表存在不同数值，不能混用。"
+    },
+    {
+      "role": "focus_extremes",
+      "observation_date": "",
+      "status": "unresolved",
+      "note": "未取得完整重点样本，不将最近一个月页面极值当成八月以来极值"
+    }
+  ],
+  "official_release_checks": [
+    {
+      "event": "July CPI",
+      "observation_period": "2026-07",
+      "released_at": "2026-08-12T08:30:00-04:00",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
+      "actual": "headline MoM 0.1%; YoY 3.4%",
+      "consensus": null,
+      "revisions": "原发布文本已定位；季调历史值可能修订"
+    },
+    {
+      "event": "July Personal Income and Outlays",
+      "observation_period": "2026-07",
+      "released_at": "2026-08-26T08:30:00-04:00",
+      "source_url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+      "actual": "headline PCE MoM 0.2%; core PCE MoM 0.2%",
+      "consensus": null,
+      "revisions": "原发布修订说明已定位；使用时逐项核验"
+    },
+    {
+      "event": "August Employment Situation",
+      "observation_period": "2026-08",
+      "released_at": "2026-09-04T08:30:00-04:00",
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+      "actual": "nonfarm payroll change +162,000; unemployment 4.1%",
+      "consensus": null,
+      "revisions": "June +20,000 to +31,000; July -23,000 to +21,000"
+    }
+  ],
+  "last_rechecked_at": "2026-09-09T12:46:00.602471+00:00",
+  "access_rechecks": [
+    {
+      "checked_at": "2026-09-09T12:46:00.602471+00:00",
+      "context": "User enabled TUN and then changed proxy node; no system settings changed by researcher",
+      "command_line": [
+        {
+          "source": "dukascopy",
+          "checked_at": "2026-09-09T12:43:12.316164+00:00",
+          "error": "SSLError"
+        },
+        {
+          "source": "dukascopy_docs",
+          "checked_at": "2026-09-09T12:43:12.316552+00:00",
+          "error": "SSLError"
+        },
+        {
+          "source": "fedwatch",
+          "checked_at": "2026-09-09T12:43:12.316657+00:00",
+          "error": "ReadTimeout"
+        },
+        {
+          "source": "wgc",
+          "checked_at": "2026-09-09T12:43:12.316817+00:00",
+          "status": 403,
+          "bytes": 54811,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "source": "stooq",
+          "checked_at": "2026-09-09T12:43:12.316904+00:00",
+          "status": 404,
+          "bytes": 271,
+          "content_type": "text/html"
+        },
+        {
+          "source": "fedwatch_csv",
+          "checked_at": "2026-09-09T12:43:12.317014+00:00",
+          "status": 200,
+          "bytes": 94388,
+          "content_type": "application/csv; charset=utf-8"
+        }
+      ],
+      "browser": {
+        "dukascopy": "ERR_CONNECTION_CLOSED",
+        "fedwatch": "Tool loaded; Downloads lists meeting CSVs; direct CSV retrieval succeeded",
+        "wgc": "Data page loaded; clicking workbook opens Sign in form"
+      },
+      "baseline_snapshot_unchanged": true
+    }
+  ],
+  "research_instrument": "COMEX gold futures",
+  "primary_price_series": "gold",
+  "scope_decision": {
+    "confirmed_by": "user",
+    "date": "2026-09-09",
+    "decision": "COMEX 黄金期货为主，GC=F 作为选定连续行情；XAU/USD 留作补充参照；继续 Phase 0，不授权 Phase 1"
+  }
+}

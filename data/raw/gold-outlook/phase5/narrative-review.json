@@ -1,0 +1,583 @@
+{
+  "revision": "historical_explanatory_rewrite",
+  "authorized_by": "User explicitly requested implementation of the approved narrative rewrite plan.",
+  "checked_at": "2026-09-11T11:54:31+00:00",
+  "status": "completed_local_review",
+  "report": "content/research/gold-outlook.md",
+  "report_sha256": "2d638bc62a364eec2a3bd9ce087bae3e3238ac97d9ba7fed0f5869e50cd3a776",
+  "previous_report_sha256": "53dd72e0d218b71da2490f67856e4f4dd8dcfc52bd0a003dd1404ad90a3e5939",
+  "window": "2026-08-01 through 2026-09-10; July 31 comparable endpoint; charts retain their stated historical windows",
+  "numeric_and_context_checks": [
+    {
+      "claim": "快速回升",
+      "expected_fragments": [
+        "7/31—8/7",
+        "4,107.00",
+        "4,399.70",
+        "+7.13%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "高位反复",
+      "expected_fragments": [
+        "8/7—8/18",
+        "4,399.70",
+        "4,389.50",
+        "-0.23%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "再度上行",
+      "expected_fragments": [
+        "8/18—8/25",
+        "4,389.50",
+        "4,715.90",
+        "+7.44%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "回落与反复",
+      "expected_fragments": [
+        "8/25—9/8",
+        "4,715.90",
+        "4,400.00",
+        "-6.70%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "GC=F background peak and end",
+      "expected_fragments": [
+        "5,318.40",
+        "4,393.90",
+        "17.38%",
+        "2026年1月29日"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Observed five-minute maximum drawdown",
+      "expected_fragments": [
+        "4,752.50",
+        "8.84%",
+        "8月24日20:40",
+        "9月1日23:35"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September 9-10 endpoints",
+      "expected_fragments": [
+        "4,447.20",
+        "4,358.50"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Return from July endpoint through September 10",
+      "expected_fragments": [
+        "6.12%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "July 31 to August 7 ust2y",
+      "expected_fragments": [
+        "9基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "July 31 to August 7 real10y",
+      "expected_fragments": [
+        "7基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September meeting probability ['2026-07-31', '2026-08-07']",
+      "expected_fragments": [
+        "67.0%",
+        "44.4%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September meeting probability ['2026-08-18', '2026-08-25']",
+      "expected_fragments": [
+        "36.1%",
+        "39.6%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September meeting probability ['2026-08-27', '2026-08-28']",
+      "expected_fragments": [
+        "35.4%",
+        "57.0%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September meeting probability ['2026-08-28', '2026-08-31']",
+      "expected_fragments": [
+        "57.0%",
+        "65.4%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Event-day gold 2026-08-19",
+      "expected_fragments": [
+        "4.36%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Event-day DXY 2026-08-19",
+      "expected_fragments": [
+        "0.82%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Event-day gold 2026-08-28",
+      "expected_fragments": [
+        "2.68%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Event-day DXY 2026-08-28",
+      "expected_fragments": [
+        "0.54%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Event-day gold 2026-08-31",
+      "expected_fragments": [
+        "0.72%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Event-day DXY 2026-08-31",
+      "expected_fragments": [
+        "0.27%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August 19 pre-minutes move",
+      "expected_fragments": [
+        "3.52%",
+        "13:55",
+        "14:00"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August 19 real yield",
+      "expected_fragments": [
+        "6基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August 28 intraday",
+      "expected_fragments": [
+        "4,662.70",
+        "4,603.20",
+        "1.28%",
+        "09:55",
+        "10:30"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August 28 yields",
+      "expected_fragments": [
+        "14、8基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August 31 oil and real yield",
+      "expected_fragments": [
+        "2.83%",
+        "2基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August 31 flat nominal yield",
+      "expected_fragments": [
+        "两年期收益率当天没有上升"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "real10y 2026-08-18 to 2026-08-25",
+      "expected_fragments": [
+        "9基点"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "dxy 2026-08-18 to 2026-08-25",
+      "expected_fragments": [
+        "0.73%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "wti 2026-08-25 to 2026-09-01",
+      "expected_fragments": [
+        "9.03%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "gold 2026-08-25 to 2026-09-01",
+      "expected_fragments": [
+        "7.21%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "dxy 2026-08-25 to 2026-09-08",
+      "expected_fragments": [
+        "0.08%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "gold 2026-08-25 to 2026-09-08",
+      "expected_fragments": [
+        "6.70%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September 9 positive gold/yield co-movement",
+      "expected_fragments": [
+        "4、3基点",
+        "1.07%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September 8-10 gold",
+      "expected_fragments": [
+        "0.94%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "September 8-10 wti_futures",
+      "expected_fragments": [
+        "10.16%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "GLD 2026-07-31 to 2026-08-25",
+      "expected_fragments": [
+        "41.34吨"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "GLD 2026-08-25 to 2026-09-08",
+      "expected_fragments": [
+        "2.28吨"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "GLD September 8-10",
+      "expected_fragments": [
+        "0.35吨"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Managed Money long-short decomposition",
+      "expected_fragments": [
+        "119,795手",
+        "144,747手",
+        "7,976手",
+        "10,098手",
+        "2,122手"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "CFTC observation and publication dates",
+      "expected_fragments": [
+        "9月1日持仓于9月4日公布"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "July employment as first released",
+      "expected_fragments": [
+        "8月7日",
+        "减少2.3万人",
+        "五月和六月的新增就业也被下修"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "July CPI",
+      "expected_fragments": [
+        "8月12日",
+        "0.1%",
+        "0.2%",
+        "3.4%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "July PCE",
+      "expected_fragments": [
+        "8月26日",
+        "总体与核心环比均上涨0.2%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August payrolls and July revision",
+      "expected_fragments": [
+        "9月4日",
+        "增加16.2万人",
+        "4.1%",
+        "减少2.3万人",
+        "增加2.1万人"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "August PPI and July revision",
+      "expected_fragments": [
+        "0.4%",
+        "5.4%",
+        "4.2%",
+        "0.0%",
+        "0.1%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Global August ETF flows and holdings",
+      "expected_fragments": [
+        "180亿美元",
+        "121吨",
+        "4,189吨",
+        "9月9日发布"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Reuters September 10 approximate FedWatch quote",
+      "expected_fragments": [
+        "约为70%"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "July FOMC target and dissent",
+      "expected_fragments": [
+        "3.50%—3.75%",
+        "三名委员主张加息"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Rate-panel per-series coverage",
+      "expected_fragments": [
+        "金价及概率到9月8日",
+        "名义与实际收益率到9月4日",
+        "通胀补偿到9月8日"
+      ],
+      "passed": true
+    },
+    {
+      "claim": "Material causal qualifications",
+      "expected_fragments": [
+        "不能全部归给最后一天",
+        "缺少可核验的发布前一致预期",
+        "精确发布时间和事前预期仍不清楚",
+        "只有日度概率",
+        "无法把冲突带来的影响单独分离",
+        "是对八月需求的事后统计"
+      ],
+      "passed": true
+    }
+  ],
+  "preserved_artifact_hashes": {
+    "content/_assets/plots/gold-outlook/manifest.json": "240b9c34677ff696a07d1c0cae641137d4b93cdd9063054e339641ed2a3f5c73",
+    "content/_assets/plots/gold-outlook/dollar-energy.json": "1094a81dc2358639202f84d2cd5ae1eddaaeb23850bef930b7ea1b9c960920ee",
+    "content/_assets/plots/gold-outlook/since-august.json": "a70c8a52e695f255a35bb1a1ff4081cf313d0da4a4f9fa9e24c780b11af79f38",
+    "content/_assets/plots/gold-outlook/history.json": "96e9ace4fa5791dbda6d7523c8b03109bfb887ae6cb518fff026f57791606e27",
+    "content/_assets/plots/gold-outlook/rates-policy.json": "98fe4d16c2375ad77f3f6d0714b9c96c26e21563b8c4df7bba57009854df580b",
+    "content/_assets/plots/gold-outlook/holdings-positioning.json": "b65c33a4c2abde081f2fa708a011684e54cd8fa6def8717e10b1ca9e675314ae",
+    "content/_assets/plots/gold-outlook/event-intraday.json": "1d1f5cde6470e210f693a50c84ee3133e5ae6b18ca0a7dd98bc11b90fc1ea7bb",
+    "data/raw/gold-outlook/phase4/evidence.json": "dc8789652f18bd9d67e0c3ca8c548ace8aec12af162ff076755d15f20ec8751c",
+    "data/raw/gold-outlook/phase4/statistics.json": "de0a084e2886b4542489041b53bcbe7db75a8ceab8901f6281fdba51ae19b13d",
+    "data/raw/gold-outlook/phase4/inputs.json": "011bbe711faed1be02c170dfad7a804f1c37b0cd001fb6b2d005e498d0a9178e",
+    "data/raw/gold-outlook/phase4/execution.json": "749dc5793d5287648042d705fe2720ce17da31e5693b6c99c1dee5ed19ed0f9f",
+    "data/raw/gold-outlook/phase3/evidence.json": "e618e779fb3c64c9b4746c7e51bb2c138dc5b608ead03d50efcc00358d453ed3",
+    "data/raw/gold-outlook/phase3/statistics.json": "3971bfce6d1ba7880c5cbf1eab6ca11d2d259570cb67ab13b0ec546aae9b9b21",
+    "data/raw/gold-outlook/phase3/inputs.json": "18f789e6d4d099cc4396ba0b575a8c7b833c46cac3191b5e4c33daa8ae288ac9",
+    "data/raw/gold-outlook/phase3/execution.json": "f54f4298842d4c291817d775efd99bddda2cc1d78a5d6e49174fd41af5276534",
+    "data/raw/gold-outlook/phase2/evidence.json": "468cf1d6e014a4e49a3c2a5db85ad420e79a4da8dd3bb2744eed94db37d8dd5f",
+    "data/raw/gold-outlook/phase2/statistics.json": "6db507c695e0da8ce7dbec3d6f1886e8509c18acfab188fcdf8ba688e0735640",
+    "data/raw/gold-outlook/phase2/inputs.json": "0684fd6dbdc259cfb172f753ccdadecc8f19dc4b2ef45d637b04f5ea06dd106b",
+    "data/raw/gold-outlook/phase2/execution.json": "c341e66849a325e451ebb4d19678b33f5315787a1ec84d15527a837dcbf051fc",
+    "data/raw/gold-outlook/phase5/audit.json": "50777a3228530a45cfb713c25477568a290445c8743a25a52728920d3db1676c",
+    "data/raw/gold-outlook/phase5/source-review.json": "cfa31420a5aa98348dd9e29f3b7b0749702d1cc4cf44dafa9f8082200dd7a5e1",
+    "data/raw/gold-outlook/phase5/inputs.json": "789a0e1a2f4d9f1ae12ef4740f0be26adb40d61c3566a0acb4a91c4e5a6e38d8",
+    "data/raw/gold-outlook/phase5/execution.json": "45aba9534b070b996f1126ff4c887573fdd4ced03a4cc8ee15fbf6fdd3b6de85",
+    "data/raw/gold-outlook/phase1/events.json": "38ef3362b60791c93d3bf6cb26115d5403c4fc5fb7237fc16106d844c314d865",
+    "data/raw/gold-outlook/phase1/statistics.json": "617f0bcc03c407d3ff2d7c8d02c7e350c9e30c8adb4b843930c26f446eb2efa5",
+    "data/raw/gold-outlook/phase1/intraday-audit.json": "6e9507c8f766b062fbdb2688aea363f1ef6063f4979cdf10323ac784629c6add",
+    "data/raw/gold-outlook/phase1/intraday-input.json": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+    "data/raw/gold-outlook/phase1/execution.json": "809f24af3fb235719f8418d81388954868c22e8ff50aa8b142344f35a56c3707"
+  },
+  "chart_order": [
+    "history",
+    "since-august",
+    "rates-policy",
+    "event-intraday",
+    "dollar-energy",
+    "holdings-positioning"
+  ],
+  "headings": [
+    "黄金为什么对消息敏感",
+    "八月回升处在怎样的背景中",
+    "从八月回升到九月回落",
+    "消息怎样影响价格",
+    "资金与持仓说明了什么"
+  ],
+  "previous_visible_characters": 7902,
+  "visible_characters": 6650,
+  "removed": [
+    "Forward investment view and scenarios",
+    "Future event calendar",
+    "Writing status and revision history",
+    "Snapshot comparison table",
+    "Standalone release table",
+    "Event follow-up return table",
+    "Trading research TODO and retrieval/process notes"
+  ],
+  "source_review": {
+    "live_checked": [
+      "WGC rates and dollar explanations",
+      "FRED DFII10 definition",
+      "July FOMC target/dissent",
+      "July and August BLS employment releases",
+      "July CPI and PCE releases",
+      "July FOMC minutes",
+      "Treasury August 19 announcement",
+      "Warsh August 28 speech",
+      "Reuters August 19 morning report",
+      "August 30 conflict report",
+      "August and July PPI releases",
+      "September 10 Reuters probability quote",
+      "September 9 WGC August ETF summary",
+      "CFTC position-category explanation"
+    ],
+    "retained_from_pinned_evidence": [
+      "Reuters August 26-27 speech preview",
+      "August 31 Reuters cross-market report",
+      "SPDR GLD holdings and definition",
+      "ICE DXY composition",
+      "CME FedWatch definition"
+    ],
+    "causal_review": "Mechanism explanations are conditional. Neither daily co-movement nor post-event windows are used to allocate causal contributions. Later employment revisions and the retrospective ETF report are dated explicitly."
+  },
+  "source_urls": [
+    "https://finance.yahoo.com/quote/CL%3DF/history/",
+    "https://finance.yahoo.com/quote/GC%3DF/history/",
+    "https://finance.yahoo.com/quote/GCZ26.CMX/history/",
+    "https://fred.stlouisfed.org/series/DCOILWTICO",
+    "https://fred.stlouisfed.org/series/DFII10",
+    "https://fred.stlouisfed.org/series/DGS2",
+    "https://fred.stlouisfed.org/series/DTWEXBGS",
+    "https://home.treasury.gov/news/press-releases/sb0607",
+    "https://www.axios.com/2026/08/30/us-iran-strike-hormuz-mines",
+    "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+    "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
+    "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
+    "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+    "https://www.bls.gov/news.release/archives/ppi_08132026.htm",
+    "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
+    "https://www.brecorder.com/news/40435585/gold-surges-over-3-as-us-treasury-announcement-hurts-yields-dollar",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/DisaggregatedExplanatoryNotes/index.htm",
+    "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html",
+    "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+    "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+    "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+    "https://www.gold.org/goldhub/research/investment-update-rates-pose-risks-also-unlock-opportunities-gold",
+    "https://www.gold.org/goldhub/research/qaurum-vs-us-real-rates-and-dollar-model",
+    "https://www.investing.com/news/economy-news/anxious-investors-hope-for-clarity-on-warshs-fed-plan-at-jackson-hole-4876622",
+    "https://www.marketscreener.com/news/gold-falls-over-1-as-u-s-inflation-data-boosts-fed-hike-bets-ce785bdede89f725",
+    "https://www.marketscreener.com/news/gold-slips-to-near-two-week-low-on-fed-rate-hike-bets-ce7858dcd080f726",
+    "https://www.spdrgoldshares.com/usa/gld/",
+    "https://www.theice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf"
+  ],
+  "validation": {
+    "content_and_source_review": "passed",
+    "build": "make render passed, including make check prerequisite and scripts/check-site.ts",
+    "python_tests_passed": 65,
+    "node_tests_passed": 7,
+    "snapshot_check": "passed; all six plot hashes and prior statistical records unchanged",
+    "git_diff_check": "passed",
+    "browser": {
+      "surface": "existing in-app browser, local gold-outlook page",
+      "desktop_viewport": [
+        1280,
+        900
+      ],
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "title_and_metadata": "correct; date information appears once below title",
+      "section_order": "five main sections with five chronological event subsections",
+      "plots_rendered": 6,
+      "tables": 1,
+      "current_toc_links_resolve": true,
+      "horizontal_page_overflow": false,
+      "mobile_table": {
+        "client_width": 339,
+        "scroll_width": 398,
+        "verified_scroll_left": 58.5,
+        "last_column_visible_after_scroll": true
+      },
+      "interactions": [
+        "Desktop nominal-yield legend toggled on and restored; plotted trace count changed from four to five.",
+        "Reversed rate-axis direction visually checked on desktop and mobile.",
+        "CFTC hover showed -10,098 on desktop and +2,122 on mobile with publication timestamps.",
+        "Mobile contents expanded and August 19 event link navigated to the correct section."
+      ],
+      "visual_review": [
+        "Desktop and mobile first screen",
+        "Chronological event prose and adjacent comparison plot",
+        "Mobile rate plot and caption",
+        "Mobile CFTC plot, tooltip and caption"
+      ],
+      "console_errors": 0,
+      "console_warnings": 0,
+      "framework_overlay": false,
+      "original_viewport_restored": true
+    }
+  },
+  "publication_boundary": "Existing commercial time series and plot snapshots remain in ignored local storage; historical rights records preserved."
+}

@@ -1,0 +1,78 @@
+{
+  "phase": 4,
+  "authorized_on": "2026-09-11",
+  "authorized_by": "用户明确回复：下一步",
+  "prior_phase_accepted_for_progression": 3,
+  "status": "accepted_for_progression",
+  "next_phase_authorized": true,
+  "report": "content/research/gold-outlook.md",
+  "information_cutoff_at": "2026-09-11T10:28:05Z",
+  "sample_end": "2026-09-10T17:00:00-04:00",
+  "findings": [
+    "Two-day gold decline and larger oil increase leave near-term policy pressure unresolved.",
+    "Sep 9 gold rose with real yields: retain this counterexample; no Sep 10 nominal/real yields available in selected vintage.",
+    "August global ETF summary is now known available but does not establish September inflows.",
+    "Short term cautious; medium term awaits inflation, real yields and demand confirmation."
+  ],
+  "review_decisions": [
+    "Three conditional scenarios, explicit observable revision conditions; no probabilities or price targets.",
+    "No extra chart: two new gold endpoints and asynchronously updated drivers are clearer in a compact comparison table. Six historical figures and Phase 1-3 statistics stay fixed.",
+    "Official FedWatch export is unavailable; news estimate near 70% is separate from official Sep 8 CSV.",
+    "No partial Sep 11 market date, future CPI result or not-yet-released Sep 8 CFTC report used.",
+    "Mobile QA found the four-column scenario table too wide; converted it to three short paragraphs. Numeric update and event calendar tables retain horizontal scrolling."
+  ],
+  "source_limits": [
+    "Commercial full series remain ignored/local-only.",
+    "Historical commercial downloads acquired after cutoff; exact first-release times unavailable.",
+    "Consensus archive, global ETF workbook and disaggregated CME volume/open interest still missing."
+  ],
+  "validation": {
+    "status": "passed_local_review",
+    "commands_passed": [
+      "make analyze REPORT=gold-outlook",
+      "make render (includes make check and scripts/check-site.ts)",
+      "git diff --check"
+    ],
+    "python_tests_passed": 65,
+    "node_tests_passed": 7,
+    "snapshot_checks": [
+      "11 FRED series use the completed Sep 10 vintage and known-by boundary before cutoff.",
+      "7,094 overlapping gold bars have zero revised prices and zero missing old bars.",
+      "The two added full trading days contain 552 bars; missing data not filled.",
+      "Phase 1-3 statistics and all six historical chart payload hashes unchanged.",
+      "Markdown numeric update table, common-date yield counterexample and Beijing release times reconciled with Phase 4 statistics.",
+      "Official FedWatch HTML errors rejected; reported approximation remains news evidence only.",
+      "Future CPI and CFTC releases excluded from current actual values."
+    ],
+    "browser": {
+      "route": "/research/gold-outlook.html",
+      "desktop_viewport": [
+        1280,
+        900
+      ],
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "loaded_figures": 6,
+      "desktop_tables_fit": true,
+      "page_horizontal_overflow": false,
+      "new_sections_screenshots_checked": true,
+      "mobile_update_table_scroll_left": 152.5,
+      "mobile_calendar_table_scroll_left": 301,
+      "scenario_layout": "three wrapped paragraphs; no horizontal scroll",
+      "toc_jump_to_update_passed": true,
+      "source_links_match_evidence": true,
+      "console_errors_and_warnings": 0,
+      "viewport_override_reset": true
+    },
+    "public_clean_checkout_ready": false,
+    "publication_limit": "Commercial full series and Plotly payloads remain local-only as in previous phases; no deployment performed."
+  },
+  "output_sha256": {
+    "content/research/gold-outlook.md": "5d5eb87b8b24d538a28f849e4492182b835f3884b8f3c109c36f6600bc32f58f",
+    "data/raw/gold-outlook/phase4/statistics.json": "de0a084e2886b4542489041b53bcbe7db75a8ceab8901f6281fdba51ae19b13d",
+    "content/_assets/plots/gold-outlook/manifest.json": "5239a5decee9b7fc9fe9e8c80f8eea9d97830050677ea8dd2ec7742a68903a9e"
+  },
+  "accepted_by": "用户明确回复：下一步（授权Phase 5）"
+}

@@ -1,7 +1,7 @@
 # 数据字典 SOURCES
 
 > 本文件由 `inv.sources.generate()` 自动生成，请勿手工编辑。
-> 最后生成：2026-08-29 15:12
+> 最后生成：2026-09-11 11:57
 > 新增数据序列请在 `src/inv/config.py` 中登记，然后运行 `make update`。
 
 行数/起止日期反映 `data/raw/` 下的实际落盘状态。
@@ -123,4 +123,30 @@
 **时点口径**：FRED 的观测日期不是发布时间。默认数据集使用 ALFRED 留存的最早可证 vintage 日，
 并在缺少日内时间时从下一 SPX 交易时段保守生效；它不声称等于档案覆盖前的真实历史首发时刻。市场价格不前向填充，
 宏观值按日/周/月/季分别在 7/21/62/140 个自然日后失效。
+
+## 黄金研究固定快照
+
+`scripts/update_gold.py` 显式抓取或读取缓存，按信息截止时间保存独立快照；不更新以上共享原始数据。
+来源在 `config.GOLD_RESEARCH_FRED_IDS` 与 `config.GOLD_RESEARCH_CANDIDATES` 中登记。
+已确认采用 `gold`（COMEX 黄金期货，`GC=F`）作为主研究对象；`xauusd` 留作补充参照。
+`--futures-review` 复用市场下载器，在忽略缓存保存定时行情快照；公开目录保存覆盖、哈希和口径缺口。
+
+`--intraday` 通过 Yahoo/yfinance 定向取得五分钟 OHLCV，配置见 `config.GOLD_RESEARCH_INTRADAY`。
+Phase 1 日内图使用 `GCZ26.CMX` 十二月合约，长历史仍为 `GC=F` 日线；两者分别计算、不拼接。
+Yahoo 时间标签按柱起点处理，图中使用五分钟后的区间结束时刻（纽约时间）；不当作交易所结算价。
+原始响应、清洗后行情与哈希保存在忽略缓存；公开核验记录为 `reviews/intraday-<UTC截止时间>.json`。
+当前选定日内输入见 `phase1/intraday-input.json`；缺口不填补，节假日的缺失与休市分开核验。
+
+`--drivers` 固定 Phase 2 的 DXY、WTI期货、FedWatch分会议概率与GLD持金量；
+只有 `--drivers --refresh` 联网更新 `config.GOLD_RESEARCH_DRIVER_MARKETS` 中的两个Yahoo品种，
+FedWatch与GLD读取已取得的导出缓存。完整商业数据保留在忽略缓存，选定哈希与覆盖见 `phase2/inputs.json`。
+驱动分析按共同观测日计算，明确缩短后的截止日；CFTC按公布时间过滤，ETF与持仓保持原频率。
+WGC月报等后补证据及公开时间限制见 `phase2/evidence.json`；统计和图表均可离线重算。
+
+- `data/raw/gold-outlook/snapshots/<UTC截止时间>/coverage.csv`：实际覆盖、缺口和来源。
+- 同目录 `manifest.json`：输入版本、抓取时间、公开文件哈希与阶段状态。
+- FRED 使用研究截止时间之前最后一个完整芝加哥日的 vintage；`known_by_at` 只给可知上界。
+- CFTC 使用下载时的年度档案；已核验的公布时间单独记录，未知时间留空，不冒充历史初版。
+- 候选商业数据的公开权限未确认时，只保存核验记录，不发布完整数值。
+- 本研究不使用 SPX 日历裁剪黄金日期，普通站点构建不联网更新快照。
 

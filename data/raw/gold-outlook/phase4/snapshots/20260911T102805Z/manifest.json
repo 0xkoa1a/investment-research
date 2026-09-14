@@ -1,0 +1,18 @@
+{
+  "phase": 4,
+  "cutoff_at": "2026-09-11T10:28:05+00:00",
+  "created_at": "2026-09-11T10:45:10+00:00",
+  "files": {
+    "breakeven10y.csv": "e79ba1bf0c24b87c909ff0dc8ef324aba1ea0755b9084f4868df0d73a6b44cf6",
+    "ffr_effective.csv": "34c3d6cfa791eb7ab0b685b73a0bb3aae15e9b22b03c604476c130341c9035c4",
+    "ffr_target_lower.csv": "839bd26e1fab028cd0ef3713e18b09830c4e1024518ff1f4c9e7d51baf33bfe3",
+    "ffr_target_upper.csv": "b16b7bb9efcdadb1428df845050bf2bbccb32eea2c2fa77163926118d1cdbd31",
+    "initial_claims.csv": "1ecdbbb49a8ec82045cc3da3052f92e58b6a20c73f5cb7098e6e74b4e1d1a391",
+    "real10y.csv": "f61e1127dbc0e71e1a28d68c7f9916ec11bea2ca90f04d8d405a66cda5292e21",
+    "real5y.csv": "7280ba4691f187e5234f0dbe6d91a185500ed98c1e79deae8d8ebbdf15ac1bd3",
+    "usd_broad.csv": "cca78c0bef0223eee59b0832d1fd5e9b18e86ef8c66b82527d4a4946f0be102c",
+    "ust10y.csv": "5e34a932a057f724b97047e53abe2f9521ea3ce4c9fd56ccf8db80213091e321",
+    "ust2y.csv": "c88b87f94a2bb7a27a226d7854bab6149909cc093a483859ae0cabeab6475eb1",
+    "wti.csv": "57b26efaf2cc9509fa7af227d768780571a62d64d717e6d454e37a7a9c83ab15"
+  }
+}

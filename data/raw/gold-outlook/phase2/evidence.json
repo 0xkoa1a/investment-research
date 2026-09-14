@@ -1,0 +1,88 @@
+{
+  "information_cutoff_at": "2026-09-09T11:59:46Z",
+  "verified_on": "2026-09-11",
+  "usage": "Phase 2 retrospective driver checks; exact event windows remain Phase 3",
+  "events": [
+    {
+      "id": "P1",
+      "label": "July FOMC target unchanged",
+      "released_at": "2026-07-29T14:00:00-04:00",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "source": "Federal Reserve",
+      "finding": "Target range remained 3.50–3.75%; three dissenters preferred a 25bp increase.",
+      "baseline_eligible": true
+    },
+    {
+      "id": "P2",
+      "label": "Jackson Hole speech",
+      "released_at": "2026-08-28T10:00:00-04:00",
+      "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+      "time_source": "https://www.federalreserve.gov/newsevents/2026-august.htm",
+      "source": "Federal Reserve",
+      "finding": "Warsh questioned whether financial conditions were restrictive and required clearer inflation progress; no commitment to a specific meeting action.",
+      "baseline_eligible": true
+    },
+    {
+      "id": "P3",
+      "label": "Treasury long-end liquidity buybacks announcement",
+      "publication_date": "2026-08-19",
+      "released_at": null,
+      "conservative_known_by_at": "2026-08-20T00:00:00-04:00",
+      "boundary_note": "Analytical next-day boundary for a date-only release, not an observed timestamp.",
+      "url": "https://home.treasury.gov/news/press-releases/sb0607",
+      "source": "US Treasury",
+      "finding": "Maximum nominal long-end liquidity buyback sizes rise from $2bn to at least $4bn per operation starting September 9. Announcement, not August execution or Fed QE.",
+      "baseline_eligible": true
+    },
+    {
+      "id": "R1",
+      "label": "Hormuz: US strikes Iranian targets",
+      "event_date": "2026-08-30",
+      "publication_date": "2026-08-30",
+      "released_at": null,
+      "url": "https://www.axios.com/2026/08/30/us-iran-strike-hormuz-mines",
+      "source": "Axios reporting on CENTCOM; updated article",
+      "baseline_eligible": true,
+      "limit": "Exact first publication and direct original CENTCOM release not archived; do not infer intraday order."
+    },
+    {
+      "id": "R2",
+      "label": "Gold decline and rate-hike discussion",
+      "released_at": "2026-08-31T10:49:00-04:00",
+      "updated_at": "2026-08-31T14:06:00-04:00",
+      "url": "https://www.marketscreener.com/news/gold-slips-to-near-two-week-low-on-fed-rate-hike-bets-ce7858dcd080f726",
+      "source": "Reuters via MarketScreener",
+      "usage": "Contemporaneous competing policy/energy explanation; price statistics use frozen Yahoo/FRED, not the news quotation.",
+      "baseline_eligible": true
+    }
+  ],
+  "etf_monthly_supplement": {
+    "source": "World Gold Council",
+    "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+    "observation_period": "2026-08",
+    "publication_date": "2026-09-09",
+    "released_at": null,
+    "baseline_eligible": false,
+    "reason": "Date matches cutoff day but publication clock unknown; treat as later verified supplement, not information proven available at cutoff.",
+    "global_flow_usd_bn_rounded": 18,
+    "holdings_change_tonnes": 121,
+    "ending_holdings_tonnes": 4189,
+    "regional_flow_usd_bn_rounded": {"North America": 7.7, "Europe": 7.9, "Asia": 2.0, "Other": 0.234},
+    "limits": "Rounded components need not sum exactly. One-month observation cannot date daily flows. AUM and WGC positioning aggregates not substituted for flows or CFTC futures-only positions."
+  },
+  "definitions": [
+    {"name": "FedWatch export", "url": "https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html", "limit": "Guide documents meeting-specific history downloads, not the clock of this free date-only export."},
+    {"name": "FedWatch probabilities", "url": "https://www.cmegroup.com/fedwatch", "limit": "Implied from 30-day federal funds futures; not objective outcome probabilities."},
+    {"name": "DXY basket", "url": "https://www.theice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf", "limit": "Fixed six-currency basket differs from the Fed broad trade-weighted index."},
+    {"name": "10y breakeven", "url": "https://fred.stlouisfed.org/series/T10YIE", "limit": "Nominal minus real yield; includes risk/liquidity premia, not pure expected inflation."},
+    {"name": "CFTC publication schedule", "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm", "limit": "Observation date differs from publication. The Sept 8 observation is excluded as unpublished at cutoff."}
+  ],
+  "unresolved": [
+    "Pre-release CPI, PCE and employment consensus; use Phase 1 actual releases and contemporaneous revisions only.",
+    "FedWatch export observation clock; Yahoo DXY and CL daily Close clocks; GLD publication clock.",
+    "WGC full global/regional workbook still unavailable; published monthly summary provides retrospective totals only.",
+    "CME contract-specific daily volume and open interest not independently downloaded; CFTC all-maturity open interest is available.",
+    "Direct original Aug 30 CENTCOM announcement and exact news first-publication sequence.",
+    "Central bank physical purchases, fiscal-risk premium and OTC/physical demand are not quantified in this sample."
+  ]
+}
