@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "kind": "stage_1_calculation_evidence_not_plot_manifest",
+  "as_of": "2026-09-18",
+  "units": {
+    "teaching": "currency units per share unless cash bridge",
+    "index_returns": "percent",
+    "computed_returns": "decimal"
+  },
+  "conventions": {
+    "main_growth_start": 2,
+    "trap_growth_start": 1,
+    "dividend_payment": "year_end",
+    "cash_reinvestment": false,
+    "cash_interest": 0,
+    "taxes_fees": "excluded",
+    "index_total_return": "index dividend reinvestment; not investor after-tax return",
+    "annual_evidence": "cross_checked_public_tables_not_official_daily_download"
+  },
+  "valuation_scenarios": {
+    "pressure": {
+      "inputs": {
+        "eps_year_1": 1.4,
+        "growth_from_year_2": 0,
+        "payout": 0.5,
+        "exit_pe": 8,
+        "entry_price": 20,
+        "discount_rate": 0.08
+      },
+      "eps": [
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4
+      ],
+      "dividends": [
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "total_dividends": 3.5,
+      "terminal_price": 11.2,
+      "terminal_wealth": 14.7,
+      "five_year_return": -0.265,
+      "present_value": 10.417428832732691
+    },
+    "base": {
+      "inputs": {
+        "eps_year_1": 2,
+        "growth_from_year_2": 0.03,
+        "payout": 0.6,
+        "exit_pe": 10,
+        "entry_price": 20,
+        "discount_rate": 0.08
+      },
+      "eps": [
+        2.0,
+        2.06,
+        2.1218,
+        2.185454,
+        2.2510176200000003
+      ],
+      "dividends": [
+        1.2,
+        1.236,
+        1.27308,
+        1.3112724,
+        1.3506105720000001
+      ],
+      "total_dividends": 6.370962972,
+      "terminal_price": 22.510176200000004,
+      "terminal_wealth": 28.881139172000005,
+      "five_year_return": 0.4440569586000003,
+      "present_value": 20.384468746578566
+    },
+    "better": {
+      "inputs": {
+        "eps_year_1": 2,
+        "growth_from_year_2": 0.05,
+        "payout": 0.65,
+        "exit_pe": 12,
+        "entry_price": 20,
+        "discount_rate": 0.08
+      },
+      "eps": [
+        2.0,
+        2.1,
+        2.205,
+        2.3152500000000003,
+        2.4310125000000005
+      ],
+      "dividends": [
+        1.3,
+        1.3650000000000002,
+        1.4332500000000001,
+        1.5049125000000003,
+        1.5801581250000003
+      ],
+      "total_dividends": 7.183320625000001,
+      "terminal_price": 29.172150000000006,
+      "terminal_wealth": 36.35547062500001,
+      "five_year_return": 0.8177735312500005,
+      "present_value": 25.5473910460839
+    }
+  },
+  "base_entry_prices": [
+    {
+      "price": 20,
+      "return": 0.4440569586000003
+    },
+    {
+      "price": 25,
+      "return": 0.15524556688000013
+    },
+    {
+      "price": 30,
+      "return": -0.03729536093333319
+    }
+  ],
+  "implied_exit_pe_at_price_25_and_return_8pct": 13.012739482687838,
+  "dividend_trap": {
+    "decline": {
+      "dividends": [
+        5.6,
+        5.6,
+        5.6,
+        5.6,
+        5.6
+      ],
+      "terminal_price": 70,
+      "total_dividends": 28.0,
+      "terminal_wealth": 98.0,
+      "return": -0.020000000000000018
+    },
+    "stable": {
+      "dividends": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "terminal_price": 100,
+      "total_dividends": 40,
+      "terminal_wealth": 140,
+      "return": 0.3999999999999999
+    },
+    "growth": {
+      "dividends": [
+        4.2,
+        4.41,
+        4.6305000000000005,
+        4.862025000000001,
+        5.105126250000001
+      ],
+      "terminal_price": 127.62815625000003,
+      "total_dividends": 23.20765125,
+      "terminal_wealth": 150.83580750000004,
+      "return": 0.5083580750000005
+    }
+  },
+  "trap_growth_with_exit_pe_down_30pct_wealth": 112.54736062500001,
+  "cash_bridge": {
+    "net_profit": 100,
+    "operating_cash_flow": 120,
+    "maintenance_capex": 30,
+    "committed_growth_capex": 25,
+    "interest_not_in_operating_cash": 5,
+    "net_debt_repayment": 10,
+    "incremental_cash_buffer": 10,
+    "simple_fcf": 65,
+    "available_cash": 40,
+    "planned_dividend": 60,
+    "profit_to_operating_cash": {
+      "net_profit": 100,
+      "depreciation_addback": 30,
+      "net_working_capital_cash_use": 15,
+      "interest_expense_addback_classified_as_financing": 5,
+      "other_adjustments": 0,
+      "operating_cash_flow": 120
+    }
+  },
+  "historical_annual_returns": [
+    {
+      "year": 2013,
+      "csi_dividend_total_return_pct": -6.74,
+      "csi300_total_return_pct": -5.33
+    },
+    {
+      "year": 2014,
+      "csi_dividend_total_return_pct": 57.59,
+      "csi300_total_return_pct": 55.85
+    },
+    {
+      "year": 2015,
+      "csi_dividend_total_return_pct": 29.89,
+      "csi300_total_return_pct": 7.22
+    },
+    {
+      "year": 2016,
+      "csi_dividend_total_return_pct": -4.3,
+      "csi300_total_return_pct": -9.26
+    },
+    {
+      "year": 2017,
+      "csi_dividend_total_return_pct": 21.34,
+      "csi300_total_return_pct": 24.25
+    },
+    {
+      "year": 2018,
+      "csi_dividend_total_return_pct": -16.15,
+      "csi300_total_return_pct": -23.64
+    },
+    {
+      "year": 2019,
+      "csi_dividend_total_return_pct": 20.88,
+      "csi300_total_return_pct": 39.19
+    },
+    {
+      "year": 2020,
+      "csi_dividend_total_return_pct": 8.18,
+      "csi300_total_return_pct": 29.89
+    },
+    {
+      "year": 2021,
+      "csi_dividend_total_return_pct": 18.19,
+      "csi300_total_return_pct": -3.52
+    },
+    {
+      "year": 2022,
+      "csi_dividend_total_return_pct": -0.37,
+      "csi300_total_return_pct": -19.84
+    },
+    {
+      "year": 2023,
+      "csi_dividend_total_return_pct": 6.34,
+      "csi300_total_return_pct": -9.14
+    },
+    {
+      "year": 2024,
+      "csi_dividend_total_return_pct": 18.76,
+      "csi300_total_return_pct": 18.24
+    },
+    {
+      "year": 2025,
+      "csi_dividend_total_return_pct": 3.76,
+      "csi300_total_return_pct": 20.98
+    }
+  ],
+  "annual_evidence_ids": {
+    "csi_dividend_2013_2019": [
+      "I4"
+    ],
+    "csi_dividend_2014_2023": [
+      "I5",
+      "I6"
+    ],
+    "csi_dividend_2024": [
+      "I7"
+    ],
+    "csi_dividend_2025": [
+      "I9",
+      "I10"
+    ],
+    "csi300_2013_2025": [
+      "I8"
+    ],
+    "definitions": [
+      "I1",
+      "I2",
+      "I3"
+    ]
+  },
+  "complete_calendar_five_year_windows": [
+    {
+      "start_year": 2013,
+      "end_year": 2017,
+      "csi_dividend_cagr": 0.17258178186012096,
+      "csi300_cagr": 0.12268528859769212
+    },
+    {
+      "start_year": 2014,
+      "end_year": 2018,
+      "csi_dividend_cagr": 0.14790163252351674,
+      "csi300_cagr": 0.07544632617031843
+    },
+    {
+      "start_year": 2015,
+      "end_year": 2019,
+      "csi_dividend_cagr": 0.08860376669220926,
+      "csi300_cagr": 0.05140245307725411
+    },
+    {
+      "start_year": 2016,
+      "end_year": 2020,
+      "csi_dividend_cagr": 0.049503967603803156,
+      "csi300_cagr": 0.09251892507166337
+    },
+    {
+      "start_year": 2017,
+      "end_year": 2021,
+      "csi_dividend_cagr": 0.09475728466107403,
+      "csi300_cagr": 0.10600393648894979
+    },
+    {
+      "start_year": 2018,
+      "end_year": 2022,
+      "csi_dividend_cagr": 0.05243448874392431,
+      "csi300_cagr": 0.013185427890365364
+    },
+    {
+      "start_year": 2019,
+      "end_year": 2023,
+      "csi_dividend_cagr": 0.10365615454323684,
+      "csi300_cagr": 0.04903577115195534
+    },
+    {
+      "start_year": 2020,
+      "end_year": 2024,
+      "csi_dividend_cagr": 0.09975751160893331,
+      "csi300_cagr": 0.015363563769955846
+    },
+    {
+      "start_year": 2021,
+      "end_year": 2025,
+      "csi_dividend_cagr": 0.09062019233429397,
+      "csi300_cagr": 0.0010347350863249005
+    }
+  ],
+  "verified_company_cash_bridge_yuan": {
+    "yangtze_operating_cash": 24128313774.37,
+    "yangtze_long_term_asset_cash_outflow": 4434616153.91,
+    "difference": 19693697620.46
+  },
+  "treasury_verified_observation": {
+    "date": "2026-09-11",
+    "two_year_pct": 4.63,
+    "ten_year_pct": 4.96,
+    "source_id": "M1"
+  },
+  "not_yet_verified": [
+    "ChiNext full annual total return series",
+    "2024 monthly total returns for three indices",
+    "remaining original Treasury observation dates"
+  ]
+}
