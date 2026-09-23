@@ -42,8 +42,40 @@ def line(fig: go.Figure, series: pd.Series, name: str, color: str, row: int, *,
         hovertemplate=f'%{{x|%Y-%m-%d}}<br>{name}：%{{y:,.2f}} {unit}<extra></extra>'), row=row, col=1)
 
 
+def annotate_gold_events(fig: go.Figure, events: list[dict], evidence: dict) -> None:
+    """Mark exact releases separately from whole-day context, using saved evidence."""
+    jobs = next(event for event in events if event['id'] == 'E1')
+    selected = [
+        ('就业', jobs['released_at'], '七月就业报告'),
+        ('纪要', evidence['sources']['minutes']['released_at'], '七月FOMC纪要'),
+        ('讲话', evidence['sources']['warsh_speech']['released_at'], '沃什讲话'),
+    ]
+    times = [pd.Timestamp(released_at).tz_convert('America/New_York').tz_localize(None).isoformat()
+             for _, released_at, _ in selected]
+    for released_at in times:
+        fig.add_shape(type='line', x0=released_at, x1=released_at, y0=0, y1=.90,
+                      xref='x', yref='paper', line=dict(color='#C2CCD7', width=1, dash='dot'), layer='below')
+    fig.add_trace(go.Scatter(
+        x=times, y=[.90] * len(selected), yaxis='y2',
+        mode='markers+text', text=[label for label, _, _ in selected], textposition='top center',
+        marker=dict(symbol='diamond', size=9, color=BLUE), name='发布时间',
+        customdata=[detail for _, _, detail in selected],
+        hovertemplate='%{customdata}<br>发布：%{x|%m/%d %H:%M} 纽约<extra></extra>',
+    ))
+    conflict = next(case for case in evidence['cases'] if case['id'] == 'aug31')
+    for date, label in [(evidence['sources']['buybacks']['published_date'], '财政部消息'),
+                        (conflict['date'], '冲突后<br>首个交易日')]:
+        start = pd.Timestamp(date)
+        fig.add_vrect(x0=start.isoformat(), x1=(start + pd.Timedelta(days=1)).isoformat(),
+                      fillcolor='#64748B', opacity=.10, line_width=0, layer='below')
+        # Midday centers a whole-day label; it is not an assumed announcement timestamp.
+        fig.add_annotation(x=(start + pd.Timedelta(hours=12)).isoformat(), y=.84, yref='paper',
+                           text=label, showarrow=False, yanchor='top',
+                           font=dict(size=10, color='#475569'))
+
+
 def write_driver_plots(writer, frames: dict, gold: pd.Series) -> None:
-    fig = panels('金价 · 美元/盎司', '目标更高概率 · %')
+    fig = panels('金价 · 美元/盎司', '九月加息概率 · %')
     daily_gold = gold.tz_convert('America/New_York').between_time('17:00', '17:00').copy()
     daily_gold.index = daily_gold.index.tz_localize(None).normalize()
     line(fig, daily_gold, '黄金', GOLD, 1, unit='美元/金衡盎司')
@@ -56,14 +88,11 @@ def write_driver_plots(writer, frames: dict, gold: pd.Series) -> None:
     )
     fig.update_yaxes(tickformat=',.0f', row=1, col=1)
     for name, label, color, dash in [('real10y', '10年实际', BLUE, 'dash'),
-                                    ('ust2y', '2年名义', '#94A3B8', 'solid'),
-                                    ('breakeven10y', '通胀补偿', GRAY, 'dot')]:
+                                    ('ust2y', '2年名义', '#94A3B8', 'solid')]:
         s = frames[name].value
         line(fig, (s - s.loc[BASELINE]) * 100, label, color, 1, unit='bp', dash=dash)
         fig.data[-1].update(yaxis='y3', visible=True if name == 'real10y' else 'legendonly')
-    for meeting, label, color, dash in [('20260916', '9/16会议后', BLUE, 'solid'),
-                                       ('20261209', '12/9会议后', GRAY, 'dash')]:
-        line(fig, frames['fedwatch_' + meeting].higher_pct, label, color, 2, unit='%', dash=dash)
+    line(fig, frames['fedwatch_20260916'].higher_pct, '9/16会议后', BLUE, 2, unit='%')
     fig.update_yaxes(range=[0, 100], row=2, col=1)
     writer.write_plotly(fig, 'rates-policy')
 

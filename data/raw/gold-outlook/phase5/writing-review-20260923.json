@@ -1,0 +1,141 @@
+{
+  "reviewed_on": "2026-09-23",
+  "report_sha256": "9c8b2e537771e39937c4965b9967710b25895ba20c3c97856f90e3263b0fde26",
+  "basis": "Approved six writing-review findings; existing local evidence and chart data.",
+  "generation": "Presentation-only redraw from hash-validated existing Plotly payloads, using annotate_gold_events and ReportWriter. Retained traces are numerically unchanged.",
+  "full_analysis_status": "make analyze REPORT=gold-outlook cannot run: the original .cache/gold-outlook/comex/snapshots/20260909T125258Z input is absent. No fresh market data was substituted.",
+  "input_plot_manifest": {
+    "report": "gold-outlook",
+    "data_as_of": "2026-09-10",
+    "charts": [
+      {
+        "file": "dollar-energy.json",
+        "sha256": "1094a81dc2358639202f84d2cd5ae1eddaaeb23850bef930b7ea1b9c960920ee",
+        "traces": 4
+      },
+      {
+        "file": "event-intraday.json",
+        "sha256": "1d1f5cde6470e210f693a50c84ee3133e5ae6b18ca0a7dd98bc11b90fc1ea7bb",
+        "traces": 2
+      },
+      {
+        "file": "history.json",
+        "sha256": "96e9ace4fa5791dbda6d7523c8b03109bfb887ae6cb518fff026f57791606e27",
+        "traces": 1
+      },
+      {
+        "file": "holdings-positioning.json",
+        "sha256": "b65c33a4c2abde081f2fa708a011684e54cd8fa6def8717e10b1ca9e675314ae",
+        "traces": 4
+      },
+      {
+        "file": "rates-policy.json",
+        "sha256": "98fe4d16c2375ad77f3f6d0714b9c96c26e21563b8c4df7bba57009854df580b",
+        "traces": 6
+      },
+      {
+        "file": "since-august.json",
+        "sha256": "a70c8a52e695f255a35bb1a1ff4081cf313d0da4a4f9fa9e24c780b11af79f38",
+        "traces": 3
+      }
+    ]
+  },
+  "output_plot_manifest": {
+    "report": "gold-outlook",
+    "data_as_of": "2026-09-10",
+    "charts": [
+      {
+        "file": "dollar-energy.json",
+        "sha256": "1094a81dc2358639202f84d2cd5ae1eddaaeb23850bef930b7ea1b9c960920ee",
+        "traces": 4
+      },
+      {
+        "file": "event-intraday.json",
+        "sha256": "1d1f5cde6470e210f693a50c84ee3133e5ae6b18ca0a7dd98bc11b90fc1ea7bb",
+        "traces": 2
+      },
+      {
+        "file": "history.json",
+        "sha256": "96e9ace4fa5791dbda6d7523c8b03109bfb887ae6cb518fff026f57791606e27",
+        "traces": 1
+      },
+      {
+        "file": "holdings-positioning.json",
+        "sha256": "b65c33a4c2abde081f2fa708a011684e54cd8fa6def8717e10b1ca9e675314ae",
+        "traces": 4
+      },
+      {
+        "file": "rates-policy.json",
+        "sha256": "82f443a6d1ae1827dde0cd5ad0fc5db7de4ad90fa23f10d5224bd861da43fe7c",
+        "traces": 4
+      },
+      {
+        "file": "since-august.json",
+        "sha256": "6f11d784bee5c9a02224e3b14786f78373cb9d4099a03ab6f92d1364d367e777",
+        "traces": 3
+      }
+    ]
+  },
+  "event_evidence": {
+    "selection_sha256": "18f789e6d4d099cc4396ba0b575a8c7b833c46cac3191b5e4c33daa8ae288ac9",
+    "phase": 3,
+    "information_cutoff_at": "2026-09-09T11:59:46Z",
+    "sample_end": "2026-09-08T17:00:00-04:00",
+    "files": {
+      "data/raw/gold-outlook/phase1/intraday-input.json": "33ea5ad53a52a77611304c680992768fe6f72c54d449fcac071c0241507c43e6",
+      "data/raw/gold-outlook/phase1/events.json": "38ef3362b60791c93d3bf6cb26115d5403c4fc5fb7237fc16106d844c314d865",
+      "data/raw/gold-outlook/phase2/inputs.json": "0684fd6dbdc259cfb172f753ccdadecc8f19dc4b2ef45d637b04f5ea06dd106b",
+      "data/raw/gold-outlook/phase2/evidence.json": "468cf1d6e014a4e49a3c2a5db85ad420e79a4da8dd3bb2744eed94db37d8dd5f",
+      "data/raw/gold-outlook/phase3/evidence.json": "e618e779fb3c64c9b4746c7e51bb2c138dc5b608ead03d50efcc00358d453ed3"
+    },
+    "note": "Underlying price and macro/supplement snapshots are independently verified by load_intraday and load_drivers; Phase 3 pins their selection records. No new market observations."
+  },
+  "employment_timing": {
+    "released_at": "2026-08-07T08:30:00-04:00",
+    "before_bar_end": "2026-08-07T08:25:00-04:00",
+    "day_end": "2026-08-07T17:00:00-04:00",
+    "baseline_price": 4107.0,
+    "before_price": 4370.2001953125,
+    "day_end_price": 4399.7001953125,
+    "before_return_pct": 6.4085754884952495,
+    "day_end_return_pct": 7.126861341916246,
+    "after_return_pct": 0.6750262844169352
+  },
+  "changes": [
+    "Separate pre-release rally from jobs reaction.",
+    "Remove unsupported safe-haven attribution.",
+    "Show three verified release times and two whole-day context bands.",
+    "Remove unused breakeven and December probability traces; explain the horizons in prose.",
+    "Keep key speech-window returns and policy evidence, with original prices in hover.",
+    "Merge repeated positioning explanations."
+  ],
+  "checks": {
+    "six_charts_validated": true,
+    "retained_numeric_traces_unchanged": true,
+    "four_unedited_chart_files_byte_identical": true,
+    "reverse_rate_axis_retained": true,
+    "before_after_jobs_returns_recomputed": true
+  },
+  "validation": {
+    "make_check": "passed: 79 Python tests, 7 Node tests, content, snapshots, types, lint",
+    "render": "VuePress build succeeded; final check-site passed on recheck. One intermediate site check found its output directory absent during concurrent workspace build activity.",
+    "built_gold_snapshots_match_source": true,
+    "browser": {
+      "desktop_width": 1280,
+      "mobile_viewport": [
+        390,
+        844
+      ],
+      "plots_rendered": 6,
+      "main_chart": "Verified release labels, date bands and Warsh tooltip 08/28 10:00 New York; marker row lowered below mobile toolbar.",
+      "rate_chart": "Reversed axis verified; nominal-yield legend toggled on and restored; probability hover displayed.",
+      "new_body_and_date_visible": true,
+      "all_toc_anchors_resolve": true,
+      "mobile_horizontal_page_overflow": false,
+      "external_links": 0,
+      "quote_blocks": 0,
+      "console_errors_or_warnings": 0,
+      "viewport_restored": true
+    }
+  }
+}

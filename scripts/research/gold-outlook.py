@@ -11,10 +11,10 @@ import plotly.graph_objects as go
 from inv import config as C
 from inv.gold_analysis import AS_OF, BASELINE, intraday_results, load_inputs, results
 from inv.gold_data import timestamp
-from inv.gold_driver_plots import write_driver_plots
+from inv.gold_driver_plots import annotate_gold_events, write_driver_plots
 from inv.gold_drivers import driver_statistics, load_drivers, write_json
 from inv.gold_events import event_statistics, load_event_evidence, write_event_plot
-from inv.gold_intraday import NY, broken_line, load_intraday
+from inv.gold_intraday import broken_line, load_intraday
 from inv.gold_update import load_update, update_statistics
 from inv.reporting import ReportWriter
 
@@ -34,6 +34,23 @@ summary = intraday_results(intraday, intraday_provenance)
 summary['background'] = daily_summary['background']
 summary['background_inputs'] = provenance
 updated, update_provenance, update_evidence = load_update()
+event_evidence, event_provenance = load_event_evidence()
+summary['event_annotation_inputs'] = event_provenance
+jobs = next(event for event in events if event['id'] == 'E1')
+release = pd.Timestamp(jobs['released_at'])
+before = release - pd.Timedelta(minutes=5)
+day_end = release.normalize() + pd.Timedelta(hours=17)
+baseline_price = float(intraday.loc[pd.Timestamp(summary['overall']['start'])])
+before_price, day_end_price = float(intraday.loc[before]), float(intraday.loc[day_end])
+summary['employment_timing'] = {
+    'released_at': release.isoformat(),
+    'before_bar_end': before.isoformat(), 'before_price': before_price,
+    'day_end': day_end.isoformat(), 'day_end_price': day_end_price,
+    'baseline_price': baseline_price,
+    'before_return_pct': (before_price / baseline_price - 1) * 100,
+    'day_end_return_pct': (day_end_price / baseline_price - 1) * 100,
+    'after_return_pct': (day_end_price / before_price - 1) * 100,
+}
 update_as_of = update_provenance['sample_end'][:10]
 writer = ReportWriter('gold-outlook', data_as_of=update_as_of)
 GOLD, BLUE = '#B8860B', '#2563EB'
@@ -77,19 +94,8 @@ fig.add_trace(go.Scatter(
     x=[x[0], x[-1]], y=[float(focus.iloc[0]), float(focus.iloc[-1])], mode='markers',
     marker=dict(size=6, color=GOLD), customdata=['7月末基准', '样本末日'],
     hovertemplate='%{customdata}<br>%{x|%m/%d %H:%M} 纽约<br>十二月合约：%{y:,.2f}<extra></extra>'))
-# Place releases on a separate marker row: the event position does not imply a release-time price.
-event_times = [pd.Timestamp(e['released_at']).tz_convert(NY).tz_localize(None).isoformat() for e in events]
 marker_level = float(focus.max()) + 70
-for released_at in event_times:
-    fig.add_shape(type='line', x0=released_at, x1=released_at, y0=0, y1=.94,
-                  xref='x', yref='paper', line=dict(color='#C2CCD7', width=1, dash='dot'), layer='below')
-fig.add_trace(go.Scatter(
-    x=event_times, y=[.94] * len(events), yaxis='y2',
-    mode='markers+text', text=[e['id'] for e in events], textposition='top center',
-    marker=dict(symbol='diamond', size=9, color=BLUE), name='发布时间',
-    customdata=[e['label'] for e in events],
-    hovertemplate='%{text} %{customdata}<br>发布：%{x|%m/%d %H:%M} 纽约<extra></extra>',
-))
+annotate_gold_events(fig, events, event_evidence)
 fig.update_layout(yaxis=dict(range=[float(focus.min()) - 40, marker_level + 55]),
                   yaxis2=dict(overlaying='y', range=[0, 1], visible=False, fixedrange=True),
                   xaxis=dict(title='纽约时间 · 5分钟区间结束', tickformatstops=[
@@ -99,7 +105,6 @@ writer.write_plotly(fig, 'since-august')
 drivers, driver_provenance = load_drivers()
 driver_summary = driver_statistics(drivers, intraday, driver_provenance)
 write_driver_plots(writer, drivers, intraday)
-event_evidence, event_provenance = load_event_evidence()
 event_summary = event_statistics(intraday, drivers, event_evidence, event_provenance)
 write_event_plot(writer, intraday, event_summary)
 manifest_path = writer.finish()
