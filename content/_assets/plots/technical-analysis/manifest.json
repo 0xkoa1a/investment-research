@@ -1,0 +1,81 @@
+{
+  "report": "technical-analysis",
+  "data_as_of": "2026-09-23",
+  "charts": [
+    {
+      "file": "bollinger-bands.json",
+      "sha256": "e3e62e450e8f6350edda3b30ca0549f8142ba5c9dc644ab7f1aa5f344255f836",
+      "traces": 4
+    },
+    {
+      "file": "breakout-paths.json",
+      "sha256": "9405560ce500e429418cb69baa3f12f04a762fa48ad05554f792c1d177ce92bf",
+      "traces": 3
+    },
+    {
+      "file": "breakout-retest.json",
+      "sha256": "1ac0048b0a64f8a189969d64f019970d3661cac608754c1d4f00c811a06a2779",
+      "traces": 2
+    },
+    {
+      "file": "candle-paths.json",
+      "sha256": "d192ccc3116a7406bd9b4bbdf09c9de512f8764673f4b3c2156c689919086428",
+      "traces": 3
+    },
+    {
+      "file": "fibonacci-anchors.json",
+      "sha256": "7e3258e9b3d8bce856496d339f0c32363432661f423773f504cf92d60ed969ad",
+      "traces": 7
+    },
+    {
+      "file": "market-structure.json",
+      "sha256": "d2b12b6f4f8fb9417c8033084e2075e16a3751fd37731ca97dd3f905819c56fe",
+      "traces": 1
+    },
+    {
+      "file": "momentum-macd.json",
+      "sha256": "27f72f8a4b33cc296d52799d195763d25b957424b3bb78ba60267dc15cc32ec9",
+      "traces": 3
+    },
+    {
+      "file": "momentum-price.json",
+      "sha256": "7ee3a7983a71790c77fb42b5907bcd19bfcbc63ee376d565dd4bcb80d55756ae",
+      "traces": 3
+    },
+    {
+      "file": "momentum-rsi.json",
+      "sha256": "356ca399b2bae71f3abcb7cd9c3280d8ca16065cded7689151f7b6453824f623",
+      "traces": 1
+    },
+    {
+      "file": "moving-averages.json",
+      "sha256": "48aa6482a3535a70e08fa3291f476a538720b1720ee260ab52da4f9843cf9b9f",
+      "traces": 4
+    },
+    {
+      "file": "pattern-comparison.json",
+      "sha256": "ebc72119c17d344bf65c5c8fcf7810b4076e8c92e536ca3a500e3e2f3f9608ac",
+      "traces": 14
+    },
+    {
+      "file": "timeframe-daily.json",
+      "sha256": "69cd7cbf584799b8a77ead6c3f4774e2cfd97454fa54a9c8de89bf875ed24750",
+      "traces": 1
+    },
+    {
+      "file": "timeframe-hourly.json",
+      "sha256": "32b88fc20b79d64858accbc98292f995bf349d01dadd9b3527103a7489925b4c",
+      "traces": 2
+    },
+    {
+      "file": "timeframe-weekly.json",
+      "sha256": "20bc7f7be98fc96c3cbea15ff31cd3d8d58d1eb131bb0cb966fcf643ab69a104",
+      "traces": 1
+    },
+    {
+      "file": "volume-profile.json",
+      "sha256": "8193a3589fe572021e5e3911469d1d5b9a2b59caeef6350454bd57dca5166413",
+      "traces": 1
+    }
+  ]
+}
