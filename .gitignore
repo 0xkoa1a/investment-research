@@ -22,6 +22,3 @@ _site/
 
 # ---- macOS ----
 .DS_Store
-
-# ---- 黄金研究本地审阅图表：完整行情再分发条件待确认 ----
-content/_assets/plots/gold-outlook/
