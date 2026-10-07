@@ -4,6 +4,12 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # vue-tsc 3.x uses compiler entry points removed by TypeScript 7.
+    # Re-enable major upgrades after validating a compatible vue-tsc release.
+    ignore:
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
     groups:
       vuepress:
         patterns:

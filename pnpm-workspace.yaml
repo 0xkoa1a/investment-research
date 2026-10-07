@@ -5,6 +5,10 @@ allowBuilds:
 
 overrides:
   "js-yaml@>=3.0.0 <3.15.2": 3.15.2
+  "markdown-it@>=14.0.0 <14.3.1": 14.3.1
+  "source-map-js@>=1.0.0 <1.2.2": 1.2.2
+  # argparse 2 retains the v1 CLI API and removes vulnerable sprintf-js.
+  "js-yaml@3.15.2>argparse": 2.0.1
 
 # VuePress v2 RC packages declare adjacent peer ranges. These exact versions
 # are pinned and validated together by the lockfile and CI.
