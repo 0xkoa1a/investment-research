@@ -1,0 +1,21 @@
+{
+  "primary_ready": true,
+  "primary_daily": {
+    "baseline_date": "2026-07-31",
+    "baseline_ready": true,
+    "sample_end_present": true,
+    "focus_rows": 47,
+    "focus_prices_valid": true,
+    "ready": true
+  },
+  "daily_date_set_gaps": {
+    "primary_missing_from_history": [],
+    "history_missing_from_primary": []
+  },
+  "weekday_missing_pending_calendar_review": [
+    "2026-09-07"
+  ],
+  "five_minute_required": false,
+  "five_minute_status": "downloaded",
+  "phase_1_authorized": false
+}

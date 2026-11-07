@@ -1,0 +1,871 @@
+{
+  "run_id": "20261008T090303Z",
+  "verification": {
+    "refresh": {
+      "status": "passed",
+      "path": "data/raw/gold-outlook/runs/20261008T090303Z",
+      "public_file_count": 22,
+      "local_path": "data/local/gold-outlook/runs/20261008T090303Z",
+      "local_file_count": 76,
+      "local_manifest_sha256": "f6f71e2fab16e08b7b2464c39c19c72de0587febdf43691d63301c4ac85c8081",
+      "local_manifest_sha256_matches_public": true,
+      "local_manifest_file_entry_count": 75
+    },
+    "old_phase4_snapshot": {
+      "status": "passed",
+      "path": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z",
+      "phase": 4,
+      "file_count": 12
+    },
+    "phase0_snapshot": {
+      "status": "passed",
+      "path": "data/raw/gold-outlook/snapshots/20260909T115946Z",
+      "phase": 0,
+      "file_count": 21
+    }
+  },
+  "government_series_comparison": {
+    "breakeven10y": {
+      "source": "FRED/ALFRED",
+      "source_id": "T10YIE",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/breakeven10y.csv",
+      "current_csv_sha256": "54bb54c3b4736ce9f6c6da66e8c56c1ce64968806b117ccc6313df5ce3411657",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/breakeven10y.csv",
+        "csv_sha256": "e79ba1bf0c24b87c909ff0dc8ef324aba1ea0755b9084f4868df0d73a6b44cf6",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 813,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "cot_gold": {
+      "source": "CFTC",
+      "source_id": "088691",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/cot_gold.csv",
+      "current_csv_sha256": "0652ca7eccb2181516891311fb1b5408487023054da35b783cae2f61a7833a46",
+      "csv_vintage_date": {
+        "status": "empty_in_csv",
+        "dates": []
+      },
+      "reference": {
+        "snapshot": "phase0",
+        "csv": "data/raw/gold-outlook/snapshots/20260909T115946Z/cot_gold.csv",
+        "csv_sha256": "20779664d683f55c8baf507b5b634c3d8e4d35e098c22848fe2552e543bab65f",
+        "csv_vintage_date": {
+          "status": "empty_in_csv",
+          "dates": []
+        }
+      },
+      "common_date_count": 162,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value",
+        "managed_money_long",
+        "managed_money_short",
+        "managed_money_spreading",
+        "open_interest"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "cpi": {
+      "source": "FRED/ALFRED",
+      "source_id": "CPIAUCSL",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/cpi.csv",
+      "current_csv_sha256": "e22ba2adb2dc35983751d765379bf1bf014967af72c9a9869f795eee545458ec",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase0",
+        "csv": "data/raw/gold-outlook/snapshots/20260909T115946Z/cpi.csv",
+        "csv_sha256": "8df8c2bd2c445bf18f3adb58adfbfc6df57141653cc857a17b7456d9898b6154",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-08"
+          ]
+        }
+      },
+      "common_date_count": 36,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "cpi_core": {
+      "source": "FRED/ALFRED",
+      "source_id": "CPILFESL",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/cpi_core.csv",
+      "current_csv_sha256": "5ded7a08aad59d84012ad499287ffff1806fd22e7063d55d0cb69cdadc20ff84",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase0",
+        "csv": "data/raw/gold-outlook/snapshots/20260909T115946Z/cpi_core.csv",
+        "csv_sha256": "8a1e933360df3dc114bb0b2a8d26f6ac762a491298d6c2efe5e856788523baa5",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-08"
+          ]
+        }
+      },
+      "common_date_count": 36,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "ffr_effective": {
+      "source": "FRED/ALFRED",
+      "source_id": "DFF",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/ffr_effective.csv",
+      "current_csv_sha256": "28ab91c880303a9ce913736197d44c5b5a2516f677083b9b89ad8c8173a40bc2",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/ffr_effective.csv",
+        "csv_sha256": "34c3d6cfa791eb7ab0b685b73a0bb3aae15e9b22b03c604476c130341c9035c4",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 1136,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "ffr_target_lower": {
+      "source": "FRED/ALFRED",
+      "source_id": "DFEDTARL",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/ffr_target_lower.csv",
+      "current_csv_sha256": "314ec66ec11a424dbf1e445a3eae7a959d1639510e11135b982de036b63c34dd",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/ffr_target_lower.csv",
+        "csv_sha256": "839bd26e1fab028cd0ef3713e18b09830c4e1024518ff1f4c9e7d51baf33bfe3",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 1137,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "ffr_target_upper": {
+      "source": "FRED/ALFRED",
+      "source_id": "DFEDTARU",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/ffr_target_upper.csv",
+      "current_csv_sha256": "ea45117a42d5df8d68762326a57845f353ce46954761507bc4829c0db282eb7b",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/ffr_target_upper.csv",
+        "csv_sha256": "b16b7bb9efcdadb1428df845050bf2bbccb32eea2c2fa77163926118d1cdbd31",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 1137,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "initial_claims": {
+      "source": "FRED/ALFRED",
+      "source_id": "ICSA",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/initial_claims.csv",
+      "current_csv_sha256": "eaa0d2352bec9f20508c814907da6e184aef94889764e2f2f13da63e03516bc3",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/initial_claims.csv",
+        "csv_sha256": "1ecdbbb49a8ec82045cc3da3052f92e58b6a20c73f5cb7098e6e74b4e1d1a391",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 162,
+      "changed_value_count": 1,
+      "missing_status_change_count": 0,
+      "value_changes": [
+        {
+          "date": "2026-09-05",
+          "field": "value",
+          "reference_value": 206000.0,
+          "current_value": 207000.0
+        }
+      ],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "nonfarm_payroll": {
+      "source": "FRED/ALFRED",
+      "source_id": "PAYEMS",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/nonfarm_payroll.csv",
+      "current_csv_sha256": "cebdf78554e45536ca49069e94b58540b4c2f4719622fbb4feabb1311892d95d",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase0",
+        "csv": "data/raw/gold-outlook/snapshots/20260909T115946Z/nonfarm_payroll.csv",
+        "csv_sha256": "889156f96e252704d39d1b582163fb8b643bfa4252ac46e44693014599c1f0cd",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-08"
+          ]
+        }
+      },
+      "common_date_count": 37,
+      "changed_value_count": 2,
+      "missing_status_change_count": 0,
+      "value_changes": [
+        {
+          "date": "2026-07-01",
+          "field": "value",
+          "reference_value": 158913.0,
+          "current_value": 158882.0
+        },
+        {
+          "date": "2026-08-01",
+          "field": "value",
+          "reference_value": 159075.0,
+          "current_value": 159015.0
+        }
+      ],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "pce_core": {
+      "source": "FRED/ALFRED",
+      "source_id": "PCEPILFE",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/pce_core.csv",
+      "current_csv_sha256": "b1a8a528ac42f30a394acdd2d28d4eab3d4e46382c93db33a86ac452f3cd76a2",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase0",
+        "csv": "data/raw/gold-outlook/snapshots/20260909T115946Z/pce_core.csv",
+        "csv_sha256": "9d848cbb62dba4e0f192bbefda085aaa77a02f8b8c6efb4b0fad59566ee93cbe",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-08"
+          ]
+        }
+      },
+      "common_date_count": 36,
+      "changed_value_count": 36,
+      "missing_status_change_count": 0,
+      "value_changes": [
+        {
+          "date": "2023-08-01",
+          "field": "value",
+          "reference_value": 119.689,
+          "current_value": 119.662
+        },
+        {
+          "date": "2023-09-01",
+          "field": "value",
+          "reference_value": 120.058,
+          "current_value": 120.053
+        },
+        {
+          "date": "2023-10-01",
+          "field": "value",
+          "reference_value": 120.241,
+          "current_value": 120.321
+        },
+        {
+          "date": "2023-11-01",
+          "field": "value",
+          "reference_value": 120.374,
+          "current_value": 120.525
+        },
+        {
+          "date": "2023-12-01",
+          "field": "value",
+          "reference_value": 120.592,
+          "current_value": 120.694
+        },
+        {
+          "date": "2024-01-01",
+          "field": "value",
+          "reference_value": 121.217,
+          "current_value": 121.201
+        },
+        {
+          "date": "2024-02-01",
+          "field": "value",
+          "reference_value": 121.537,
+          "current_value": 121.57
+        },
+        {
+          "date": "2024-03-01",
+          "field": "value",
+          "reference_value": 122.009,
+          "current_value": 122.016
+        },
+        {
+          "date": "2024-04-01",
+          "field": "value",
+          "reference_value": 122.304,
+          "current_value": 122.252
+        },
+        {
+          "date": "2024-05-01",
+          "field": "value",
+          "reference_value": 122.383,
+          "current_value": 122.406
+        },
+        {
+          "date": "2024-06-01",
+          "field": "value",
+          "reference_value": 122.677,
+          "current_value": 122.667
+        },
+        {
+          "date": "2024-07-01",
+          "field": "value",
+          "reference_value": 122.911,
+          "current_value": 122.872
+        },
+        {
+          "date": "2024-08-01",
+          "field": "value",
+          "reference_value": 123.128,
+          "current_value": 123.135
+        },
+        {
+          "date": "2024-09-01",
+          "field": "value",
+          "reference_value": 123.466,
+          "current_value": 123.462
+        },
+        {
+          "date": "2024-10-01",
+          "field": "value",
+          "reference_value": 123.832,
+          "current_value": 123.816
+        },
+        {
+          "date": "2024-11-01",
+          "field": "value",
+          "reference_value": 123.962,
+          "current_value": 123.989
+        },
+        {
+          "date": "2024-12-01",
+          "field": "value",
+          "reference_value": 124.196,
+          "current_value": 124.198
+        },
+        {
+          "date": "2025-01-01",
+          "field": "value",
+          "reference_value": 124.587,
+          "current_value": 124.609
+        },
+        {
+          "date": "2025-02-01",
+          "field": "value",
+          "reference_value": 125.145,
+          "current_value": 125.002
+        },
+        {
+          "date": "2025-03-01",
+          "field": "value",
+          "reference_value": 125.267,
+          "current_value": 125.144
+        },
+        {
+          "date": "2025-04-01",
+          "field": "value",
+          "reference_value": 125.502,
+          "current_value": 125.524
+        },
+        {
+          "date": "2025-05-01",
+          "field": "value",
+          "reference_value": 125.79,
+          "current_value": 125.818
+        },
+        {
+          "date": "2025-06-01",
+          "field": "value",
+          "reference_value": 126.121,
+          "current_value": 126.133
+        },
+        {
+          "date": "2025-07-01",
+          "field": "value",
+          "reference_value": 126.43,
+          "current_value": 126.363
+        },
+        {
+          "date": "2025-08-01",
+          "field": "value",
+          "reference_value": 126.714,
+          "current_value": 126.646
+        },
+        {
+          "date": "2025-09-01",
+          "field": "value",
+          "reference_value": 126.954,
+          "current_value": 126.94
+        },
+        {
+          "date": "2025-10-01",
+          "field": "value",
+          "reference_value": 127.243,
+          "current_value": 127.165
+        },
+        {
+          "date": "2025-11-01",
+          "field": "value",
+          "reference_value": 127.469,
+          "current_value": 127.363
+        },
+        {
+          "date": "2025-12-01",
+          "field": "value",
+          "reference_value": 127.886,
+          "current_value": 127.765
+        },
+        {
+          "date": "2026-01-01",
+          "field": "value",
+          "reference_value": 128.455,
+          "current_value": 128.27
+        },
+        {
+          "date": "2026-02-01",
+          "field": "value",
+          "reference_value": 128.961,
+          "current_value": 128.701
+        },
+        {
+          "date": "2026-03-01",
+          "field": "value",
+          "reference_value": 129.343,
+          "current_value": 129.03
+        },
+        {
+          "date": "2026-04-01",
+          "field": "value",
+          "reference_value": 129.681,
+          "current_value": 129.395
+        },
+        {
+          "date": "2026-05-01",
+          "field": "value",
+          "reference_value": 130.147,
+          "current_value": 129.796
+        },
+        {
+          "date": "2026-06-01",
+          "field": "value",
+          "reference_value": 130.338,
+          "current_value": 129.969
+        },
+        {
+          "date": "2026-07-01",
+          "field": "value",
+          "reference_value": 130.658,
+          "current_value": 130.133
+        }
+      ],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "real10y": {
+      "source": "FRED/ALFRED",
+      "source_id": "DFII10",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/real10y.csv",
+      "current_csv_sha256": "d5991caa308257bf9b3d89a7dc317f1518606cbf49e90623c98dbd863e0772d6",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/real10y.csv",
+        "csv_sha256": "f61e1127dbc0e71e1a28d68c7f9916ec11bea2ca90f04d8d405a66cda5292e21",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 812,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "real5y": {
+      "source": "FRED/ALFRED",
+      "source_id": "DFII5",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/real5y.csv",
+      "current_csv_sha256": "9281399152fdc7208cfcd2a878fb797ce6912ecc58330724b1ade19d928e6e48",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/real5y.csv",
+        "csv_sha256": "7280ba4691f187e5234f0dbe6d91a185500ed98c1e79deae8d8ebbdf15ac1bd3",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 812,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "unemployment": {
+      "source": "FRED/ALFRED",
+      "source_id": "UNRATE",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/unemployment.csv",
+      "current_csv_sha256": "b7735a4495dc196f2c936b752501366ee0d8d9d918faf26a3be70e3eb3351ac3",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase0",
+        "csv": "data/raw/gold-outlook/snapshots/20260909T115946Z/unemployment.csv",
+        "csv_sha256": "3e9351c8f4bd8d46c55c759680a7e0e04b1f7ae42c362b480a05f0a3c0a2f0e5",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-08"
+          ]
+        }
+      },
+      "common_date_count": 37,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "usd_broad": {
+      "source": "FRED/ALFRED",
+      "source_id": "DTWEXBGS",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/usd_broad.csv",
+      "current_csv_sha256": "bd8514ed4828b1a9264f1060172eff1f221b73dc4eeb32c65bf2d98e8499ef03",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/usd_broad.csv",
+        "csv_sha256": "cca78c0bef0223eee59b0832d1fd5e9b18e86ef8c66b82527d4a4946f0be102c",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 809,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "ust10y": {
+      "source": "FRED/ALFRED",
+      "source_id": "DGS10",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/ust10y.csv",
+      "current_csv_sha256": "dd14eceb96ceab242ff1ee745f89da6c92550a851d5c35fe3ca1c71707a77366",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/ust10y.csv",
+        "csv_sha256": "5e34a932a057f724b97047e53abe2f9521ea3ce4c9fd56ccf8db80213091e321",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 812,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "ust2y": {
+      "source": "FRED/ALFRED",
+      "source_id": "DGS2",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/ust2y.csv",
+      "current_csv_sha256": "f30e319425b1c3854b6f0fb35aa900db30404358e05aa3e62f508c181289904e",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/ust2y.csv",
+        "csv_sha256": "c88b87f94a2bb7a27a226d7854bab6149909cc093a483859ae0cabeab6475eb1",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 812,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    },
+    "wti": {
+      "source": "FRED/ALFRED",
+      "source_id": "DCOILWTICO",
+      "current_csv": "data/raw/gold-outlook/runs/20261008T090303Z/wti.csv",
+      "current_csv_sha256": "8363d34154dc6303c56685cb118f68e2009bdf6972705137dfac36d0226671f0",
+      "csv_vintage_date": {
+        "status": "recorded",
+        "dates": [
+          "2026-10-07"
+        ]
+      },
+      "reference": {
+        "snapshot": "phase4",
+        "csv": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z/wti.csv",
+        "csv_sha256": "57b26efaf2cc9509fa7af227d768780571a62d64d717e6d454e37a7a9c83ab15",
+        "csv_vintage_date": {
+          "status": "recorded",
+          "dates": [
+            "2026-09-10"
+          ]
+        }
+      },
+      "common_date_count": 812,
+      "changed_value_count": 0,
+      "missing_status_change_count": 0,
+      "value_changes": [],
+      "missing_status_changes": [],
+      "status": "compared",
+      "comparable_value_fields": [
+        "value"
+      ],
+      "expected_value_fields_missing_from_one_or_both_csvs": []
+    }
+  },
+  "primary_daily": {
+    "source_file": "data/local/gold-outlook/runs/20261008T090303Z/primary_daily.csv",
+    "date_unique": true,
+    "row_count": 55,
+    "date_endpoints": {
+      "first": "2026-07-22",
+      "last": "2026-10-07"
+    },
+    "focus_window": {
+      "start": "2026-08-01",
+      "end": "2026-10-07",
+      "rows": 47,
+      "complete_ohlc_rows": 47,
+      "incomplete_ohlc_dates": []
+    },
+    "baseline_date": "2026-07-31",
+    "baseline_present": true,
+    "baseline_ohlc_complete": true,
+    "focus_max_high_dates": [
+      "2026-08-25"
+    ],
+    "focus_max_close_dates": [
+      "2026-08-24"
+    ]
+  },
+  "primary_intraday": {
+    "source_file": "data/local/gold-outlook/runs/20261008T090303Z/primary_intraday.csv",
+    "row_count": 14255,
+    "complete_empty_ohlcv_rows": 2879,
+    "partial_empty_ohlcv_rows": 0,
+    "missing_rows_by_regular_session": {
+      "complete_empty_inside": 87,
+      "complete_empty_outside": 2792,
+      "partial_empty_inside": 0,
+      "partial_empty_outside": 0
+    },
+    "nonempty_outside_regular_session_count": 4,
+    "nonempty_outside_regular_session_timestamps": [
+      "2026-08-14T21:00:00Z",
+      "2026-09-03T21:00:00Z",
+      "2026-09-23T21:00:00Z",
+      "2026-10-05T21:00:00Z"
+    ]
+  }
+}

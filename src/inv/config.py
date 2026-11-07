@@ -180,6 +180,11 @@ CN_INDEXES: dict[str, tuple[str, str]] = {
 
 # 黄金研究采用独立的定时快照，不改变 gold=GC=F 或公共 SPX 日历。
 GOLD_RESEARCH_RAW = RAW / "gold-outlook"
+GOLD_RESEARCH_LOCAL = DATA / "local" / "gold-outlook"
+GOLD_RESEARCH_REFRESH_MARKETS = {
+    "primary_daily": "GCZ26.CMX", "history_daily": "GC=F",
+    "dxy_daily": "DX-Y.NYB", "wti_futures_daily": "CL=F",
+}
 GOLD_RESEARCH_PRIMARY = "gold"
 GOLD_RESEARCH_FUTURES = {"gold": "GC=F", "gcv26": "GCV26.CMX", "gcz26": "GCZ26.CMX"}
 GOLD_RESEARCH_INTRADAY = {

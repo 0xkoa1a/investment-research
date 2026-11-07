@@ -1,0 +1,104 @@
+{
+  "report": "gold-outlook",
+  "phase": 0,
+  "input_run": "data/raw/gold-outlook/runs/20261008T090303Z",
+  "information_cutoff_at": "2026-10-08T09:03:03Z",
+  "latest_complete_primary_session": "2026-10-07",
+  "profile": "data/raw/gold-outlook/reviews/refresh-20261008-profile.json",
+  "verification_code": "data/raw/gold-outlook/reviews/verify-refresh-20261008.py",
+  "primary_price": {
+    "instrument": "GCZ26.CMX, COMEX December 2026 gold futures",
+    "definition": "Yahoo unadjusted daily Close, USD per troy ounce",
+    "baseline_date": "2026-07-31",
+    "focus_valid_daily_rows": 47,
+    "highest_high_date": "2026-08-25",
+    "highest_close_date": "2026-08-24",
+    "check_values_location": "data/local/gold-outlook/runs/20261008T090303Z/price_checks.csv",
+    "assessment": "Primary daily observations are ready for Phase 1. Daily Close is not identified as an exchange settlement price or a New York 17:00 intraday endpoint. Price checks use saved OHLCV and raw Yahoo responses from the same provider, not an independent second vendor."
+  },
+  "calendar_review": {
+    "date": "2026-09-07",
+    "source_url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2026/labor-day-holiday-settlement-times-2026.pdf",
+    "official_fact": "CME's Labor Day notice states that settlement prices will not be derived or disseminated for CME, CBOT, NYMEX and COMEX on September 7.",
+    "assessment": "The missing Yahoo daily observation falls on the documented holiday. This does not establish that all trading was closed or that Yahoo Close equals settlement. Preserve the observed calendar and do not fill a price. The primary and continuous series have identical focus-date sets.",
+    "frozen_readiness_record": "The original pending-calendar flag remains unchanged; this supplement records the later review."
+  },
+  "intraday_review": {
+    "first_bar_start_utc": "2026-08-10T09:05:00Z",
+    "last_bar_end_utc": "2026-10-07T21:00:00Z",
+    "missing_ohlcv_rows": 2879,
+    "missing_within_ordinary_session": 87,
+    "nonempty_outside_ordinary_session": 4,
+    "assessment": "Retain source nulls and timestamp gaps. Ordinary-session classification is a screening rule, not a verified holiday schedule. Inspect the exact publication window before using bars for an event case. The latest bar ends at New York 17:00; the first day begins partway through the session.",
+    "early_august": "Outside the new Yahoo five-minute window; retain existing evidence, but do not reconstruct raw observations from saved charts."
+  },
+  "government_revision_review": {
+    "changed_government_values": 39,
+    "changes_by_series": {"initial_claims": 1, "nonfarm_payroll": 2, "pce_core": 36},
+    "missing_status_changes": 0,
+    "comparison_order": [
+      "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z",
+      "data/raw/gold-outlook/snapshots/20260909T115946Z"
+    ],
+    "assessment": "The immediate predecessor omits some macro CSVs. Use the earlier verified snapshot for those series and record actual CSV vintage dates separately from research cutoffs. Payroll levels and core PCE indexes contain revisions. Current revised values cannot establish what investors knew at an earlier event.",
+    "payroll_units": "PAYEMS levels are thousands of persons. A revision in an employment level differs from a revision in that month's employment change because earlier revisions carry forward.",
+    "event_evidence": "Original BLS and BEA releases are recorded in sources-evidence.json and retained locally. Prerelease consensus estimates remain missing; do not describe results as above or below consensus."
+  },
+  "supplemental_sources": {
+    "fedwatch": {
+      "status": "historical_csv_missing",
+      "source_url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html",
+      "access_review": "The native-browser page and embedded controls loaded in a later access check. Historical export was not acquired; this revises the access diagnosis without adding a probability series to the frozen input.",
+      "assessment": "Two-year yields remain supporting rate evidence, not policy probabilities. Imported distributions must identify a meeting and use the prevailing policy band. Unknown daily observation clocks on announcement and effective-change days leave derived move buckets blank."
+    },
+    "global_etf": {
+      "status": "september_commentary_only",
+      "source_url": "https://www.gold.org/goldhub/research/gold-market-commentary-september-2026",
+      "publication_date": "2026-10-07",
+      "assessment": "Official monthly commentary is available; complete downloads returned HTTP 403. Commentary supports monthly background, while GLD holdings describe one fund. Neither is a daily global flow series."
+    },
+    "comex_activity": {
+      "status": "complete_volume_and_open_interest_missing",
+      "assessment": "Yahoo contract volume cannot be labelled CME total gold volume or open interest. CFTC futures-only positioning retains managed-money longs, shorts, net, spreading and total open interest at its own weekly frequency."
+    }
+  },
+  "availability_boundary": {
+    "fred_vintage_date": "2026-10-07",
+    "latest_main_yields": "2026-10-06",
+    "latest_breakeven_10y": "2026-10-07",
+    "latest_broad_dollar": "2026-10-02",
+    "latest_cftc_observation": "2026-09-29",
+    "latest_cftc_release_at": "2026-10-02T15:30:00-04:00",
+    "assessment": "Download time is recorded separately from the research cutoff. Government inputs use a completed vintage; commercial archives are current retrievals filtered to completed observations, with unknown first-publication clocks and possible later revisions. They are not asserted to reproduce every value available at the exact cutoff second."
+  },
+  "storage_boundary": {
+    "public": "Government series, relative paths, hashes, coverage and verification findings.",
+    "local_ignored": "Commercial prices, probabilities, ETF workbooks and original source responses in data/local/gold-outlook/; make clean does not remove this directory.",
+    "frozen_run_modified": false
+  },
+  "delegation": {
+    "execution_model": "gpt-6-luna",
+    "execution": "Acquisition helpers, immutable-run plumbing, tests and mechanical offline profiling.",
+    "primary_agent": "Definitions, cutoff and availability decisions, source interpretation, corrective review and final acceptance."
+  },
+  "validation": {
+    "make_check": {"status": "passed", "python_tests": 123, "node_tests": 7},
+    "make_render": {"status": "passed", "scope": "Existing report and chart presentation; no new research analysis performed."},
+    "check_site": {"status": "passed", "research_reports": 5},
+    "refresh_offline_verification": {"status": "passed", "public_files_including_manifest": 22, "local_files_including_manifest": 76},
+    "prior_snapshot_verification": {"phase4": "passed", "phase0": "passed"},
+    "git_diff_check": "passed",
+    "commercial_directory_git_ignored": true,
+    "report_and_charts_changed": false,
+    "shared_datasets_changed": false,
+    "make_analyze": "Not run: Phase 0 freezes input only; the existing report remains on its selected older input.",
+    "browser_presentation_check": "Not repeated: report, charts and page structure were unchanged in Phase 0.",
+    "commit_push_or_deployment": "Not requested or performed."
+  },
+  "next_stage": {
+    "primary_ready": true,
+    "auxiliary_gaps_recorded": true,
+    "phase_1_authorized": false,
+    "disposition": "Phase 0 is complete. Await explicit authorization for price reconstruction and chart updates."
+  }
+}

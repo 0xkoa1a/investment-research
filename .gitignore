@@ -16,6 +16,8 @@ node_modules/
 
 # ---- 派生数据（可由脚本重建，不进版本库）----
 data/processed/
+# 原始商业研究数据需要长期保留，不随 make clean 删除。
+data/local/
 
 # ---- VuePress 产物 ----
 _site/

@@ -17,20 +17,61 @@ def main() -> int:
     parser.add_argument("--intraday", action="store_true", help="保存独立 Yahoo 五分钟行情快照；固定范围见 config.GOLD_RESEARCH_INTRADAY")
     parser.add_argument("--drivers", action="store_true", help="固定 Phase 2 驱动补充；--refresh 仅更新 DXY / WTI，FedWatch 与 GLD 读取已取得的缓存")
     parser.add_argument("--outlook", action="store_true", help="Phase 4：导入独立更新快照，商业原始数值只存本地忽略缓存")
-    parser.add_argument("--sample-end", help="--outlook 的最后完整纽约交易日期，YYYY-MM-DD，取17:00端点")
+    parser.add_argument("--research-update", action="store_true", help="新研究周期 Phase 0：下载独立、长期保存的输入，不改报告和图表")
+    parser.add_argument("--start", help="--research-update 的重点样本起点，YYYY-MM-DD")
+    parser.add_argument("--background-start", default="2023-08-01", help="--research-update 的背景样本起点")
+    parser.add_argument("--evidence", type=Path, help="--research-update 的来源核验和实际公布时间记录 JSON")
+    parser.add_argument("--sample-end", help="最后完整纽约交易日期，YYYY-MM-DD；新周期采用 Yahoo 日线 Close")
     parser.add_argument("--imports", type=Path, help="导入目录；--outlook 接受既有来源导出，其余模式只接受已确认公开许可的 CSV")
     parser.add_argument("--verify", type=Path, help="只校验已有快照及文件哈希")
     args = parser.parse_args()
     if args.verify:
-        if args.cutoff or args.refresh or args.imports or args.futures_review or args.intraday or args.drivers or args.outlook or args.sample_end:
+        if args.cutoff or args.refresh or args.imports or args.futures_review or args.intraday or args.drivers or args.outlook or args.research_update or args.sample_end or args.start or args.evidence:
             parser.error("--verify 不与抓取参数一起使用")
-        manifest = verify_snapshot(args.verify)
+        import json
+
+        from inv import config as C
+
+        selection = json.loads((args.verify / "manifest.json").read_text())
+        if selection.get("kind") == "gold-research-refresh":
+            from inv.gold_refresh import verify_refresh
+            manifest = verify_refresh(args.verify, C.GOLD_RESEARCH_LOCAL)
+        else:
+            manifest = verify_snapshot(args.verify)
         print(f"[gold-check] OK: {manifest['cutoff_at']}, {len(manifest['files'])} files")
         return 0
     if not args.cutoff:
         parser.error("必须指定 --cutoff 或 --verify")
+    if args.research_update:
+        if args.futures_review or args.intraday or args.drivers or args.outlook:
+            parser.error("--research-update 不与旧阶段模式同用")
+        if not args.start or not args.sample_end or not args.evidence or not args.refresh:
+            parser.error("--research-update 需要 --start、--sample-end、--evidence 和显式 --refresh")
+        from inv import config as C
+        from inv.gold_refresh import freeze_refresh
+
+        try:
+            path = freeze_refresh(timestamp(args.cutoff), focus_start=args.start,
+                                  background_start=args.background_start, sample_end=args.sample_end,
+                                  refresh=args.refresh, public_root=C.GOLD_RESEARCH_RAW,
+                                  local_root=C.GOLD_RESEARCH_LOCAL, evidence=args.evidence, imports=args.imports)
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
+        import json
+
+        readiness = json.loads((path / "readiness.json").read_text(encoding="utf-8"))
+        primary_ready = bool(readiness.get("primary_ready", False))
+        print(f"[gold-research-update] {path.relative_to(C.ROOT)}")
+        print(f"[gold-research-update] primary_ready={str(primary_ready).lower()}")
+        if primary_ready:
+            print("[gold-phase-0] 主价格数据已通过准备检查；不授权进入 Phase 1。")
+            return 0
+        print("[gold-phase-0] 主价格数据未通过准备检查；输入已保留供审查，不授权进入 Phase 1。")
+        return 1
+    if args.start or args.evidence:
+        parser.error("--start 和 --evidence 仅用于 --research-update")
     if args.sample_end and not args.outlook:
-        parser.error("--sample-end 仅用于 --outlook")
+        parser.error("--sample-end 仅用于 --outlook 或 --research-update")
     if args.outlook:
         if args.refresh or args.drivers or args.intraday or args.futures_review or not args.imports or not args.sample_end:
             parser.error("--outlook 需要 --imports 和 --sample-end，不与其他模式或 --refresh 同用")

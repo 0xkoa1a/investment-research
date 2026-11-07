@@ -1,0 +1,145 @@
+{
+  "report": "gold-outlook",
+  "research_cycle": "August 2026 through latest complete session",
+  "phase": 0,
+  "created_at": "2026-10-08T09:01:39.458150+00:00",
+  "research_instrument": "COMEX December 2026 gold futures GCZ26.CMX",
+  "price_definition": "Yahoo unadjusted daily Close; not asserted to be exchange settlement or NY17:00 bar close",
+  "supporting_local_directory": "source-downloads/20261008",
+  "comparison_snapshot": "data/raw/gold-outlook/phase4/snapshots/20260911T102805Z",
+  "cftc_release_times": {
+    "2026-07-28": "2026-07-31T15:30:00-04:00",
+    "2026-08-04": "2026-08-07T15:30:00-04:00",
+    "2026-08-11": "2026-08-14T15:30:00-04:00",
+    "2026-08-18": "2026-08-21T15:30:00-04:00",
+    "2026-08-25": "2026-08-28T15:30:00-04:00",
+    "2026-09-01": "2026-09-04T15:30:00-04:00",
+    "2026-09-08": "2026-09-11T15:30:00-04:00",
+    "2026-09-15": "2026-09-18T15:30:00-04:00",
+    "2026-09-22": "2026-09-25T15:30:00-04:00",
+    "2026-09-29": "2026-10-02T15:30:00-04:00",
+    "2026-10-06": "2026-10-09T15:30:00-04:00"
+  },
+  "cftc_calendar": {
+    "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+    "verified_releases": [
+      "2026-07-31",
+      "2026-08-07",
+      "2026-08-14",
+      "2026-08-21",
+      "2026-08-28",
+      "2026-09-04",
+      "2026-09-11",
+      "2026-09-18",
+      "2026-09-25",
+      "2026-10-02",
+      "2026-10-09"
+    ],
+    "release_clock": "15:30 America/New_York",
+    "basis": "Official schedule opened and checked; annual 2026 archive endpoint shows Last-Modified 2026-10-02. Future release dates are excluded by cutoff; this is not an arithmetic Tuesday-plus-three-day assumption."
+  },
+  "events": [
+    {
+      "event": "fomc_20260916",
+      "released_at": "2026-09-16T14:00:00-04:00",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "title": "Federal Reserve Board - Federal Reserve issues FOMC statement",
+      "http_status": 200,
+      "payload_sha256": "06a7901b78996f1a7feb9e32cebc6aeab9b2b4b2a4a099d4c8ed0a97874a0e7f",
+      "expectations_status": "not_yet_obtained",
+      "release_and_revisions": "Original archived release saved locally; event interpretation reserved for Phase 3.",
+      "announced_target_bp": [
+        375,
+        400
+      ]
+    },
+    {
+      "event": "bls_empsit_20260904",
+      "released_at": "2026-09-04T08:30:00-04:00",
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+      "title": "Employment Situation News Release - 2026 M08 Results",
+      "http_status": 200,
+      "payload_sha256": "6d83eeecf867f1e8c9a2a5449a4b064896062f4529ad36c4ff2a37e6968b7481",
+      "expectations_status": "not_yet_obtained",
+      "release_and_revisions": "Original archived release saved locally; event interpretation reserved for Phase 3."
+    },
+    {
+      "event": "bls_cpi_20260911",
+      "released_at": "2026-09-11T08:30:00-04:00",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_09112026.htm",
+      "title": "Consumer Price Index News Release - 2026 M08 Results",
+      "http_status": 200,
+      "payload_sha256": "aee0cdff604c295d784e6302b2ba74130f10f535675a5a0fb7262c936edaaabd",
+      "expectations_status": "not_yet_obtained",
+      "release_and_revisions": "Original archived release saved locally; event interpretation reserved for Phase 3."
+    },
+    {
+      "event": "bea_personal_income_aug2026",
+      "released_at": "2026-09-30T08:30:00-04:00",
+      "source_url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026",
+      "title": "Personal Income and Outlays, August 2026 | U.S. Bureau of Economic Analysis (BEA)",
+      "http_status": 200,
+      "payload_sha256": "6c207be356d7a4a0023086bfed2c1ea3d6dc33c43be8496a39207d0fd2e2f329",
+      "expectations_status": "not_yet_obtained",
+      "release_and_revisions": "Original archived release saved locally; event interpretation reserved for Phase 3."
+    },
+    {
+      "event": "bls_empsit_20261002",
+      "released_at": "2026-10-02T08:30:00-04:00",
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "title": "Employment Situation News Release - 2026 M09 Results",
+      "http_status": 200,
+      "payload_sha256": "1de7921a0f1a8fe0d512e9faf5f588383d65e2e3a90e62d8c6c8c7c730f4c4fe",
+      "expectations_status": "not_yet_obtained",
+      "release_and_revisions": "Original archived release saved locally; event interpretation reserved for Phase 3.",
+      "published_facts": {
+        "payroll_change_september_thousands": 29,
+        "unemployment_pct": 4.2,
+        "july_previous_thousands": 21,
+        "july_revised_thousands": -10,
+        "august_previous_thousands": 162,
+        "august_revised_thousands": 133
+      }
+    }
+  ],
+  "policy_announcements": [
+    {
+      "released_at": "2026-09-16T14:00:00-04:00",
+      "target_lower_bp": 375,
+      "target_upper_bp": 400,
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    }
+  ],
+  "sources": {
+    "policy_expectations": {
+      "status": "missing",
+      "frequency": "D",
+      "source_url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html",
+      "meetings": [
+        "2026-09-16",
+        "2026-10-28",
+        "2026-12-09"
+      ],
+      "gap": "Current fully parameterized official iframe returns QuikStrike Error; no usable historical export. Do not reuse old sessions or substitute two-year yields as probabilities."
+    },
+    "etf_global": {
+      "status": "monthly_commentary_only",
+      "frequency": "M",
+      "source_url": "https://www.gold.org/goldhub/research/gold-market-commentary-september-2026",
+      "publication_date": "2026-10-07",
+      "publication_time_status": "unknown",
+      "last_observation": "2026-09-30",
+      "known_by_at": "2026-10-08T08:54:11.334438+00:00",
+      "gap": "September official monthly commentary is available; XLSX and China PDF downloads returned HTTP 403 HTML. No complete global holdings/flow table was obtained. Restricted original responses remain local."
+    }
+  },
+  "limitations": [
+    "Old commercial raw cache is absent; archived chart payloads are not substituted for raw downloads.",
+    "Yahoo 5-minute history is limited to the last 60 days. New primary statistics use one daily series; old NY17:00 figures keep their original meaning.",
+    "Government download vintages and commercial current archives may contain revisions; individual first-release clocks require original event evidence.",
+    "Daily Close labels do not establish a precise intraday publication time.",
+    "Original releases are available but prerelease consensus estimates have not yet been obtained.",
+    "Commercial raw numbers are local-only; no publication or deployment is authorized."
+  ],
+  "phase_1_authorized": false
+}
