@@ -20,7 +20,7 @@
     "@types/node": "22.20.1",
     "@vuepress/bundler-vite": "2.0.0-rc.31",
     "gray-matter": "4.0.3",
-    "katex": "0.18.4",
+    "katex": "0.19.1",
     "markdown-it": "15.0.1",
     "tsx": "4.23.12",
     "typescript": "5.9.3",
