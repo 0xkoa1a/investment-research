@@ -6,16 +6,12 @@ import MarkdownIt from 'markdown-it'
 
 import type {
   ContentManifest,
-  PlotReference,
-  ResearchContract,
   ResearchItem,
   SearchItem,
 } from './content-types.js'
 
 export type {
   ContentManifest,
-  PlotReference,
-  ResearchContract,
   ResearchItem,
   SearchItem,
 } from './content-types.js'
@@ -36,16 +32,12 @@ export const contentPagePatterns = [
 
 interface ParsedMarkdown {
   data: Record<string, unknown>
-  tokens: MarkdownToken[]
   headings: Array<{ level: number; title: string; line: number }>
   plainText: string
-  plots: PlotReference[]
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/u
 const SAFE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u
-const PLOT_TAG = /<PlotlyChart\b([\s\S]*?)\/>/gu
-const ATTRIBUTE = /([:@]?[A-Za-z][\w:.-]*)\s*=\s*"([^"]*)"/gu
 const markdown = new MarkdownIt({ html: true })
 const collator = new Intl.Collator('zh-CN')
 
@@ -85,48 +77,45 @@ function inlineText(token: MarkdownToken | undefined): string {
     .trim()
 }
 
-function parsePlotReferences(tokens: MarkdownToken[], file: string): PlotReference[] {
-  const plots: PlotReference[] = []
-  const ids = new Set<string>()
-  for (const token of tokens) {
-    if (!['html_block', 'html_inline', 'inline'].includes(token.type) || !token.content.includes('<PlotlyChart')) continue
-    const matches = [...token.content.matchAll(PLOT_TAG)]
-    if (!matches.length || token.content.replace(PLOT_TAG, '').includes('<PlotlyChart')) {
-      throw new Error(`${file}: PlotlyChart 必须使用完整的自闭合标签`)
-    }
-    for (const match of matches) {
-      const attributes = new Map<string, string>()
-      for (const attribute of match[1].matchAll(ATTRIBUTE)) {
-        const [, name, value] = attribute
-        if (attributes.has(name)) throw new Error(`${file}: PlotlyChart 属性 ${name} 重复`)
-        attributes.set(name, value.trim())
-      }
-      const unsupported = [...attributes.keys()].filter((name) => !['chart', 'caption'].includes(name))
-      if (unsupported.length) {
-        throw new Error(`${file}: PlotlyChart 不允许属性 ${unsupported.join(', ')}；只使用 chart 与 caption`)
-      }
-      const chart = attributes.get('chart') ?? ''
-      const caption = attributes.get('caption') ?? ''
-      if (!SAFE_SLUG.test(chart)) throw new Error(`${file}: PlotlyChart 缺少安全 chart 标识`)
-      if (!caption) throw new Error(`${file}: PlotlyChart 必须提供 caption`)
-      if (ids.has(chart)) throw new Error(`${file}: PlotlyChart chart=${chart} 重复`)
-      ids.add(chart)
-      plots.push({ chart, caption })
-    }
+// Lift the plain Markdown introduction into the site's article header at build time.
+export function reportPageSource(source: string): { content: string; frontmatter: Record<string, string> } {
+  const tokens = markdown.parse(source, {}) as MarkdownToken[]
+  const heading = tokens[0]
+  if (heading?.type !== 'heading_open' || heading.tag !== 'h1' || !heading.map) {
+    return { content: source, frontmatter: {} }
   }
-  return plots
+  const frontmatter: Record<string, string> = { title: inlineText(tokens[1]) }
+  let end = heading.map[1]
+  let next = 3
+  const paragraph = tokens[next]
+  const intro = tokens[next + 1]
+  // Leave rich paragraphs (links, images, math or emphasis) in the Markdown body.
+  if (paragraph?.type === 'paragraph_open' && paragraph.map && intro?.children?.every(
+    (child) => child.type === 'text' || child.type === 'softbreak',
+  ) && !intro.content.includes('$') && !intro.content.startsWith('更新于 ')) {
+    frontmatter.summary = intro.content.trim()
+    end = paragraph.map[1]
+    next += 3
+  }
+  const dates = tokens[next + 1]?.content.match(/^更新于 (\d{4}-\d{2}-\d{2}) · 数据截至 (\d{4}-\d{2}-\d{2})$/u)
+  if (tokens[next]?.type === 'paragraph_open' && tokens[next].map && dates) {
+    frontmatter.updated = dates[1]
+    frontmatter.data_as_of = dates[2]
+    end = tokens[next].map![1]
+  }
+  return { content: source.split(/\r?\n/u).slice(end).join('\n'), frontmatter }
 }
 
 function parseMarkdown(filePath: string, displayPath: string): ParsedMarkdown {
   const source = fs.readFileSync(filePath, 'utf8')
-  if (!/^---[^\S\r\n]*\r?\n/u.test(source)) throw new Error(`${displayPath}: 缺少 frontmatter`)
+  const page = reportPageSource(source)
   let parsed: matter.GrayMatterFile<string>
   try {
-    parsed = matter(source)
+    parsed = matter(page.content)
   } catch (error) {
     throw new Error(`${displayPath}: frontmatter 无效：${error instanceof Error ? error.message : String(error)}`)
   }
-  const data = parsed.data as Record<string, unknown>
+  const data = { ...parsed.data, ...page.frontmatter }
   const tokens = markdown.parse(parsed.content, {}) as MarkdownToken[]
   const headings: ParsedMarkdown['headings'] = []
   const text: string[] = []
@@ -146,10 +135,8 @@ function parseMarkdown(filePath: string, displayPath: string): ParsedMarkdown {
   }
   return {
     data,
-    tokens,
     headings,
     plainText: text.join(' ').replace(/\s+/gu, ' ').trim(),
-    plots: parsePlotReferences(tokens, displayPath),
   }
 }
 
@@ -169,7 +156,7 @@ function researchFiles(root: string): string[] {
   return names.sort((left, right) => left.localeCompare(right, 'en'))
 }
 
-function researchDocument(root: string, name: string): { item: ResearchItem; parsed: ParsedMarkdown; contract: ResearchContract } {
+function researchDocument(root: string, name: string): { item: ResearchItem; parsed: ParsedMarkdown } {
   const filePath = path.join(root, 'content', 'research', name)
   const displayPath = relative(root, filePath)
   const slug = name.slice(0, -3)
@@ -179,18 +166,13 @@ function researchDocument(root: string, name: string): { item: ResearchItem; par
   const item: ResearchItem = {
     type: 'research',
     title: requiredString(parsed.data, 'title', displayPath),
-    summary: requiredString(parsed.data, 'summary', displayPath),
+    summary: typeof parsed.data.summary === 'string' ? parsed.data.summary : '',
     updated: optionalDate(parsed.data, 'updated', displayPath),
     dataAsOf: optionalDate(parsed.data, 'data_as_of', displayPath),
     path: `/research/${slug}.html`,
     slug,
   }
-  if (parsed.plots.length && !item.dataAsOf) throw new Error(`${displayPath}: 含图表时必须填写 data_as_of`)
-  return {
-    item,
-    parsed,
-    contract: { slug, source: displayPath, dataAsOf: item.dataAsOf, plots: parsed.plots },
-  }
+  return { item, parsed }
 }
 
 export function contentRoute(root: string, filePath: string): string | undefined {
@@ -223,14 +205,7 @@ export function buildContentManifest(root: string): ContentManifest {
       path: item.path,
     }
   })
-  return { research, search, contracts: researchDocuments.map(({ contract }) => contract) }
-}
-
-export function researchContract(root: string, slug: string): ResearchContract {
-  if (!SAFE_SLUG.test(slug)) throw new Error('研究 slug 无效')
-  const contract = buildContentManifest(root).contracts.find((item) => item.slug === slug)
-  if (!contract) throw new Error(`缺少研究正文：content/research/${slug}.md`)
-  return contract
+  return { research, search }
 }
 
 export function validateCatalogs(root: string): void {
@@ -243,8 +218,4 @@ export function validateCatalogs(root: string): void {
   requiredString(parsed.data, 'summary', displayPath)
   const template = path.join(root, 'content', 'research', '_template.md')
   if (!fs.existsSync(template)) throw new Error('缺少 content/research/_template.md')
-  const publicRoot = path.join(root, 'content', '_assets')
-  const publicEntries = fs.existsSync(publicRoot) ? fs.readdirSync(publicRoot) : []
-  const unexpected = publicEntries.filter((name) => name !== 'plots')
-  if (unexpected.length) throw new Error(`content/_assets 只允许 plots/：${unexpected.join(', ')}`)
 }

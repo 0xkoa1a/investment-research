@@ -6,6 +6,7 @@ import { researchItems } from 'virtual:content-manifest'
 import SiteHeader from '../components/SiteHeader.vue'
 import TableOfContents from '../components/TableOfContents.vue'
 
+const isPortableExport = import.meta.env.VITE_PORTABLE_EXPORT === '1'
 const page = usePageData()
 interface ArticleMeta {
   title: string
@@ -32,7 +33,7 @@ function formatDate(value: unknown): string {
 </script>
 
 <template>
-  <SiteHeader />
+  <SiteHeader v-if="!isPortableExport" />
 
   <main v-if="isCatalog" :key="page.path" class="page-frame catalog-page">
     <header class="catalog-intro">
@@ -51,12 +52,12 @@ function formatDate(value: unknown): string {
     </section>
   </main>
 
-  <main v-else :key="page.path" class="page-frame article-shell">
+  <main v-else :key="page.path" class="page-frame article-shell" :class="{ 'portable-article': isPortableExport }">
     <article class="article-main">
-      <RouterLink class="back-link" to="/">← 返回研究</RouterLink>
+      <RouterLink v-if="!isPortableExport" class="back-link" to="/">← 返回研究</RouterLink>
       <header class="article-header">
         <h1>{{ meta.title }}</h1>
-        <p>{{ meta.summary }}</p>
+        <p v-if="meta.summary">{{ meta.summary }}</p>
         <p v-if="meta.updated || meta.dataAsOf" class="research-meta">
           <span v-if="meta.updated">更新于 {{ formatDate(meta.updated) }}</span>
           <span v-if="meta.dataAsOf">数据截至 {{ formatDate(meta.dataAsOf) }}</span>

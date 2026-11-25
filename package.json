@@ -6,6 +6,7 @@
   "scripts": {
     "check:content": "node --import tsx scripts/check-content.ts",
     "check:site": "node --import tsx scripts/check-site.ts",
+    "export:page": "node scripts/export-page.mjs",
     "docs:build": "vuepress build .",
     "test": "node --import tsx --test tests/node/**/*.test.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json && vue-tsc --noEmit -p tsconfig.app.json"
@@ -21,7 +22,6 @@
     "gray-matter": "4.0.3",
     "katex": "0.18.4",
     "markdown-it": "15.0.1",
-    "plotly.js-dist-min": "3.7.0",
     "tsx": "4.23.12",
     "typescript": "5.9.3",
     "vite": "8.2.2",

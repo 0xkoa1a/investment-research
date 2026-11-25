@@ -31,15 +31,8 @@ jobs:
           node-version: 22.18.0
           cache: pnpm
 
-      - name: Install uv and Python
-        run: |
-          pipx install uv==0.11.27
-          uv python install 3.12
-
       - name: Install locked dependencies
-        run: |
-          uv sync --locked --python 3.12
-          pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
-      - name: Check, test, and build offline site
+      - name: Check, test, and build site
         run: make render

@@ -5,8 +5,6 @@ import { buildContentManifest } from '../site/content.js'
 
 const root = path.resolve(import.meta.dirname, '..')
 const site = path.join(root, '_site')
-const sourcePlots = path.join(root, 'content', '_assets', 'plots')
-const builtPlots = path.join(site, 'plots')
 const errors: string[] = []
 
 const filesBelow = (directory: string): string[] => {
@@ -36,11 +34,6 @@ try {
   }
   for (const forbidden of ['research/_template.html', 'research.html', 'journal', 'journal.html']) {
     if (fs.existsSync(path.join(site, forbidden))) errors.push(`非研究内容意外进入站点：${forbidden}`)
-  }
-  const sourceAssets = filesBelow(sourcePlots)
-  const builtAssets = filesBelow(builtPlots)
-  if (JSON.stringify(sourceAssets) !== JSON.stringify(builtAssets)) {
-    errors.push(`Plotly 静态资源集合不一致：source=${sourceAssets.join(',')} built=${builtAssets.join(',')}`)
   }
   const builtFiles = filesBelow(site)
   const forbiddenFiles = builtFiles.filter((name) => /(?:^|\/)(?:trades?|positions?)(?:[./]|$)|\.(?:csv|py|map)$/iu.test(name))

@@ -27,13 +27,7 @@ jobs:
           cache: pnpm
 
       - name: Install locked dependencies
-        run: |
-          pipx install uv==0.11.27
-          uv python install 3.12
-          uv sync --locked --python 3.12
-          pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Audit dependencies
-        run: |
-          pnpm audit --audit-level=moderate
-          .venv/bin/pip-audit
+        run: pnpm audit --audit-level=moderate

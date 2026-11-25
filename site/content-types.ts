@@ -1,8 +1,3 @@
-export interface PlotReference {
-  chart: string
-  caption: string
-}
-
 export interface ResearchItem {
   type: 'research'
   title: string
@@ -22,15 +17,7 @@ export interface SearchItem {
   path: string
 }
 
-export interface ResearchContract {
-  slug: string
-  source: string
-  dataAsOf?: string
-  plots: PlotReference[]
-}
-
 export interface ContentManifest {
   research: ResearchItem[]
   search: SearchItem[]
-  contracts: ResearchContract[]
 }

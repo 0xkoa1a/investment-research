@@ -7,12 +7,11 @@
 - Keep secrets in ignored local environment files. Never commit API keys, tokens, credentials, account identifiers, or private filesystem paths.
 - Before every push, run `make check`, `make render`, and `git diff --check`. Inspect `_site/` with `scripts/check-site.ts` before deployment.
 
-## Content and computation
+## 报告与截图
 
-- Markdown owns report prose, formulas, tables, citations, and conclusions.
-- Python owns data retrieval, statistics, and versioned Plotly snapshots.
-- A normal site build must not fetch data, rerun analysis, or change report conclusions.
-- Preserve unrelated report prose, sources, data snapshots, and user edits.
+- 正文使用普通 Markdown，保存在 `content/research/`。每篇报告的本地图片放在 `content/research/images/<报告文件名>/`，在正文中使用相对路径。
+- 仓库根目录的 README 是阅读目录。增删报告或更改标题时同步更新目录链接。
+- 保留与当前任务无关的报告正文、图片和用户编辑。
 
 ## 理解式研究报告的偏好
 
@@ -31,7 +30,7 @@
 - 使用通俗、准确、连贯的中文段落，一段讲清一个主要意思。先说重点，再给解释和必要证据，让后一句承接前一句。
 - 优先使用常见词、具体例子和明确动词。术语首次出现时就地解释，数字与技术细节只保留到足以帮助理解的程度。
 - 正文以段落为主；确实并列、有顺序或适合比较的信息才使用列表、表格。避免嵌套列表、术语堆砌、套话、机械过渡、不必要的对比句，以及重复正文的小结。
-- 不显示引用标记、引用链接、脚注、参考文献列表或单列来源署名，也不把普通说明包在引用块中。支撑结论的来源与核验依据保存在支持资料中；理解事实所必需的机构、指标和事件名称可正常使用。
+- 不显示引用标记、引用链接、脚注、参考文献列表或单列来源署名，也不把普通说明包在引用块中。理解事实所必需的机构、指标和事件名称可正常使用。
 - 不写数据获取、快照、版本、哈希、写作进度、Phase状态、待审阅提示、修改过程或修订记录等元信息。更新和数据截止日期使用页面现有字段，正文不重复说明。
 - 品种、单位、实际统计区间、必要的观测日与消息发布时间，以及影响解释的数据缺口，属于理解证据所需的内容，简短放在相应位置。研究数字本身应按论述需要保留。
 

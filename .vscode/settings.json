@@ -1,36 +1,26 @@
 {
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-  "python.terminal.activateEnvironment": true,
-  "python.analysis.extraPaths": ["${workspaceFolder}/src"],
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.autoImportCompletions": true,
-
-  "files.exclude": {
-    "**/__pycache__": true,
-    "**/*.egg-info": true
-  },
-  "files.watcherExclude": {
-    "**/.venv/**": true,
-    "**/_site/**": true,
-    "**/data/**": true
-  },
-  "search.exclude": {
-    "**/.venv": true,
-    "**/_site": true,
-    "**/data/raw": true,
-    "**/uv.lock": true
-  },
-
-  "[python]": {
-    "editor.rulers": [100],
-    "editor.formatOnSave": false
-  },
   "[markdown]": {
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": { "other": false }
+    "editor.lineHeight": 1.65,
+    "editor.minimap.enabled": false,
+    "editor.pasteAs.enabled": true,
+    "editor.quickSuggestions": {
+      "other": false
+    }
   },
-
-  "csv-preview.separator": ",",
+  "workbench.editorAssociations": {
+    "**/content/research/*.md": "vscode.markdown.editor"
+  },
+  "markdown.validate.enabled": true,
+  "markdown.copyFiles.destination": {
+    "/content/research/*.md": "images/${documentBaseName}/"
+  },
   "editor.renderWhitespace": "boundary",
-  "terminal.integrated.cwd": "${workspaceFolder}"
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.pnpm-store": true,
+    "**/node_modules": true,
+    "**/_site": true
+  }
 }

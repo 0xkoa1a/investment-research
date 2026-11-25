@@ -1,26 +1,10 @@
-# ---- 密钥与本地配置 ----
-.env
-.env.local
-
-# ---- Python ----
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-.ipynb_checkpoints/
-.pytest_cache/
-.ruff_cache/
-.cache/
-.pnpm-store/
-node_modules/
-
-# ---- 派生数据（可由脚本重建，不进版本库）----
-data/processed/
-# 原始商业研究数据需要长期保留，不随 make clean 删除。
-data/local/
-
-# ---- VuePress 产物 ----
-_site/
-
-# ---- macOS ----
 .DS_Store
+.env
+.env.*
+
+node_modules/
+.pnpm-store/
+.cache/
+_site/
+_exports/
+.vuepress-export-*/

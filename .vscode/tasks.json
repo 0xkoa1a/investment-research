@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "报告：预览研究站点",
+      "type": "process",
+      "command": "make",
+      "args": ["preview"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "panel": "dedicated", "reveal": "always" }
+    },
+    {
+      "label": "报告：导出当前报告为离线 HTML",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/export-page.mjs", "--page", "${relativeFile}"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}
