@@ -522,9 +522,14 @@ kbd {
 
 .article-content img {
   display: block;
-  max-width: 100%;
+  max-width: min(82%, 560px);
+  max-height: 360px;
   height: auto;
   margin: 1.25em auto;
+}
+
+@media (max-width: 480px) {
+  .article-content img { max-width: 100%; }
 }
 
 .search-backdrop {

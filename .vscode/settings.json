@@ -11,9 +11,10 @@
   "workbench.editorAssociations": {
     "**/content/research/*.md": "vscode.markdown.editor"
   },
+  "workbench.browser.newTabPlacement": "sideGroup",
   "markdown.validate.enabled": true,
   "markdown.copyFiles.destination": {
-    "/content/research/*.md": "images/${documentBaseName}/"
+    "/content/research/*.md": "asset/${documentBaseName}/"
   },
   "editor.renderWhitespace": "boundary",
   "terminal.integrated.cwd": "${workspaceFolder}",

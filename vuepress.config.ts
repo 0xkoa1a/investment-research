@@ -55,8 +55,8 @@ export default defineUserConfig({
   pagePatterns: isPortableExport ? [`content/research/${portablePage}`] : [...contentPagePatterns],
   bundler: viteBundler({
     viteOptions: {
-      // VS Code inserts screenshot links as images/<report>/<file>.
-      resolve: { alias: { images: path.join(researchDir, 'images') } },
+      // VS Code inserts screenshot links as asset/<report>/<file>.
+      resolve: { alias: { asset: path.join(researchDir, 'asset') } },
       build: {
         chunkSizeWarningLimit: 5000,
         ...(isPortableExport && {

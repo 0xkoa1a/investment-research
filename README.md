@@ -1,6 +1,6 @@
 # 投资研究报告
 
-- [2022 年末以来的黄金上涨：利率、央行与投资需求](content/research/gold-evidence.md)
+- [2022～2026 年黄金牛市分析](content/research/gold-evidence.md)
 - [技术分析入门：价格行为、指标与投资决策](content/research/technical-analysis.md)
 - [经济与投资时间序列：统计口径、数据变换与实时回测](content/research/basics.md)
 - [COMEX 黄金：2026年8月至9月初的消息与行情](content/research/gold-outlook.md)
@@ -11,7 +11,7 @@
 
 在 VS Code 中打开本仓库，复制 [报告模板](content/research/_template.md)，将副本保存在同一目录，文件名使用小写英文字母、数字和连字符，例如 `gold-evidence.md`。首行写一级标题，下一段可写摘要。
 
-在编辑器里按 `⌘V` 粘贴截图，VS Code 会将图片保存到 `content/research/images/报告文件名/` 并插入相对链接。正文、公式和表格都可以直接用 Markdown 编辑。完成后，把报告链接加到上面的目录。
+在编辑器里按 `⌘V` 粘贴截图，VS Code 会将图片保存到 `content/research/asset/报告文件名/` 并插入相对链接。正文、公式和表格都可以直接用 Markdown 编辑。完成后，把报告链接加到上面的目录。
 
 ## 预览和导出
 

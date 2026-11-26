@@ -54,14 +54,14 @@ test('manifest reflects add, edit, and delete without an index file', async (con
 })
 
 test('plain reports supply a title, introduction and dates to the site', () => {
-  const source = '# 标题\n\n摘要\n\n更新于 2026-11-25 · 数据截至 2026-03-31\n\n## 章节\n\n![图](images/sample/foo.png)'
+  const source = '# 标题\n\n摘要\n\n更新于 2026-11-25 · 数据截至 2026-03-31\n\n## 章节\n\n![图](asset/sample/foo.png)'
   const page = reportPageSource(source)
   assert.deepEqual(page.frontmatter, { title: '标题', summary: '摘要', updated: '2026-11-25', data_as_of: '2026-03-31' })
-  assert.equal(page.content.trimStart(), '## 章节\n\n![图](images/sample/foo.png)')
+  assert.equal(page.content.trimStart(), '## 章节\n\n![图](asset/sample/foo.png)')
 })
 
 test('the first screenshot or formatted paragraph stays in the rendered body', () => {
-  for (const text of ['![截图](images/a.png)', '段落含有 **强调** 或 $x$']) {
+  for (const text of ['![截图](asset/sample/a.png)', '段落含有 **强调** 或 $x$']) {
     assert.equal(reportPageSource('# 报告\n\n' + text).content.trimStart(), text)
   }
 })

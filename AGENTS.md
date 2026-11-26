@@ -9,7 +9,7 @@
 
 ## 报告与截图
 
-- 正文使用普通 Markdown，保存在 `content/research/`。每篇报告的本地图片放在 `content/research/images/<报告文件名>/`，在正文中使用相对路径。
+- 正文使用普通 Markdown，保存在 `content/research/`。每篇报告的本地图片放在 `content/research/asset/<报告文件名>/`，在正文中使用相对路径。
 - 仓库根目录的 README 是阅读目录。增删报告或更改标题时同步更新目录链接。
 - 保留与当前任务无关的报告正文、图片和用户编辑。
 
